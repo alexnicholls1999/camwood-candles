@@ -1,3 +1,5 @@
+const aboutId = document.getElementById('about-id')
+
 const route = (event) => {
     event = event || window.event;
     event.preventDefault();
@@ -6,10 +8,8 @@ const route = (event) => {
 }
 
 const routes = {
-    404: "/pages/404.html",
-    "/": "/pages/index.html",
-    "/about": "/pages/about.html",
-    "/lorem": "/pages/lorem.html"
+    404: "/src/pages/404.html",
+    "/root": "/src/pages/index.html",
 };
 
 const handleLocation = async () => {
