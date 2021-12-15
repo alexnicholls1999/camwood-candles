@@ -1,5 +1,42 @@
 @import './variables'
 
 body 
-    @include typography
+    @include font-family
     
+
+h1
+    @include h1($color: $colors-primary-600)
+
+h2
+    @include h2($color: $colors-primary-600)
+
+p 
+    @include p($color: $colors-neutral-900)
+    
+
+// home css
+
+.hero
+    .hero-content
+        @include make-col-ready()
+
+        @include media-breakpoint-up(sm)
+            @include make-col(6)
+    
+        @include media-breakpoint-up(lg)
+            @include make-col(8)
+    
+    .hero-image
+        
+        @include make-col-ready()
+
+        @include media-breakpoint-up(sm)
+            @include make-col(6)
+        
+        @include media-breakpoint-up(lg)
+            @include make-col(4)
+            
+        .image
+            background-color: $colors-primary-800
+            padding: 25rem
+            width: 100%

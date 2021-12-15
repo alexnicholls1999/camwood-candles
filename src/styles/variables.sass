@@ -5,10 +5,31 @@ $font-family-bitter: Bitter, serif
 $font-family-georgia: Georgia, serif
 $font-family-arial: Arial, sans-serif
 
-@mixin typography
+@mixin font-family
     font-family: $font-family-bitter, $font-family-georgia, $font-family-arial
-    font-size: 10em
-    color: $colors-primary-800
+
+
+//Headings
+
+@mixin h1($color)
+    color: $color
+    font-size: 5rem
+    font-weight: bold
+
+@mixin h2($color)
+    color: $color
+    font-size: 3rem
+    font-weight: lighter  
+
+@mixin h3($color)
+    color: $color
+    font-size: 2.75rem
+    font-weight: light
+
+@mixin p($color)
+    font-size: 2.5rem
+    color: $color
+    
 
 // Colors
 $colors-primary-800: #FCC32C
@@ -21,13 +42,10 @@ $colors-primary-200: #fffbde
 $colors-primary-100: #fff8e6
 
 $colors-neutral-900: #000000
-$colors-neutral-500: #1C1C1C
+$colors-neutral-700: #1C1C1C
+$colors-neutral-500: #848484
+$colors-neutral-300: #DFDFDF
 $colors-neutral-100: #FFFFFF
-
-//Headings
-
-
-
 
 //Components
 @mixin button
