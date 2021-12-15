@@ -2,7 +2,8 @@
 
 body 
     @include font-family
-    
+    margin: 0
+    padding: 0
 
 h1
     @include h1($color: $colors-primary-600)
@@ -14,29 +15,25 @@ p
     @include p($color: $colors-neutral-900)
     
 
-// home css
+// Intro Wrapper
 
-.hero
+.intro-wrapper
+    height: 100vh
+
+// Hero
+
+.hero 
+    display: flex
+    flex-direction: column-reverse
+    position: relative
+    height: 90%
+
     .hero-content
-        @include make-col-ready()
+        height: 50%
+        padding: 4rem 2rem
 
-        @include media-breakpoint-up(sm)
-            @include make-col(6)
-    
-        @include media-breakpoint-up(lg)
-            @include make-col(8)
-    
     .hero-image
-        
-        @include make-col-ready()
+        @include image($src: url($bg-image))
+        height: 50%
+        width: 100%
 
-        @include media-breakpoint-up(sm)
-            @include make-col(6)
-        
-        @include media-breakpoint-up(lg)
-            @include make-col(4)
-            
-        .image
-            background-color: $colors-primary-800
-            padding: 25rem
-            width: 100%
