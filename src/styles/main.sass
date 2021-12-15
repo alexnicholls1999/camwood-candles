@@ -1,4 +1,5 @@
 @import './variables'
+@import './styled-components/atoms'
 
 body 
     @include font-family
@@ -32,8 +33,17 @@ p
         height: 50%
         padding: 4rem 2rem
 
+        p
+            padding-bottom: 3rem
+
+
     .hero-image
         @include image($src: url($bg-image))
         height: 50%
         width: 100%
 
+
+// Form Components
+
+.button
+    @include button()       
