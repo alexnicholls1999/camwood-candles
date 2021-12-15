@@ -38,7 +38,7 @@ p
 
 
     .hero-image
-        @include image($src: url($bg-image))
+        @include image($src: $bg-image, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
         height: 50%
         width: 100%
 
@@ -47,3 +47,4 @@ p
 
 .button
     @include button()       
+
