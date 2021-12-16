@@ -43,12 +43,34 @@ p
             .icon
                 @include sm-icon
 
+            .icon-primary
+                color: $colors-primary-600
+
+            .icon-secondary
+                color: $colors-neutral-900
+
 
     .hero-image
         @include image($src: $bg-image, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
         height: 50%
         width: 100%
 
+        box-shadow: inset 0 0 0 100vmax #00000057
+
+.scroll-down
+    position: absolute
+    bottom: 10rem
+    left: 2rem
+    font-size: 2rem
+    color: $colors-neutral-700
+
+    &::after
+        content: ''
+        position: absolute
+        margin-left: 2.5rem
+        padding: 1.5rem
+
+        @include image($src: $scroll-down-arrow, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
 
 // Form Components
 
