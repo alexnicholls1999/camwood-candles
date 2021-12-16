@@ -50,3 +50,14 @@ $colors-neutral-500: #848484
 $colors-neutral-300: #DFDFDF
 $colors-neutral-100: #FFFFFF
 
+// Shadows
+
+
+// Social Media Child
+@mixin icon($n, $color, $size, $padding)
+    &:nth-child(#{$n})
+        color: $color
+        padding: $padding
+        font-size: $size
+        
+    

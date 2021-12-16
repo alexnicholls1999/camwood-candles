@@ -1,5 +1,6 @@
 @import './variables'
 @import './styled-components/atoms'
+@import './styled-components/molecules'
 
 body 
     @include font-family
@@ -36,6 +37,12 @@ p
         p
             padding-bottom: 3rem
 
+        .social-media
+            @include social-media
+
+            .icon
+                @include sm-icon
+
 
     .hero-image
         @include image($src: $bg-image, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
@@ -48,3 +55,5 @@ p
 .button
     @include button()       
 
+
+        
