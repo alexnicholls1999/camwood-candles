@@ -16,67 +16,48 @@ h2
 p 
     @include p($color: $colors-neutral-900)
     
-
-// Intro Wrapper
-
-.intro-wrapper
-    height: 100vh
+.hero-content
+    padding-top: 1rem
     position: relative
 
-// Hero
+    .hero-intro
+        display: flex
+        flex-flow: column
+        gap: 0.5rem
+        justify-content: space-evenly
 
-.hero 
-    display: flex
-    flex-direction: column-reverse
-    position: relative
-    height: 90%
+.hero-image
+    @include image($src: $bg-image, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat )
+    height: 50vh
+    width: 100%
+    box-shadow: inset 0 0 0 100vmax #00000057
+
+.store-link-btn
+    @include button
+    margin: 1rem 0
+
+@media (min-width: 48em )
+    .h-md-100 
+        height: 100vh
 
     .hero-content
-        height: 50%
-        padding: 4rem 2rem
 
-        p
-            padding-bottom: 3rem
+        .hero-intro
+            padding-left: 1.5rem
 
-        .social-media
-            @include social-media
+    .store-link-btn 
+        width: min(35rem, 25rem)
+        padding: 1.25rem 1rem
+        font-size: 1rem
 
-            .icon
-                @include sm-icon
+@media (min-width: 160em)
 
-            .icon-primary
-                color: $colors-primary-600
+    .hero-content
+        .hero-intro
+            padding-left: 2vw
 
-            .icon-secondary
-                color: $colors-neutral-900
-
-
-    .hero-image
-        @include image($src: $bg-image, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
-        height: 50%
-        width: 100%
-
-        box-shadow: inset 0 0 0 100vmax #00000057
-
-.scroll-down
-    position: absolute
-    bottom: 10rem
-    left: 2rem
-    font-size: 2rem
-    color: $colors-neutral-700
-
-    &::after
-        content: ''
-        position: absolute
-        margin-left: 2.5rem
-        padding: 1.5rem
-
-        @include image($src: $scroll-down-arrow, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
-
-// Form Components
-
-.button
-    @include button()       
-
-
-        
+    .store-link-btn 
+        width: 25em
+        padding: 1.5rem 1.25rem
+        margin-left: 1rem 
+        font-size: 1.5rem  
