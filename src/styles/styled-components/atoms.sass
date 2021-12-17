@@ -2,20 +2,14 @@
  
 @mixin sm-icon()
     display: flex
-    flex-direction: column
+    flex-flow: column
     align-items: center
-    justify-content: center
-
+    justify-content: space-around
     border-radius: 50%
-    margin: 1rem
-    border: 0.2rem solid $colors-neutral-300
-    padding: 2.6rem
-    font-size: 2.5rem
-
-    height: 5rem
-    width: 5rem
-    
-
+    border: 0.1rem solid $colors-neutral-300
+    padding: 0.5rem
+    height: 2rem
+    width: 2rem
 
 @mixin button
     @include image($src: $arrow-btn, $bg-size: 1.5rem, $bg-position: 95% , $bg-repeat: no-repeat)
