@@ -18,14 +18,30 @@ h2 {
 
 p {
   color: #000000;
+  line-height: 2rem;
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+
+.primary-sm {
+  color: #fecb3d;
+}
+
+.secondary-sm {
+  color: #000000;
 }
 
 .primary {
-  color: #fecb3d;
+  color: #FFFFFF;
+  background-color: #1C1C1C;
+}
+.primary p {
+  color: #FFFFFF;
 }
 
 .secondary {
   color: #000000;
+  background-color: #FCC32C;
 }
 
 .hero-content {
@@ -41,18 +57,22 @@ p {
 .hero-content .hero-intro .slogan {
   color: #848484;
   font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .scroll-down {
   position: absolute;
-  left: 2rem;
-  font-size: 0.75rem;
+  left: 1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
 }
 .scroll-down::after {
   content: "";
   position: absolute;
   margin-left: 1rem;
-  padding: 0.5rem;
+  bottom: 0.65rem;
+  padding: 0.6rem;
   background: url("./../src/assets/icons/scroll-down-arrow.svg");
   background-size: contain;
   background-position: center;
@@ -65,7 +85,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   height: 50vh;
-  width: 100%;
+  min-width: 100%;
   box-shadow: inset 0 0 0 100vmax #00000066;
 }
 
@@ -80,7 +100,7 @@ p {
   outline: none;
   padding: 1rem;
   border: none;
-  width: min(100%, 22rem);
+  min-width: 20rem;
   border-left: #fecb3d 0.25rem solid;
   box-shadow: 0px 19px 41px 3px rgba(206, 206, 206, 0.5);
   font-size: 0.75rem;
@@ -94,6 +114,7 @@ p {
   justify-content: space-evenly;
   margin: 0;
   width: 13rem;
+  min-width: 13rem;
 }
 .social-media .icon {
   display: flex;
@@ -103,8 +124,33 @@ p {
   border-radius: 50%;
   border: 0.1rem solid #DFDFDF;
   padding: 0.5rem;
-  height: 2rem;
-  width: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  background-color: #FFFFFF;
+}
+
+.about-title {
+  font-size: min(1rem, 2vh);
+  color: #000000;
+  font-weight: 700;
+}
+
+.about-slogan {
+  font-size: min(2.5rem, 5vh);
+  color: #fecb3d;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.point {
+  display: flex;
+  flex-flow: column;
+  padding: 2rem 1rem 7.5rem;
+}
+
+.point-title {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 @media (min-width: 48em) {
@@ -140,7 +186,7 @@ p {
   }
 
   .store-link-btn {
-    width: 25em;
+    min-width: 25em;
     padding: 1.5rem 1.25rem;
     margin-left: 1rem;
     font-size: 1.5rem;

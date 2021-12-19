@@ -14,14 +14,27 @@ h2
     @include h2($color: $colors-primary-600)
 
 p 
-    @include p($color: $colors-neutral-900)
+    @include p($color: $colors-neutral-900, $l-height: 2rem)
+
+.primary-sm
+    color: $colors-primary-600
+
+.secondary-sm
+    color: $colors-neutral-900
 
 .primary
-    color: $colors-primary-600
+    color: $colors-neutral-100
+    background-color: $colors-neutral-700
+
+    p
+        color: $colors-neutral-100
 
 .secondary
     color: $colors-neutral-900
-    
+    background-color: $colors-primary-800
+
+
+
 .hero-content
     padding-top: 1rem
     position: relative
@@ -35,24 +48,30 @@ p
         .slogan
             color: $colors-neutral-500
             font-size: 1rem
+            @include fontWeight($styles: $regular)
+            line-height: 1.5rem
+                
             
 .scroll-down
     position: absolute
-    left: 2rem
-    font-size: 0.75rem
+    left: 1rem
+    font-size: 0.6rem
+    @include fontWeight($styles: $semi-bold)
+    
     
     &::after
         content: ''
         position: absolute
         margin-left: 1rem
-        padding: 0.5rem
+        bottom: 0.65rem
+        padding: 0.6rem
         @include image($src: $scroll-down-arrow, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
         
             
 .hero-image
     @include image($src: $bg-image, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat )
     height: 50vh
-    width: 100%
+    min-width: 100%
     box-shadow: inset 0 0 0 100vmax #00000066
 
 .store-link-btn
@@ -67,6 +86,26 @@ p
         @include sm-icon()
 
 
+.about-title
+    font-size: min(1rem, 2vh)
+    color: $colors-neutral-900
+    @include fontWeight($styles: $bold)
+    
+.about-slogan
+    font-size: min(2.5rem, 5vh)
+    color: $colors-primary-600
+    @include fontWeight($styles: $bold)
+    line-height: 3rem
+
+.point 
+   display: flex
+   flex-flow: column
+   padding: 2rem 1rem 7.5rem
+
+.point-title
+    font-size: 1rem
+    @include fontWeight($styles: bold)
+ 
 @media (min-width: 48em )
     .h-md-100 
         height: 100vh
@@ -97,7 +136,7 @@ p
             padding-left: 2vw
 
     .store-link-btn 
-        width: 25em
+        min-width: 25em
         padding: 1.5rem 1.25rem
         margin-left: 1rem 
         font-size: 1.5rem  

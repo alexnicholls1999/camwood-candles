@@ -38,8 +38,12 @@ $black: 900
 @mixin h3($color)
     color: $color
 
-@mixin p($color)
+@mixin p($color, $l-height)
     color: $color
+    line-height: $l-height
+    font-size: 0.75rem
+    @include fontWeight($styles: $thin)
+    
 
     
 // Images
