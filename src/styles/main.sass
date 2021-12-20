@@ -117,13 +117,29 @@ p
         &::after
             @include point-title($bg-color: $colors-neutral-900)
     
-    .symbol
+    .ps 
         display: flex
         flex-flow: column
         justify-content: start
         align-items: self-start
-        font-size: 1rem    
-            
+        float: left
+        height: 2.5rem
+        width: 2.5rem  
+        margin-bottom: 0.5rem
+
+    .ps-nature
+        @include image($src: $symbol-natural-substance, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
+    
+    .ps-burnefficency
+        @include image($src: $symbol-burn-effiency, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
+        
+    .ps-native
+        @include image($src: $symbol-native, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
+
+    .ps-airquality
+        @include image($src: $symbol-air-quality, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
+        
+        
 .point-order-1
     order: 1
         
