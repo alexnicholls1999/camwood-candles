@@ -13,8 +13,17 @@ h1
 h2
     @include h2($color: $colors-primary-600)
 
+h3
+
 p 
     @include p($color: $colors-neutral-900, $l-height: 1.75rem)
+
+.candles-image
+    padding: 1rem
+
+    img
+        width: 100%
+        box-shadow: 1rem 1rem 1rem #00000066
 
 .primary-sm
     color: $colors-primary-600
@@ -106,17 +115,18 @@ p
     .point-title
         font-size: 1.1rem
         @include fontWeight($styles: bold)
-        padding-bottom: 1.5rem
+        padding-bottom: 1rem
 
     .primary-title
         &::after
             @include point-title($bg-color: $colors-primary-600)
-            
+            color: $colors-neutral-100
 
     .secondary-title
         &::after
             @include point-title($bg-color: $colors-neutral-900)
-    
+            color: $colors-neutral-900
+
     .ps 
         display: flex
         flex-flow: column
@@ -138,7 +148,6 @@ p
 
     .ps-airquality
         @include image($src: $symbol-air-quality, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
-        
         
 .point-order-1
     order: 1
@@ -190,6 +199,9 @@ p
     
 
 @media (min-width: 60em)
+
+    .point
+        padding: 2rem 1rem
 
     .point-order-1
         order: 1
