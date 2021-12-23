@@ -161,17 +161,89 @@ p
 .point-order-4
     order: 4
 
-.votives-title
-    font-size: 1.75rem
+.votives 
+    .votives-title
+        font-size: 1.75rem
 
-.product__info
-    .product__title
-        color: $colors-neutral-900
+    p
+        margin-inline: auto
 
-.product__image
-    height: 50vh
-    width: 100%
-    background-color: $colors-neutral-900
+.candles-image
+    display: block
+    height: 100%
+
+    img
+        height: 100%
+        object-fit: cover
+
+
+.slider 
+
+    .slide-info
+        padding: 2rem 1rem
+
+        .slide-info--title-primary
+            color: $colors-primary-600
+
+        .slide-info--title-secondary
+            color: $colors-neutral-900
+
+        .slide-info--title
+            @include fontWeight($styles: bold)
+        
+        .slide-info--sub-title
+            @include fontWeight($styles: bold)
+            font-size: 1.25rem
+
+        .slide-info--cost
+            @include fontWeight($styles: medium)
+            font-size: 1rem
+            
+
+    .slide-image
+        height: 50vh
+
+    #pillars_dinning_large_pillar
+        @include image($src: $pillars_dinning_1, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
+
+    #sphere_green
+        @include image($src: $sphere_green, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)   
+    
+    #burners-blue
+        @include image($src: $burner-blue, $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
+        
+
+.tiles
+
+    .tile-info
+        display: flex
+        flex-flow: column
+        justify-content: flex-start
+        align-items: self-start
+        vertical-align: middle
+        padding: 2rem 1rem
+
+        .tile-info--title
+            @include fontWeight($styles: semiBold)
+
+        p
+            width: 75%
+            
+
+    .tile-image
+        height: 50vh
+
+    #skincare
+        @include image($src: $skincare, $bg-size: cover , $bg-position: center, $bg-repeat: no-repeat)
+        
+    #other 
+        @include image($src: $other, $bg-size: cover , $bg-position: center, $bg-repeat: no-repeat)
+
+.insta-tile
+    background-color: blue
+    padding: 10rem
+    margin: 0.5rem
+
     
 @media (min-width: 48em)
     .h-md-100 
@@ -196,6 +268,9 @@ p
         padding: 1.25rem 1rem
         font-size: 1rem
 
+    .votives
+        width: 65%
+
     .point-order-1
         order: 1
             
@@ -207,10 +282,14 @@ p
             
     .point-order-4
         order: 3
-    
+
     .slider
-        .product__info
-            padding: 5rem 3rem 
+        .slide-image
+            height: 60vh 
+
+    .tiles
+        .tile-image
+            height: 60vh 
 
 
 @media (min-width: 60em)
@@ -229,7 +308,6 @@ p
             
     .point-order-4
         order: 4
-        
 
 @media (min-width: 160em)
 
