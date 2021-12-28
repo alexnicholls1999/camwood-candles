@@ -20,6 +20,109 @@ p
     font-size: 0.9rem
     @include fontWeight($styles: bold)
     
+// Mobile Nav
+
+.mobile-btn {
+  position: fixed;
+  height: 4rem;
+  width: 4rem;
+  bottom: 5rem;
+  right: 2.5rem;
+  border-radius: 100%;
+  background-color: var(--colors-primary-600);
+  box-shadow: 0px 0px 20px 7px var(--colors-primary-600);
+  z-index: 2;
+  border: none;
+}
+
+.mobile-btn .hamburger {
+  position: relative;
+  display: flex;
+  align-items: self-end;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  height: 1.5rem;
+  width: 1.7rem;
+  margin: 0 auto;
+}
+
+.mobile-btn .hamburger > span {
+  height: 3px;
+  width: 100%;
+  background: var(--colors-neutral-100);
+  border-radius: 0.5rem;
+}
+
+.mobile-btn .hamburger > span:first-child {
+  width: 90%;
+}
+
+.mobile-btn .hamburger > span:last-child {
+  width: 70%;
+}
+
+.mobile-menu {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 1rem;
+  max-width: 360px;
+  width: 90%;
+  background-color: var(--colors-neutral-800);
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem 0 4rem;
+  color: var(--colors-neutral-100);
+  z-index: 2;
+
+  /* Animation Out*/
+  visibility: hidden;
+  transform: translateY(130%);
+  transition: 0.5s ease-out;
+}
+
+.mobile-menu .menu {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  gap: 0.65rem;
+  margin: 0 1rem;
+}
+
+.mobile-menu .close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+}
+
+.close svg {
+  font-size: 1rem;
+  fill: var(--colors-neutral-100) !important;
+  min-height: 1.75rem;
+  height: 1.75rem;
+  width: auto;
+}
+
+.mobile-menu h2 {
+  padding: 1rem 0.85rem 0;
+}
+
+.menu--item {
+  padding: 0.9rem 0.5rem;
+}
+
+.open {
+  /* Animation In*/
+  visibility: visible;
+  transform: translateY(0);
+  transition: 0.75s ease-in;
+}
+
+.active {
+  background-color: var(--colors-neutral-700);
+  font-weight: var(--font-weight-bold);
+  border-radius: 0.3rem;
+}
+
 
 a.nav-link.active
     margin-top: 1rem 
@@ -34,8 +137,6 @@ a.nav-link.active
         border-radius: 4px
         border-spacing: 1px
         box-shadow: inset 0 1px 1px rgba(0,0,0,.05)
-        
-
 
 .fixed-top
     position: absolute
@@ -287,94 +388,87 @@ a.nav-link.active
     height: 50vh
     width: 100%
 
-.mobile-nav
-    display: none
+.mobile-btn 
     position: fixed
+    height: 4rem
+    width: 4rem
+    bottom: 5rem
+    right: 2.5rem
+    border-radius: 100%
+    background-color: $colors-primary-600
+    box-shadow: 0px 0px 20px 7px $colors-primary-600
+    z-index: 2
+    border: none
+
+    .hamburger 
+        position: relative
+        display: flex
+        align-items: self-end
+        justify-content: space-around
+        flex-flow: column nowrap
+        height: 1.5rem
+        width: 1.7rem
+        margin: 0 auto
+
+        span 
+            height: 3px
+            width: 100%
+            background-color: $colors-neutral-100
+            border-radius: 0.5rem
+            
+            &:first-child
+                width: 90%
+
+            &:last-child
+                width: 70%
+
+.mobile-menu 
+    position: absolute
+    display: block
     bottom: 0
-    left: 5%
-    z-index: 2    
-    width: min(90%, 365px)
+    right: 1rem
+    max-width: 360px
+    width: 90%
+    background-color: $colors-primary-700
+    border-radius: 0.5rem 0.5rem 0 0
+    padding: 1rem 0 4rem
+    color: $colors-neutral-100
+    z-index: 2
 
-    .mobile-btn
-        position: fixed
-        bottom: 1rem
-        right: 1rem
-        border-radius: 50%
-        padding: 1.25rem
-        background-color: $colors-primary-600
-        border: none
-        box-shadow: 0 0rem 1rem 0rem $colors-primary-600
+    // Animation Out
+    visibility: hidden
+    transform: translateY(130%)
+    transition: 0.5s ease-out
+    
+    h2
+        padding: 1rem 0.85rem 0
 
-        .hamburger
-            display: flex
-            flex-flow: column
-            justify-content: space-around
-            align-items: self-end
-            height: 1.45rem
-            width: 1.5rem
-            position: relative
-
-            span
-                height: 3px
-                width: 100%
-                background-color: $colors-neutral-100
-                border-radius: 0.5rem
-
-    .mobile-menu
-        background: $colors-neutral-800
-        padding: 3rem 1rem
+    .menu
         display: flex
         flex-flow: column
         list-style: none
-        border-radius: 1rem 1rem 0 0
-        box-shadow: 0 0 20px 3px #000000b0
-        margin: 0
+        gap: 0.65rem
+        margin: 0 1rem
 
-        .close-circle
-            position: absolute
-            top: 2rem
-            right: 1rem
-            padding: .75rem
-            @include image($src: $close-circle, $bg-size: contain, $bg-position: center , $bg-repeat: no-repeat)
-            
-        
-        .mobile-menu--title
-            color: $colors-neutral-100
-            @include fontWeight($styles: $x-bold)
-            font-size: 1.75rem
-            margin-bottom: 1.5rem
+        .menu--item 
+            padding: 0.9rem 0.5rem
 
-            &:last-child
-                gap: 1rem
+    .close
+        position: absolute
+        top: 1.5rem
+        right: 1rem
+    
+        svg
+            fill: $colors-neutral-100
+            min-height: 1.75rem
+            height: 1.75rem 
+            width: auto
 
-        .button-wrapper 
-            display: flex
-            flex-flow: row
-            justify-content: space-evenly
-            gap: 1rem
-            margin-top: 1.5rem
-
-            *   
-                flex-basis: 100%
-                padding: .65rem 0
-
-        .mobile-menu--item
-            padding: 1rem 
-            
-            a 
-                color: $colors-neutral-100
-                padding: 0
-            
-        .active
-            background-color: $colors-neutral-700
-            border: none
-            margin: 0
-            padding: .75rem 1rem
-            border-radius: .25rem
-
-            &::after
-                display: none
-
+.open 
+    // Animation In
+    visibility: visible
+    transform: translateY(0)
+    transition: 0.75s ease-in
 
 footer
     background-color: $colors-neutral-700
