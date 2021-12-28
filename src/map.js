@@ -1,22 +1,29 @@
-const ashington = {
-    lat: "50.930165394501785", 
-    lng: "-0.3990112554335527"
+const mapState = {
+    location: {
+        lat: 50.930165394501785, 
+        lng: -0.3990112554335527
+    },
+    controls: {
+        zoom: 13,
+        layer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    },
+    popUp: "<p>Camwood Candles</p>"
 }
 
-const zoom = 13
-const layer = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+function initMap() {
+    
+    const { location, controls, popUp } = mapState;
 
-var map = L.map('map', {
-    fullscreenControl: {
-        psuedoFullscreen: false
-    }
-}).setView([ashington.lat, ashington.lng], zoom);
+    const map = L.map('map').setView([location.lat, location.lng], controls.zoom);
+    const marker = L.marker([location.lat, location.lng]).addTo(map);
 
-L.tileLayer(layer, {
-    attribution: attribution
-}).addTo(map);
+    L.tileLayer(controls.layer, {
+        attribution: controls.attribution,
+        maxZoom: 18,
+    }).addTo(map);
 
-L.marker([ashington.lat, ashington.lng]).addTo(map)
-    .bindPop('Camwood Candles')
-    .openPopup()
+    marker.bindPopup(popUp).openPopup()
+} 
+
+initMap()
