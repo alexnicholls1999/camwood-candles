@@ -1,4 +1,4 @@
-export function closeBtn(btn) {
+export function closeButton(btn) {
     btn.innerHTML = `
     <svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
@@ -17,7 +17,7 @@ export function closeBtn(btn) {
 export function mobileMenu() { 
     const closeBtn = document.querySelector(".close");
     const hamburger = document.querySelector(".hamburger");
-    const menu = document.querySelector(".menu");
+    const menu = document.querySelector(".mobile-menu");
 
     const openMenu = (e) => {
         e.preventDefault();
@@ -35,5 +35,6 @@ export function mobileMenu() {
     hamburger.addEventListener("click", openMenu)
     closeBtn.addEventListener("click", closeMenu)
     
-    closeBtn(closeBtn)
+    closeButton(closeBtn)
+    
 }

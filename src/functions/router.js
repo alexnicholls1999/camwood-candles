@@ -1,26 +1,53 @@
-const aboutId = document.getElementById('about-id')
+// const aboutId = document.getElementById('about-id')
 
-const route = (event) => {
-    event = event || window.event;
-    event.preventDefault();
-    window.history.pushState({}, "", event.target.href);
+// const route = (event) => {
+//     event = event || window.event;
+//     event.preventDefault();
+//     window.history.pushState({}, "", event.target.href);
+//     handleLocation();
+// }
+
+// const routes = {
+//     404: "/src/pages/404.html",
+//     "/root": "/src/pages/index.html",
+// };
+
+// const handleLocation = async () => {
+//     const path = window.location.pathname;
+//     const route = routes[path] || routes[404];
+//     const html = await fetch(route).then((data) => data.text());
+//     document.getElementById("main-page").innerHTML = html;
+// };
+
+// window.onpopstate = handleLocation;
+// window.route = route;
+
+
+// handleLocation();
+
+export function Router(aboutid) {
+
+    const route = (event) => {
+        event = event || window.event;
+        event.preventDefault();
+        window.history.pushState({}, "", event.target.href);
+        handleLocation();
+    }
+    
+    const routes = {
+        404: "/src/pages/404.html",
+        "/root": "/src/pages/index.html",
+    };
+    
+    const handleLocation = async () => {
+        const path = window.location.pathname;
+        const route = routes[path] || routes[404];
+        const html = await fetch(route).then((data) => data.text());
+        document.getElementById("main-page").innerHTML = html;
+    };
+    
+    window.onpopstate = handleLocation;
+    window.route = route;
+    
     handleLocation();
 }
-
-const routes = {
-    404: "/src/pages/404.html",
-    "/root": "/src/pages/index.html",
-};
-
-const handleLocation = async () => {
-    const path = window.location.pathname;
-    const route = routes[path] || routes[404];
-    const html = await fetch(route).then((data) => data.text());
-    document.getElementById("main-page").innerHTML = html;
-};
-
-window.onpopstate = handleLocation;
-window.route = route;
-
-
-handleLocation();

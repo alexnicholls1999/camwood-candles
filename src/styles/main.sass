@@ -1,6 +1,7 @@
 @import './variables'
 @import './styled-components/atoms'
 @import './styled-components/molecules'
+@import ./styled-components/navbar
 
 body 
     @include font-family
@@ -19,110 +20,6 @@ p
 .btn 
     font-size: 0.9rem
     @include fontWeight($styles: bold)
-    
-// Mobile Nav
-
-.mobile-btn {
-  position: fixed;
-  height: 4rem;
-  width: 4rem;
-  bottom: 5rem;
-  right: 2.5rem;
-  border-radius: 100%;
-  background-color: var(--colors-primary-600);
-  box-shadow: 0px 0px 20px 7px var(--colors-primary-600);
-  z-index: 2;
-  border: none;
-}
-
-.mobile-btn .hamburger {
-  position: relative;
-  display: flex;
-  align-items: self-end;
-  justify-content: space-around;
-  flex-flow: column nowrap;
-  height: 1.5rem;
-  width: 1.7rem;
-  margin: 0 auto;
-}
-
-.mobile-btn .hamburger > span {
-  height: 3px;
-  width: 100%;
-  background: var(--colors-neutral-100);
-  border-radius: 0.5rem;
-}
-
-.mobile-btn .hamburger > span:first-child {
-  width: 90%;
-}
-
-.mobile-btn .hamburger > span:last-child {
-  width: 70%;
-}
-
-.mobile-menu {
-  position: absolute;
-  display: block;
-  bottom: 0;
-  right: 1rem;
-  max-width: 360px;
-  width: 90%;
-  background-color: var(--colors-neutral-800);
-  border-radius: 0.5rem 0.5rem 0 0;
-  padding: 1rem 0 4rem;
-  color: var(--colors-neutral-100);
-  z-index: 2;
-
-  /* Animation Out*/
-  visibility: hidden;
-  transform: translateY(130%);
-  transition: 0.5s ease-out;
-}
-
-.mobile-menu .menu {
-  display: flex;
-  flex-flow: column;
-  list-style: none;
-  gap: 0.65rem;
-  margin: 0 1rem;
-}
-
-.mobile-menu .close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1rem;
-}
-
-.close svg {
-  font-size: 1rem;
-  fill: var(--colors-neutral-100) !important;
-  min-height: 1.75rem;
-  height: 1.75rem;
-  width: auto;
-}
-
-.mobile-menu h2 {
-  padding: 1rem 0.85rem 0;
-}
-
-.menu--item {
-  padding: 0.9rem 0.5rem;
-}
-
-.open {
-  /* Animation In*/
-  visibility: visible;
-  transform: translateY(0);
-  transition: 0.75s ease-in;
-}
-
-.active {
-  background-color: var(--colors-neutral-700);
-  font-weight: var(--font-weight-bold);
-  border-radius: 0.3rem;
-}
-
 
 a.nav-link.active
     margin-top: 1rem 
@@ -387,88 +284,7 @@ a.nav-link.active
 #map 
     height: 50vh
     width: 100%
-
-.mobile-btn 
-    position: fixed
-    height: 4rem
-    width: 4rem
-    bottom: 5rem
-    right: 2.5rem
-    border-radius: 100%
-    background-color: $colors-primary-600
-    box-shadow: 0px 0px 20px 7px $colors-primary-600
-    z-index: 2
-    border: none
-
-    .hamburger 
-        position: relative
-        display: flex
-        align-items: self-end
-        justify-content: space-around
-        flex-flow: column nowrap
-        height: 1.5rem
-        width: 1.7rem
-        margin: 0 auto
-
-        span 
-            height: 3px
-            width: 100%
-            background-color: $colors-neutral-100
-            border-radius: 0.5rem
-            
-            &:first-child
-                width: 90%
-
-            &:last-child
-                width: 70%
-
-.mobile-menu 
-    position: absolute
-    display: block
-    bottom: 0
-    right: 1rem
-    max-width: 360px
-    width: 90%
-    background-color: $colors-primary-700
-    border-radius: 0.5rem 0.5rem 0 0
-    padding: 1rem 0 4rem
-    color: $colors-neutral-100
-    z-index: 2
-
-    // Animation Out
-    visibility: hidden
-    transform: translateY(130%)
-    transition: 0.5s ease-out
-    
-    h2
-        padding: 1rem 0.85rem 0
-
-    .menu
-        display: flex
-        flex-flow: column
-        list-style: none
-        gap: 0.65rem
-        margin: 0 1rem
-
-        .menu--item 
-            padding: 0.9rem 0.5rem
-
-    .close
-        position: absolute
-        top: 1.5rem
-        right: 1rem
-    
-        svg
-            fill: $colors-neutral-100
-            min-height: 1.75rem
-            height: 1.75rem 
-            width: auto
-
-.open 
-    // Animation In
-    visibility: visible
-    transform: translateY(0)
-    transition: 0.75s ease-in
+    z-index: 0
 
 footer
     background-color: $colors-neutral-700
