@@ -1,0 +1,225 @@
+@import ./variables
+
+// Pseudo Elements
+
+@mixin after($aft-img, $aft-size, $aft-pos, $aft-repeat)
+    content: ""
+    position: absolute
+    @include bgImage($src: $aft-img, $bg-size: $aft-size , $bg-position: $aft-pos , $bg-repeat: $aft-repeat)   
+
+
+// Button
+@mixin button($btn-type)
+    @if $btn-type == "store-link"
+        border: none
+        border-left: var(--colors-primary-600) 0.25rem solid
+        @include bgImage($src: $arrow-btn, $bg-size: 1.5rem, $bg-position: 95%, $bg-repeat: no-repeat)
+        @include colors($bg-color: --colors-neutral-100, $color: --colors-neutral-500)
+        @include padding($p: 1rem)
+        @include shadow($shadow-type: outset, $offset-x: 0, $offset-y: 1rem, $blur: 3.5rem, $spread: 0.1rem, $color: rgba(#CECECE, 0.5))
+        font-size: .75rem
+        text-align: left
+        font-family: $font-family-bitter
+
+// Size
+@mixin size($height, $min-height, $width, $min-width) 
+    height: $height
+    min-height: $min-height
+    width: $width
+    min-width: $min-width
+
+// Flex
+@mixin flex($flow, $justify-content, $align-items)
+    display: flex
+    flex-flow: $flow
+    justify-content: $justify-content
+    align-items: $align-items
+
+// Position
+@mixin position($position-type)
+    position: $position-type
+
+@mixin setPosition($top, $bottom, $right, $left)
+    top: $top
+    bottom: $bottom
+    left: $left
+    right: $right
+
+// Margin
+@mixin margin($m)
+    margin: $m
+    
+@mixin marginTwo($m-tb, $m-lr)
+    margin: $m-tb $m-lr
+
+@mixin marginThree($m-t, $m-lr, $m-b)
+    margin: $m-t $m-lr $m-b    
+
+@mixin marginFour($m-t, $m-r, $m-b, $m-l)
+    margin: $m-t $m-r $m-b $m-l   
+
+// Padding
+@mixin padding($p)
+    padding: $p
+    
+@mixin paddingTwo($p-tb, $p-lr)
+    padding: $p-tb $p-lr
+
+@mixin paddingThree($p-t, $p-lr, $p-b)
+    padding: $p-t $p-lr $p-b    
+
+@mixin paddingFour($p-t, $p-r, $p-b, $p-l)
+    padding: $p-t $p-r $p-b $p-l   
+
+
+// Typography
+@mixin font-family($font-family-1, $font-family-2, $font-family-3)
+    font-family: $font-family-1, $font-family-2, $font-family-3 
+
+@mixin fontWeight($styles)
+    font-weight: $styles
+    
+// Headings
+@mixin body($color, $font-size)
+    color: var($color)
+    font-size: var($font-size)
+
+@mixin h1($color, $font-size)
+    color: var($color)
+    font-size: var($font-size)
+    @include margin($m: 0)
+    
+
+@mixin h2($color, $font-size)
+    color: var($color)
+    font-size: var($font-size)
+    @include margin($m: 0)
+    
+
+@mixin p($color, $font-size)
+    color: var($color)
+    font-size: var($font-size)
+    line-height: 1.5rem
+
+// Colors
+@mixin colors($bg-color, $color) 
+    color: var($color)
+    background-color: var($bg-color)
+
+
+// Shadows
+
+@mixin shadow($shadow-type, $offset-x, $offset-y, $blur, $spread, $color)
+    @if $shadow-type == 'outset'
+        box-shadow: $offset-x $offset-y $blur $spread $color
+    @else if $shadow-type == 'inset'
+        box-shadow: inset $offset-x $offset-y $blur $spread $color
+
+// Borders
+@mixin border($b-width, $b-style, $color)
+    border: $b-width $b-style var($color) 
+
+// Images
+@mixin bgImage($src, $bg-size, $bg-position, $bg-repeat)
+    background: url($src)
+    background-size: $bg-size
+    background-position: $bg-position
+    background-repeat: $bg-repeat 
+
+@mixin image($img-fit)
+    display: block
+    width: 100%
+    min-width: 100%
+    height: 100%
+    object-fit: $img-fit
+
+// Animations
+
+// Keyframes
+@mixin keyFrames($animation-name)
+    @keyframes #{$animation-name}
+        @content
+
+// Transition
+@mixin transition($transition, $transform)
+    transition: $transition
+    transform: $transform
+
+@mixin animation($a-name, $a-duration)
+    animation-name: $a-name
+    animation-duration: $a-duration
+
+// Media Queries
+@mixin mediaQuery($breakpoint)
+    @if $breakpoint == breakpointA 
+        @media (min-width: $break-point-one)
+            @content
+    @else if $breakpoint == breakpointB
+        @media (min-width: $break-point-two)
+            @content
+    @else if $breakpoint == breakpointC
+        @media (min-width: $break-point-three)
+            @content
+
+
+// CSS Root Variables
+@mixin root($breakpoint)
+    @if $breakpoint == default
+ 
+        /* CSS Variables
+        --colors-primary-800: #FCC32C
+        --colors-primary-700: #F1B002
+        --colors-primary-600: #fecb3d
+        --colors-primary-500: #f5cb5c
+        --colors-primary-400: #FFF6B6
+        --colors-primary-300: #FFECBC 
+        --colors-primary-200: #fffbde
+        --colors-primary-100: #fff8e6
+
+        /* Neutral
+        --colors-neutral-900: #000000
+        --colors-neutral-800: #1C1C1C
+        --colors-neutral-700: #2A2A2A
+        --colors-neutral-500: #848484
+        --colors-neutral-300: #DFDFDF
+        --colors-neutral-100: #FFFFFF
+
+        /* Typography
+        /* Font-Size
+        --fs-b: 1rem
+        --fs-h1: 2rem
+        --fs-h2: 1.75rem
+        --fs-h3: 2rem
+        --fs-h4: 2rem
+        --fs-h5: 2rem
+        --fs-h6: 2rem
+        --fs-p: 0.75rem
+
+    @else if $breakpoint == 'breakpointA'
+
+        /* Typography
+        /* Font-Size
+        --fs-b: 1rem
+        --fs-h1: 3rem
+        --fs-h2: 2rem
+        --fs-h3: 2rem
+        --fs-h4: 2rem
+        --fs-h5: 2rem
+        --fs-h6: 2rem
+        --fs-p: 1rem
+
+    @else if $breakpoint == 'breakpointB'
+        /* Typography
+        /* Font-Size
+        --fs-b: 1rem
+        --fs-h1: 5rem
+        --fs-h2: 4rem
+        --fs-h3: 2rem
+        --fs-h4: 2rem
+        --fs-h5: 2rem
+        --fs-h6: 2rem
+        --fs-p: 1.2rem
+
+    
+    
+

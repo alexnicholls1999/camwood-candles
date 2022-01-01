@@ -1,0 +1,17 @@
+@import './../abstracts/_variables'
+@import './../abstracts/_mixins'
+
+
+.about-container
+    @include paddingTwo($p-tb: 2rem , $p-lr: 0)
+    
+    .about-title
+        color: var(--colors-neutral-900)
+        font-size: min(1rem, 2vh)
+        @include fontWeight($styles: $bold)
+
+    .about-slogan
+        color: var(--colors-primary-600)
+        font-size: min(1.75rem, 5vh)
+        @include fontWeight($styles: $bold)
+        

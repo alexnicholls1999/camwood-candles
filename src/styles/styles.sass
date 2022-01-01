@@ -1,0 +1,85 @@
+@import ./core/root
+@import ./core/typography
+@import ./abstracts/mixins
+
+// Layouts
+@import ./layout/_grid
+
+//Components 
+@import ./components/_slider
+@import ./components/_hero
+@import ./components/_about
+
+    
+/* Media Queries - Breakpoint A (48em)
+@include mediaQuery($breakpoint: breakpointA)
+
+    \:root 
+        @include root($breakpoint: breakpointA)
+
+    .hero
+        .hero-container
+            > *
+                height: 100%
+                width: 50%
+
+            .hero-image
+                order: 2    
+            
+            .hero-content    
+                order: 1
+
+                .hero-content-container
+                    @include padding($p: 2rem)
+                    padding-top: 5rem
+
+    .about-container
+        @include paddingThree($p-t: 5%, $p-lr: 0, $p-b: 10%)
+        
+    /* Slider
+    .slider
+        height: 60vh
+
+        .slideshow-container
+            .slide
+                flex-flow: row
+
+                > * 
+                    flex-basis: 100%
+                
+                .slide-image, .slide-info
+                    height: 100%
+
+                .slide-info 
+                    .slide-info-container
+                        @include paddingTwo($p-tb: 3.5vw, $p-lr: 2vw)
+                        p
+                            width: 80%
+
+        .slider-btn
+            bottom: 2rem
+            top: auto
+
+        .dots-container
+            left: 22vw
+            justify-content: flex-start
+
+
+@include mediaQuery($breakpoint: breakpointC)
+
+    \:root 
+        @include root($breakpoint: breakpointC)
+
+    .slider
+
+        .slideshow-container
+            .slide
+                .slide-info
+                    .slide-info-container
+                        @include paddingTwo($p-tb: 7vw, $p-lr: 4vw)
+
+        .slider-btn
+            bottom: 5rem
+
+        .dots-container
+            left: 22vw

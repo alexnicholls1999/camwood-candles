@@ -1,0 +1,78 @@
+@import ./../abstracts/mixins
+
+/* Slider
+.slider
+    @include position($position-type: relative)
+    @include size($height: 100vh, $min-height: 50vh, $width: 100% , $min-width: 100% )
+
+    .slideshow-container
+        @include position($position-type: relative)
+        @include size($height: 100%, $min-height: 100%, $width: 100% , $min-width: 100% )
+
+        .slide
+            @include size($height: 100%, $min-height: 100% , $width: 100%, $min-width: 100%)
+            display: none
+            flex-flow: column-reverse
+            justify-content: center
+            align-items: center
+
+            .slide-info
+                height: 50%
+                @include flex($flow: column, $justify-content: flex-start, $align-items: flex-start)
+                @include colors($bg-color: --colors-primary-600, $color: --colors-neutral-900)
+
+                .slide-info-container
+                    @include padding($p: 1rem)
+                    @include margin($m: 0 auto)
+
+            .slide-image
+                height: 50%
+                width: 100%
+
+                img
+                    @include image($img-fit: cover)
+        
+        .fade 
+            @include animation($a-name: fade, $a-duration: 1.5s)
+    
+    .slider-btn
+        @include position($position-type: absolute)
+        @include setPosition($top: 0, $bottom: 0, $right: 0, $left: 0)
+        @include margin($m: auto)
+        @include size($height: 1rem, $min-height: 1rem , $width: 3rem , $min-width: 3rem)
+        @include flex($flow: row, $justify-content: space-between, $align-items: center)
+        @include paddingTwo($p-tb: 0.65rem, $p-lr: 0.75rem)
+        @include colors($bg-color: --colors-neutral-100, $color: --colors-primary-500)
+        @include shadow($shadow-type: outset, $offset-x: 0, $offset-y: 0, $blur: 0.8rem, $spread: 0.5rem, $color: #00000040)
+        border-radius: 2rem
+        
+        > *
+            cursor: pointer
+        
+    .dots-container
+        @include position($position-type: absolute)
+        left: 0
+        right: 0
+        bottom: 1rem
+
+        @include flex($flow: row, $justify-content: center, $align-items: center)        
+        gap: 1rem
+        @include margin($m: 0 auto)
+
+        .dot
+            cursor: pointer
+            @include padding($p: 0.325rem)
+            @include marginTwo($m-tb: 0, $m-lr: 2px)
+            background-color: var(--colors-neutral-700)
+            border-radius: 50%
+
+        .active
+            background-color: var(--colors-primary-600)
+            padding: 0.4rem
+
+
+@include keyFrames($animation-name: fade)
+    from 
+        opacity: 0.4
+    to
+        opacity: 1
