@@ -4,11 +4,16 @@
 
 // Layouts
 @import ./layout/_grid
+@import ./layout/_footer
 
 //Components 
 @import ./components/_slider
 @import ./components/_hero
 @import ./components/_about
+@import ./components/_votives
+@import ./components/_index
+@import ./components/_split-section
+@import ./components/_instagramGallery
 
 // Theme
 @import ./core/_theme
@@ -68,9 +73,39 @@
         .dots-container
             left: 22vw
             justify-content: flex-start
+        
+    .votives
+        .votives-image
+            @include padding($p: 2rem)
 
+    
+    .instagram-gallery 
+        @include paddingTwo($p-tb: 4rem, $p-lr: 0)
+        
 
+    .insta-title
+        text-align: center
+    
 
+    .split-section 
+        height: 50vh
+        
+        .split-image, .split-content
+            height: 100%
+            width: 50%
+
+        .split-content-container
+            @include paddingTwo($p-tb: 3.5vw, $p-lr: 2vw)
+
+    #map
+        @include size($height: 100%, $min-height: 100%, $width: 50%, $min-width: 50%)
+    
+    
+
+    footer
+        .social-media-footer
+            justify-content: flex-end
+            align-items: flex-end
 
 @include mediaQuery($breakpoint: breakpointC)
 

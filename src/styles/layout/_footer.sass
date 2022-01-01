@@ -1,0 +1,22 @@
+@import ./../abstracts/_variables
+@import ./../abstracts/_mixins
+
+
+footer
+    @include colors($bg-color: --colors-neutral-800, $color: --colors-neutral-100)
+    
+    .social-media-footer
+        @include flex($flow: row, $justify-content: flex-start, $align-items: flex-start)
+        gap: 1rem
+        list-style: none
+        padding: 0
+        @include marginTwo($m-tb: 1rem, $m-lr: 0)
+        
+        .media-icon
+            font-size: 1.5rem
+
+    .copyright
+        color: var(--colors-neutral-100)
+        text-transform: uppercase
+        @include fontWeight($styles: bold)
+            

@@ -6,6 +6,7 @@
         <title>Camwood Candles</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
          <!-- FontAwesome CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -19,7 +20,7 @@
     </head>
     <body>
         <div id="root">
-            <div class="hero">
+            <div class="hero" id="top">
                 <div class="hero-container row">
                     <div class="hero-image col-6 col-m-8"></div>
                     <div class="hero-content col-6 col-m-4">
@@ -58,27 +59,31 @@
 
             <div class="points">
               <div class="point-container row">
-                <div class="point col-6 col-m-3 primary">
+                <div class="point col-6 col-m-3 order-m-1 order-1 primary-point">
                   <div class="point-content-container">
-                    <h4>Natural Substance</h4>
+                    <div class="point-icon" id="natural-substance"></div>
+                    <h4 class="primary-point--title">Natural Substance.</h4>
                     <p class="point-desc">Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives. </p>
                   </div>
                 </div>
-                <div class="point col-6 col-m-3 secondary">
+                <div class="point col-6 col-m-3 order-m-2 order-2 secondary-point">
                   <div class="point-content-container">
-                    <h4>Burn Efficency.</h4>
+                    <div class="point-icon" id="burnefficency"></div>
+                    <h4 class="secondary-point--title">Burn Efficency.</h4>
                     <p class="point-desc">Beeswax burns longer, cleaner and brighter than any other candle.</p>
                   </div>
                 </div>
-                <div class="point col-6 col-m-3 primary">
+                <div class="point col-6 col-m-3 order-m-3 order-4 primary-point">
                   <div class="point-content-container">
-                    <h4>Native</h4>
+                    <div class="point-icon" id="native"></div>
+                    <h4 class="primary-point--title">Native.</h4>
                     <p class="point-desc">Beeswax is the only wax that is essentially used in its native state, with only filtering for processing. </p>
                   </div>
                 </div>
-                <div class="point col-6 col-m-3 secondary">
+                <div class="point col-6 col-m-3 order-m-4 order-3 secondary-point">
                   <div class="point-content-container">
-                    <h4>Better air quality.</h4>
+                    <div class="point-icon" id="airquality"></div>
+                    <h4 class="secondary-point--title">Better air quality.</h4>
                     <p class="point-desc">Natural beeswax candles can provide an important ingredient for a healthier home. They eliminate bacteria, dust, pollen, pet dander and pollutants from the air.</p>
                   </div>
                 </div>
@@ -87,7 +92,30 @@
 
             <!-- About -->
 
-            <!-- <div class="slider">
+            <div class="container-fluid votives" id="votives">
+                <div class="row flex-center">
+                    <div class="col-6 col-m-6 votives-content">
+                        <div class="votives-content-container">
+                            <h2 style="color: var(--colors-primary-600);">Small & Medium Votives</h2>
+                            <p style="color: var(--colors-neutral-100);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam expedita, praesentium culpa et sapiente tempore facere ducimus fuga assumenda at earum quis dolorum nihil consequuntur harum similique suscipit, sit optio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis unde minima sunt. Sapiente, ipsa iure! Sit in atque officia. Eligendi molestias consectetur nisi ad, dolorem molestiae eos iusto sit quaerat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex-center">
+                    <div class="col-6 col-m-6">
+                        <div class="votives-image">
+                            <img src="./../src/assets/small_medium_votives_1.jpg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-6 col-m-6">
+                        <div class="votives-image">
+                            <img src="./../src/assets/small_medium_votives_2.jpg" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider" id="meltsandburners">
                 <div class="slideshow-container">
                     <div class="slide fade">
                         <div class="slide-image">
@@ -133,13 +161,108 @@
                     <div onclick="currentSlide(2)" id="dot-two" class="dot"></div>
                     <div onclick="currentSlide(3)" id="dot-three" class="dot"></div>
                 </div>
-            </div> -->
+            </div>
 
-            <!-- Slider -->
+            <!-- Slider 1 -->
 
+            
 
+            <!-- Slider 2 -->
+
+            <div class="skincare">
+                    <div class="split-section row">
+                        <div class="col-6 col-m-6 order-2 split-content">
+                            <div class="container-fluid split-content-container">
+                                <h2>Skincare</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam assumenda quod a molestiae sunt facere perspiciatis, numquam blanditiis saepe. A tempora ab nobis atque perspiciatis ipsam. Nisi sed excepturi quo deserunt tempora veniam earum assumenda porro dolore officiis itaque enim dolores ea, cumque dicta nulla adipisci voluptatibus ipsa nesciunt provident?</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-m-6 order-1 split-image" id="skincare"></div>
+                    </div>
+            </div>
+
+            <!-- Skincare -->
+
+            <div class="other">
+                <div class="split-section row">
+                    <div class="col-6 col-m-6 split-content">
+                        <div class="container-fluid split-content-container">
+                            <h2>Other</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam assumenda quod a molestiae sunt facere perspiciatis, numquam blanditiis saepe. A tempora ab nobis atque perspiciatis ipsam. Nisi sed excepturi quo deserunt tempora veniam earum assumenda porro dolore officiis itaque enim dolores ea, cumque dicta nulla adipisci voluptatibus ipsa nesciunt provident?</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-m-6 split-image" id="other"></div>
+                </div>
+            </div>
+
+            <div class="instagram-gallery">
+                <div class="container">
+                    <div class="row flex-center">
+                        <div class="col-7 col-m-7">
+                            <h2 class="insta-title">View Us On Instagram</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row flex-center">
+                        <div class="col-3 col-m-3 insta-image" id="01"></div>
+                        <div class="col-3 col-m-3 insta-image" id="02"></div>
+                        <div class="col-3 col-m-3 insta-image" id="03"></div>
+                    </div>
+                    <div class="row flex-center">
+                        <div class="col-3 col-m-3 insta-image" id="04"></div>
+                        <div class="col-3 col-m-3 insta-image" id="05"></div>
+                        <div class="col-3 col-m-3 insta-image" id="06"></div>
+                    </div>
+                    <div class="row flex-center">
+                        <div class="col-3 col-m-3 insta-image" id="07"></div>
+                        <div class="col-3 col-m-3 insta-image" id="08"></div>
+                        <div class="col-3 col-m-3 insta-image" id="09"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other -->
+
+            <div class="contact">
+                <div class="split-section row secondary">
+                    <div class="col-6 col-m-6 split-image order-2" id="map"></div>
+                    <div class="col-6 col-m-6 split-content order-1">
+                        <div class="container-fluid split-content-container contact-container">
+                            <h2 style="color: var(--colors-neutral-900); font-size: 1rem;">Camwood Candles</h2>
+                            <ul class="contact-info">
+                                <li>074242342523</li>
+                                <li>info@camwoodcandles.co.uk</li>
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, commodi.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+
+            <footer>               
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-m-6">
+                            <p class="copyright">&copy;<span id="year"><script>document.write(`${new Date().getFullYear()} Camwood Candles`)</script></span></p>
+                        </div>
+                        <div class="col-6 col-m-6">
+                            <ul class="social-media-footer">
+                                <li class="media-icon"><i class="fab fa-facebook-square"></i></li>
+                                <li class="media-icon"><i class="fab fa-instagram"></i></li>
+                                <li class="media-icon"><i class="fab fa-twitter"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Footer -->
 
         </div>
+        <script type="module" src="./../src/index.js"></script>
         <script>
             let slideIndex = 1;
             showSlides(slideIndex);
@@ -181,6 +304,5 @@
               dots[slideIndex - 1].className += " active";
             }
         </script>
-        <script type="modules" src="./../src/index.js"></script>
     </body>
 </html>
