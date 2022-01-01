@@ -20,7 +20,25 @@
 
             .hero-content-container
                 @include padding($p: 1rem)
-                                
+
+                .social-media
+                    @include flex($flow: row, $justify-content: flex-start, $align-items: flex-start)
+                    gap: 1rem
+                    margin-left: 1rem
+                    
+                    .icon
+                        @include border($b-width: 1px, $b-style: solid, $color: --colors-neutral-300)
+                        border-radius: 50%
+                        @include size($height: 1.8rem, $min-height: 1rem, $width: 1.8rem, $min-width: 1rem)
+                        @include flex($flow: column, $justify-content: center, $align-items: center)
+                        font-size: 0.95rem
+
+                    .primary-icon
+                        @include colors($bg-color: none, $color: --colors-primary-600)
+
+                    .secondary-icon
+                        @include colors($bg-color: none, $color: --colors-neutral-900)   
+                    
 
             .hero-intro
                 @include margin($m: 0 auto)
@@ -32,9 +50,9 @@
                     color: var(--colors-neutral-500)
 
             .store-link-btn
-                @include marginTwo($m-tb: 3rem, $m-lr: 0)
+                @include marginThree($m-t: 1rem , $m-lr: 0, $m-b: 2.5rem)
                 @include button($btn-type: "store-link")
-                width: min(20rem, 100%)
+                width: max(20rem, 100%)
 
     .scroll-down
         @include position($position-type: absolute)

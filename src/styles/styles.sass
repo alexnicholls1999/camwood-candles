@@ -10,6 +10,8 @@
 @import ./components/_hero
 @import ./components/_about
 
+// Theme
+@import ./core/_theme
     
 /* Media Queries - Breakpoint A (48em)
 @include mediaQuery($breakpoint: breakpointA)
@@ -35,6 +37,9 @@
 
     .about-container
         @include paddingThree($p-t: 5%, $p-lr: 0, $p-b: 10%)
+
+        .about-slogan
+            font-size: 2.5rem
         
     /* Slider
     .slider
@@ -63,6 +68,8 @@
         .dots-container
             left: 22vw
             justify-content: flex-start
+
+
 
 
 @include mediaQuery($breakpoint: breakpointC)
