@@ -1,0 +1,34 @@
+@import './../abstracts/_variables'
+@import './../abstracts/_mixins'
+
+.mobile-btn
+    @include position($position-type: fixed)
+    @include paddingTwo($p-tb: 1.1rem, $p-lr: 1rem)
+    @include shadow($shadow-type: outset, $offset-x: 0, $offset-y: 0, $blur: 1.1rem, $spread: .5rem, $color: var(--colors-primary-500))
+    @include colors($bg-color: --colors-primary-500 , $color: --colors-neutral-100)
+    border: none
+    border-radius: 100%
+    bottom: 5rem
+    right: 2.5rem
+    z-index: 2
+
+    .hamburger 
+        position: relative
+        @include flex($flow: column nowrap, $justify-content: space-around, $align-items: self-end)
+        @include size($height: 1.5rem, $min-height: 1.5rem, $width: 1.7rem, $min-width: 1.7rem)
+        margin: 0 auto
+    
+        span
+            @include size($height: 3px, $min-height: 3px, $width: 100%, $min-width: 100%)
+            background: var(--colors-neutral-100)
+            border-radius: 0.5rem
+
+            &:first-child
+                width: 90%
+                min-width: 90%
+
+            &:last-child
+                width: 70%
+                min-width: 70%  
+
+    

@@ -20,6 +20,38 @@
     </head>
     <body>
         <div id="root">
+            <header>
+                <div class="container">
+                    <div class="row">
+                    </div>
+                </div>
+            </header>
+            <!-- Header -->
+
+            <button class="mobile-btn" data-open>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            
+            <div class="mobile-menu">
+                <h2>Menu</h2>
+                <div class="close" data-close></div>
+                <nav class="menu">
+                    <li class="menu--item active-link"><a href="#top">Home</a></li>
+                    <li class="menu--item"><a href="#about">About Us</a></li>
+                    <li class="menu--item"><a href="#candles">Candles</a></li>
+                    <li class="menu--item"><a href="#meltsandburners">Melts & Burners</a></li>
+                    <li class="menu--item"><a href="#skincare">Skincare</a></li>
+                    <div class="btn-wrapper">
+                        <button class="btn btn-primary" data-ondimensisonsclick>Dimensions</button>
+                        <button class="btn btn-primary" data-oncontactclick>Contact</button>
+                    </div>
+                </nav>
+            </div>
+
             <div class="hero" id="top">
                 <div class="hero-container row">
                     <div class="hero-image col-6 col-m-8"></div>
@@ -115,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="slider" id="meltsandburners">
+            <div class="slider" id="pillarsanddinining">
                 <div class="slideshow-container">
                     <div class="slide fade">
                         <div class="slide-image">
@@ -165,7 +197,53 @@
 
             <!-- Slider 1 -->
 
-            
+            <div class="slider" id="meltsandburners">
+                <div class="slideshow-container-b">
+                    <div class="slide slide-reverse fade">
+                        <div class="slide-image">
+                            <img src="./../src/assets/pillars_dinning.jpg" alt="dining-candle">
+                        </div>
+                        <div class="slide-info secondary">
+                            <div class="slide-info-container">
+                                <h2>Pillars & Dinning</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ut possimus deleniti debitis nesciunt quidem praesentium inventore at id tempore? Possimus quas facilis temporibus eveniet deserunt. Delectus consectetur eum tempora.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide slide-reverse fade">
+                        <div class="slide-image">
+                            <img src="./../src/assets/20211105_165303.jpg" alt="dining-candle">
+                        </div>
+                        <div class="slide-info secondary">
+                            <div class="slide-info-container">
+                                <h2>Title 2</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ut possimus deleniti debitis nesciunt quidem praesentium inventore at id tempore? Possimus quas facilis temporibus eveniet deserunt. Delectus consectetur eum tempora.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide slide-reverse fade">
+                        <div class="slide-image">
+                            <img src="./../src/assets/20211105_165720.jpg" alt="dining-candle">
+                        </div>
+                        <div class="slide-info secondary">
+                            <div class="slide-info-container">
+                                <h2>Title 3</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ut possimus deleniti debitis nesciunt quidem praesentium inventore at id tempore? Possimus quas facilis temporibus eveniet deserunt. Delectus consectetur eum tempora.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-btn">
+                    <div onclick="plusSlidesB(-1)" class="arrow" id="previous">&#10094</div>
+                    <div onclick="plusSlidesB(1)" class="arrow" id="next">&#10095</div>
+                </div>
+
+                <div class="dots-container-b">
+                    <div onclick="currentSlideB(1)" id="dot-b-one" class="dot"></div>
+                    <div onclick="currentSlideB(2)" id="dot-b-two" class="dot"></div>
+                    <div onclick="currentSlideB(3)" id="dot-b-three" class="dot"></div>
+                </div>
+            </div>
 
             <!-- Slider 2 -->
 
@@ -304,5 +382,49 @@
               dots[slideIndex - 1].className += " active";
             }
         </script>
+        <!-- Slider A JS -->
+
+        <script>
+            let slideIndexB = 1;
+            showSlidesB(slideIndexB);
+      
+            // Next/previous controls
+            function plusSlidesB(n) {
+              showSlidesB((slideIndexB += n));
+            }
+      
+            // Thumbnail image controls
+            function currentSlideB(n) {
+              showSlidesB((slideIndexB = n));
+            }
+      
+            function showSlidesB(n) {
+              const slideArray = document.querySelector(".slideshow-container-b");
+              const slides = Array.from(slideArray.children);
+      
+              const dotArray = document.querySelector(".dots-container-b");
+              const dots = Array.from(dotArray.children);
+      
+              if (n > slides.length) {
+                slideIndexB = 1;
+              }
+              if (n < 1) {
+                slideIndexB = slides.length;
+              }
+              slides.map((slide) => {
+                slide.style.display = "none";
+                return null;
+              });
+      
+              dots.map((dot) => {
+                dot.className = dot.className.replace(" active", "");
+                return null;
+              });
+      
+              slides[slideIndexB - 1].style.display = "flex";
+              dots[slideIndexB - 1].className += " active";
+            }
+        </script>
+        <!-- Slider B JS -->
     </body>
 </html>

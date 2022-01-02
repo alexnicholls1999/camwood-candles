@@ -5,7 +5,7 @@
     @include position($position-type: relative)
     @include size($height: 100vh, $min-height: 50vh, $width: 100% , $min-width: 100% )
 
-    .slideshow-container
+    .slideshow-container, .slideshow-container-b
         @include position($position-type: relative)
         @include size($height: 100%, $min-height: 100%, $width: 100% , $min-width: 100% )
 
@@ -15,6 +15,14 @@
             flex-flow: column-reverse
             justify-content: center
             align-items: center
+
+            .slide-info.secondary
+                background-color: var(--colors-neutral-800)
+                .slide-info-container
+                    h2
+                        color: var(--colors-primary-600)
+                    p
+                        color: var(--colors-neutral-100)
 
             .slide-info
                 height: 50%
@@ -49,7 +57,7 @@
         > *
             cursor: pointer
         
-    .dots-container
+    .dots-container, .dots-container-b
         @include position($position-type: absolute)
         left: 0
         right: 0

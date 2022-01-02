@@ -15,8 +15,8 @@ export function closeButton(btn) {
 }
 
 export function mobileMenu() { 
-    const closeBtn = document.querySelector(".close");
-    const hamburger = document.querySelector(".hamburger");
+    const closeBtn = document.querySelector("[data-close]");
+    const mobileBtn = document.querySelector("[data-open]");
     const menu = document.querySelector(".mobile-menu");
 
     const openMenu = (e) => {
@@ -29,10 +29,10 @@ export function mobileMenu() {
         menu.classList.remove("open");
     }
 
-    hamburger.addEventListener("touchstart", openMenu)
+    mobileBtn.addEventListener("touchstart", openMenu)
     closeBtn.addEventListener("touchstart", closeMenu)
 
-    hamburger.addEventListener("click", openMenu)
+    mobileBtn.addEventListener("click", openMenu)
     closeBtn.addEventListener("click", closeMenu)
     
     closeButton(closeBtn)

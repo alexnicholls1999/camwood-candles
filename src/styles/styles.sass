@@ -5,6 +5,7 @@
 // Layouts
 @import ./layout/_grid
 @import ./layout/_footer
+@import ./layout/_mobilenav
 
 //Components 
 @import ./components/_slider
@@ -14,6 +15,7 @@
 @import ./components/_index
 @import ./components/_split-section
 @import ./components/_instagramGallery
+@import ./components/_button
 
 // Theme
 @import ./core/_theme
@@ -50,7 +52,10 @@
     .slider
         height: 60vh
 
-        .slideshow-container
+        .slideshow-container, .slideshow-container-b
+            .slide.slide-reverse
+                flex-flow: row-reverse
+
             .slide
                 flex-flow: row
 
@@ -73,7 +78,11 @@
         .dots-container
             left: 22vw
             justify-content: flex-start
-        
+
+        .dots-container-b
+            right: 22vw
+            justify-content: flex-end
+
     .votives
         .votives-image
             @include padding($p: 2rem)
