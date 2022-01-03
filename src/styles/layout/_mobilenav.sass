@@ -1,47 +1,55 @@
 @import ./../abstracts/_variables
 @import ./../abstracts/_mixins
 
-.mobile-menu
+
+.mobile-menu 
     @include position($position-type: fixed)
     @include colors($bg-color: --colors-neutral-800, $color: --colors-neutral-100)
+    @include paddingThree($p-t: 1rem, $p-lr: 0, $p-b: 4rem)
+    @include shadow($shadow-type: outset, $offset-x: 0, $offset-y: 0, $blur: 2rem, $spread: 0, $color: rgba(black, 0.5))    
+    
     display: block
     bottom: 0
-    right: 1rem
-    max-width: 360px
-    width: 90%
+    right: 5%
+    width: min(360px, 90%)
     z-index: 2
     border-radius: 0.5rem 0.5rem 0 0
-       
-    
-    /* Animate Out */ 
+
+    /* Animate In */
     visibility: hidden
     @include transition($transition: 0.5s ease-out, $transform: translateY(130%))
+    
 
-    h2 
+    h2
+        color: var(--colors-neutral-100)
+        margin: 0.83rem 0
         @include paddingThree($p-t: 1rem, $p-lr: 0.85rem, $p-b: 0)
         
-    .menu 
+
+    .close
+        @include position($position-type: absolute)
+        top: 1.5rem
+        right: 1rem
+
+    .menu
         display: flex
         flex-flow: column
         list-style: none
         gap: 0.65rem
-        margin: 0 auto
-        
+        margin: 0 1rem
+
         .menu--item a 
             display: block
-            @include padding($p: 1rem)
+            padding: 1rem
             text-decoration: none
             color: var(--colors-neutral-100)
-            cursor: pointer         
+            cursor: pointer
 
-    .close
-        position: absolute
-        top: 1.5rem
-        right: 1rem
-
-        > * 
-            @include size($height: 1.75rem, $min-height: 1.75rem, $width: auto, $min-width: auto)
-            fill: var(--colors-neutral-100)
+.active-link
+    background-color: var(--colors-neutral-700)
+    @include fontWeight($styles: $bold)
+    border-radius: 0.3rem
+    
 
 .open 
     /* Animate In */

@@ -1,0 +1,11 @@
+@import './../abstracts/_variables'
+@import './../abstracts/_mixins'
+
+.navbar
+    position: relative
+    @include flex($flow: row, $justify-content: space-around, $align-items: flex-end)
+    
+
+    .nav-menu
+        @include flex($flow: row, $justify-content: space-evenly, $align-items: center)
+        

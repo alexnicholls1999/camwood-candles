@@ -19,40 +19,57 @@
         <link rel="stylesheet" href="./../src/styles.css">
     </head>
     <body>
-        <div id="root">
-            <header>
-                <div class="container">
-                    <div class="row">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-m-4">
+                        <h4>Camwood Candles</h4>
+                    </div>
+                    <div class="col-6 col-m-8">
+                        <nav class="navbar">
+                            <ul class="nav-menu">
+                                <li class="nav-link"><a href="#top">Home</a></li>
+                                <li class="nav-link"><a href="#about">About</a></li>
+                                <li class="nav-link"><a href="#votives">Candles</a></li>
+                                <li class="nav-link"><a href="#meltsnburners">Melts & Burners</a></li>
+                                <li class="nav-link"><a href="#skincare">Skincare</a></li>
+                            </ul> 
+                            <div class="btn-wrapper">
+                                <button class="btn btn-primary" data-ondimensionsclick>Dimensions</button>
+                                <button class="btn btn-primary" data-oncontactclick>Contact</button>
+                            </div>
+                        </nav>
                     </div>
                 </div>
-            </header>
-            <!-- Header -->
-
-            <button class="mobile-btn" data-open>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            
-            <div class="mobile-menu">
-                <h2>Menu</h2>
-                <div class="close" data-close></div>
-                <nav class="menu">
-                    <li class="menu--item active-link"><a href="#top">Home</a></li>
-                    <li class="menu--item"><a href="#about">About Us</a></li>
-                    <li class="menu--item"><a href="#candles">Candles</a></li>
-                    <li class="menu--item"><a href="#meltsandburners">Melts & Burners</a></li>
-                    <li class="menu--item"><a href="#skincare">Skincare</a></li>
-                    <div class="btn-wrapper">
-                        <button class="btn btn-primary" data-ondimensisonsclick>Dimensions</button>
-                        <button class="btn btn-primary" data-oncontactclick>Contact</button>
-                    </div>
-                </nav>
             </div>
-
-            <div class="hero" id="top">
+        </header>
+        <!-- Header -->
+        
+        <button class="mobile-btn" data-open>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        
+        <div class="mobile-menu">
+            <h2>Menu</h2>
+            <div class="close" data-close></div>
+            <nav class="menu">
+                <li class="menu--item"><a class="active-link" href="#top">Home</a></li>
+                <li class="menu--item"><a href="#about">About Us</a></li>
+                <li class="menu--item"><a href="#votives">Candles</a></li>
+                <li class="menu--item"><a href="#meltsandburners">Melts & Burners</a></li>
+                <li class="menu--item"><a href="#skincare">Skincare</a></li>
+                <div class="btn-wrapper" style="margin-top: 0.75rem">
+                    <button class="btn btn-primary" data-ondimensionsclick>Dimensions</button>
+                    <button class="btn btn-primary" data-oncontactclick>Contact</button>
+                </div>
+            </nav>
+        </div>
+        <div id="root">
+            <div class="hero page-section" id="top">
                 <div class="hero-container row">
                     <div class="hero-image col-6 col-m-8"></div>
                     <div class="hero-content col-6 col-m-4">
@@ -75,7 +92,7 @@
             </div>
             <!-- Hero -->
 
-            <div class="container-fluid" id="about">
+            <div class="container-fluid page-section" id="about">
                 <div class="about-container row">
                     <div class="col-6 col-m-6">
                         <h2 class="about-title">About Us</h2>
@@ -89,42 +106,42 @@
                 </div>
             </div>
 
-            <div class="points">
-              <div class="point-container row">
+            <div class="points page-section">
+            <div class="point-container row">
                 <div class="point col-6 col-m-3 order-m-1 order-1 primary-point">
-                  <div class="point-content-container">
+                <div class="point-content-container">
                     <div class="point-icon" id="natural-substance"></div>
                     <h4 class="primary-point--title">Natural Substance.</h4>
                     <p class="point-desc">Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives. </p>
-                  </div>
+                </div>
                 </div>
                 <div class="point col-6 col-m-3 order-m-2 order-2 secondary-point">
-                  <div class="point-content-container">
+                <div class="point-content-container">
                     <div class="point-icon" id="burnefficency"></div>
                     <h4 class="secondary-point--title">Burn Efficency.</h4>
                     <p class="point-desc">Beeswax burns longer, cleaner and brighter than any other candle.</p>
-                  </div>
+                </div>
                 </div>
                 <div class="point col-6 col-m-3 order-m-3 order-4 primary-point">
-                  <div class="point-content-container">
+                <div class="point-content-container">
                     <div class="point-icon" id="native"></div>
                     <h4 class="primary-point--title">Native.</h4>
                     <p class="point-desc">Beeswax is the only wax that is essentially used in its native state, with only filtering for processing. </p>
-                  </div>
+                </div>
                 </div>
                 <div class="point col-6 col-m-3 order-m-4 order-3 secondary-point">
-                  <div class="point-content-container">
+                <div class="point-content-container">
                     <div class="point-icon" id="airquality"></div>
                     <h4 class="secondary-point--title">Better air quality.</h4>
                     <p class="point-desc">Natural beeswax candles can provide an important ingredient for a healthier home. They eliminate bacteria, dust, pollen, pet dander and pollutants from the air.</p>
-                  </div>
                 </div>
-              </div>
+                </div>
+            </div>
             </div>
 
             <!-- About -->
 
-            <div class="container-fluid votives" id="votives">
+            <div class="container-fluid votives page-section" id="votives">
                 <div class="row flex-center">
                     <div class="col-6 col-m-6 votives-content">
                         <div class="votives-content-container">
@@ -197,7 +214,7 @@
 
             <!-- Slider 1 -->
 
-            <div class="slider" id="meltsandburners">
+            <div class="slider page-section" id="meltsandburners">
                 <div class="slideshow-container-b">
                     <div class="slide slide-reverse fade">
                         <div class="slide-image">
@@ -247,7 +264,7 @@
 
             <!-- Slider 2 -->
 
-            <div class="skincare">
+            <div class="skincare page-section">
                     <div class="split-section row">
                         <div class="col-6 col-m-6 order-2 split-content">
                             <div class="container-fluid split-content-container">

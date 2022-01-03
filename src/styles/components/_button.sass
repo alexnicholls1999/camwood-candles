@@ -1,6 +1,17 @@
 @import './../abstracts/_variables'
 @import './../abstracts/_mixins'
 
+.btn 
+    padding: 0.75rem
+    border: none
+    border-radius: 0.25rem
+    @include fontWeight($styles: $bold)    
+    font-size: 0.9rem
+
+.btn-primary
+    @include colors($bg-color: --colors-primary-600, $color: --colors-neutral-900)
+
+
 .mobile-btn
     @include position($position-type: fixed)
     @include paddingTwo($p-tb: 1.1rem, $p-lr: 1rem)
@@ -31,4 +42,9 @@
                 width: 70%
                 min-width: 70%  
 
-    
+.btn-wrapper 
+    @include flex($flow: row, $justify-content: space-evenly, $align-items: center)
+    gap: 1rem
+
+    > *
+        flex-basis: 100%
