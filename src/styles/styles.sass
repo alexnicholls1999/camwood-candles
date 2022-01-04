@@ -7,6 +7,7 @@
 @import ./layout/_footer
 @import ./layout/_mobilenav
 @import ./layout/_navbar
+@import ./layout/_header
 
 //Components 
 @import ./components/_slider
@@ -109,13 +110,18 @@
 
     #map
         @include size($height: 100%, $min-height: 100%, $width: 50%, $min-width: 50%)
-    
-    
 
     footer
         .social-media-footer
             justify-content: flex-end
             align-items: flex-end
+
+@include mediaQuery($breakpoint: breakpointB) 
+    .mobile-btn
+        display: none
+    
+    .navbar
+        display: flex
 
 @include mediaQuery($breakpoint: breakpointC)
 
