@@ -1,5 +1,6 @@
 @import ./../abstracts/variables
 @import ./../abstracts/mixins
+@import ./_theme
 
 
 \:root        
@@ -12,3 +13,6 @@ body, button
     @include font-family($font-family-1: $font-family-bitter, $font-family-2: $font-family-georgia , $font-family-3: $font-family-arial)
     @include body($color: --colors-neutral-900, $font-size: --fs-b)
     
+.hyperlink 
+    @include fontWeight($styles: $bold)
+    text-decoration: none
