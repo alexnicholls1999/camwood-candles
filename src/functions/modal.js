@@ -36,16 +36,20 @@ export function renderProducts() {
 
         return `
             <h3>${title}</h3>
-            <table>
-                <tr>
-                    <th>Product Name</th>
-                    <th>Dimensions</th>
-                    <th>Cost</th>
-                </tr>
-                <tr>${table.row1Arr.map((row) => {return `<td>${row}</td>`})}</tr>
-                <tr>${table.row2Arr.map((row) => {return `<td>${row}</td>`})}</tr>
-                <tr>${table.row3Arr.map((row) => {return `<td>${row}</td>`})}</tr>
-                <tr>${table.row4Arr.map((row) => {return `<td>${row}</td>`})}</tr>
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Dimensions</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="secondary-row">${table.row1Arr.map((row) => {return `<td>${row}</td>`}).join(' ')}</tr>
+                    <tr>${table.row2Arr.map((row) => {return `<td>${row}</td>`}).join(' ')}</tr>
+                    <tr class="secondary-row">${table.row3Arr.map((row) => {return `<td>${row}</td>`}).join(' ')}</tr>
+                    <tr>${table.row4Arr.map((row) => {return `<td>${row}</td>`}).join(' ')}</tr>
+                </tbody>
             </table>
         `;
     }).join(' ')
@@ -63,7 +67,6 @@ export function Modal(){
                     <h2>Dimensions</h2>
                     <div class="products"></div>
                 </div>
-                     
                 <div class="modal-footer">                    
                     <button class="btn btn-primary" data-closemodalclick>CLOSE</button>
                 </div>  
@@ -75,8 +78,9 @@ export function Modal(){
 }
 
 export function toggleModal(){
-    const mobileBtn = document.querySelector("[data-ondimensionsclick]");
-    const closeBtn = document.querySelector("[data-closemodalclick]")
+    const modalBtn = document.querySelector("[data-ondimensionsclick]");
+    const closeBtn = document.querySelector("[data-closemodalclick]");
+    const modalmobileBtn = document.querySelector("[data-ondimensionsmobileclick]");
     const modal = document.querySelector(".modal-wrapper");
 
     const openModal = (e) => {
@@ -89,6 +93,7 @@ export function toggleModal(){
         modal.classList.remove("open-modal")
     }
 
-    mobileBtn.addEventListener("click", openModal)
+    modalBtn.addEventListener("click", openModal)
+    modalmobileBtn.addEventListener("click", openModal)
     closeBtn.addEventListener("click", closeModal)
 }
