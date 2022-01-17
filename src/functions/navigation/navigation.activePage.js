@@ -4,23 +4,28 @@ export function currentPageObserver() {
     const toggleActiveClass = (target) => {
         document.querySelector(".active-link").classList.remove("active-link");
 
-        const id = target.getAttribute("id")
-        const newLink = document.querySelector(`[href="#${id}"]`).classList.add("active-link");
-    }
+        const id = target.getAttribute("id");
+        console.log(target)
+        const newLink = document
+        .querySelector(`[href="#${id}"]`)
+        .classList.add("active-link");
+    };
 
     const options = {
         threshold: 0.55
-    }
+    };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            const { isIntersetcting, intersectionRatio, target } = entry;
+        const { isIntersecting, intersectionRatio, target } = entry;
 
-            if (isIntersetcting && intersectionRatio >= 0.55) return toggleActiveClass(target);
+        if (isIntersecting && intersectionRatio >= 0.55)
+            return toggleActiveClass(target);
         });
-    }, options)
+    }, options);
 
     pages.forEach((page) => {
         observer.observe(page);
     });
 }
+  
