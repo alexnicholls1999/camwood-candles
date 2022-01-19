@@ -1,8 +1,11 @@
 @import ./../abstracts/_mixins
 
 
+
 .contact-form-wrapper 
-    width: min(90%, 40em)
+    width: min(90%, 30em)
+    background-color: var(--colors-neutral-800)
+    padding: 3rem 1rem
     margin-inline: auto
 
     h2 
@@ -13,16 +16,15 @@
         margin-inline: auto
         padding-block: 2rem
         gap: 1rem
-        grid-template-columns: 1fr
 
         .contact-method 
             display: grid
-            grid-template-columns: 15% 85%
+            grid-template-columns: 10% 90%
             justify-content: center
             align-items: center
             
             i, p 
-                color: var(--colors-neutral-900)
+                color: var(--colors-neutral-100)
 
             p 
                 margin: 0
@@ -37,3 +39,27 @@
             flex-flow: column
             gap: 1rem
             margin-bottom: 1rem
+            color: var(--colors-neutral-100)
+
+            label
+                font-size: 0.75rem
+                @include fontWeight($styles: bold)
+                
+
+            input, textarea
+                background-color: var(--colors-neutral-600)
+                outline: none
+                border: none
+                padding: 1rem
+                font-family: Bitter
+                @include fontWeight($styles: bold)
+                
+
+            textarea
+                resize: none
+
+        button 
+            width: min(100%, 10em)
+
+#map 
+    min-height: 50vh

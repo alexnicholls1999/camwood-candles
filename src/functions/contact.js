@@ -1,12 +1,19 @@
 export function contactMe() {
-    const contactLink = document.querySelector('#contact-me');
+    // const contactLink = document.querySelector('#contact-me');
 
-    function emailLink(){
-        const camwoodcandlesemail = "camwoodcandles@gmail.com"
+    // function emailLink(){
+
       
-        window.location = `mailto:${camwoodcandlesemail}`
-    }
+    //     window.location = `mailto:${camwoodcandlesemail}`
+    // }
 
-    contactLink.addEventListener("click", emailLink)
+    // contactLink.addEventListener("click", emailLink)
 
+
+    const contactBtn = document.querySelector('[data-oncontactclick]');
+
+    contactBtn.addEventListener("click", function() {
+        window.location = "#contact-me"
+    })
+    
 }
