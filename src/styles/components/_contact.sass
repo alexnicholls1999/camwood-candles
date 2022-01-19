@@ -3,7 +3,7 @@
 
 
 .contact-form-wrapper 
-    width: min(90%, 30em)
+    width: min(90%, 25em)
     background-color: var(--colors-neutral-800)
     padding: 3rem 1rem
     margin-inline: auto
@@ -18,10 +18,11 @@
         gap: 1rem
 
         .contact-method 
-            display: grid
-            grid-template-columns: 10% 90%
-            justify-content: center
+            display: flex
+            flex-flow: row
+            justify-content: flex-start
             align-items: center
+            gap: 0.5rem
             
             i, p 
                 color: var(--colors-neutral-100)
@@ -63,3 +64,4 @@
 
 #map 
     min-height: 50vh
+    z-index: 0
