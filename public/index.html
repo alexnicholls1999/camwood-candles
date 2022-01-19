@@ -108,36 +108,36 @@
             </div>
 
             <div class="points page-section">
-            <div class="point-container row">
-                <div class="point col-6 col-m-3 order-m-1 order-1 primary-point">
-                <div class="point-content-container">
-                    <div class="point-icon" id="natural-substance"></div>
-                    <h4 class="primary-point--title">Natural Substance.</h4>
-                    <p class="point-desc">Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives. </p>
+                <div class="point-container row">
+                    <div class="point col-6 col-m-3 order-m-1 order-1 primary-point">
+                    <div class="point-content-container">
+                        <div class="point-icon" id="natural-substance"></div>
+                        <h4 class="primary-point--title">Natural Substance.</h4>
+                        <p class="point-desc">Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives. </p>
+                    </div>
+                    </div>
+                    <div class="point col-6 col-m-3 order-m-2 order-2 secondary-point">
+                    <div class="point-content-container">
+                        <div class="point-icon" id="burnefficency"></div>
+                        <h4 class="secondary-point--title">Burn Efficency.</h4>
+                        <p class="point-desc">Beeswax burns longer, cleaner and brighter than any other candle.</p>
+                    </div>
+                    </div>
+                    <div class="point col-6 col-m-3 order-m-3 order-4 primary-point">
+                    <div class="point-content-container">
+                        <div class="point-icon" id="native"></div>
+                        <h4 class="primary-point--title">Native.</h4>
+                        <p class="point-desc">Beeswax is the only wax that is essentially used in its native state, with only filtering for processing. </p>
+                    </div>
+                    </div>
+                    <div class="point col-6 col-m-3 order-m-4 order-3 secondary-point">
+                    <div class="point-content-container">
+                        <div class="point-icon" id="airquality"></div>
+                        <h4 class="secondary-point--title">Better air quality.</h4>
+                        <p class="point-desc">Natural beeswax candles can provide an important ingredient for a healthier home. They eliminate bacteria, dust, pollen, pet dander and pollutants from the air.</p>
+                    </div>
+                    </div>
                 </div>
-                </div>
-                <div class="point col-6 col-m-3 order-m-2 order-2 secondary-point">
-                <div class="point-content-container">
-                    <div class="point-icon" id="burnefficency"></div>
-                    <h4 class="secondary-point--title">Burn Efficency.</h4>
-                    <p class="point-desc">Beeswax burns longer, cleaner and brighter than any other candle.</p>
-                </div>
-                </div>
-                <div class="point col-6 col-m-3 order-m-3 order-4 primary-point">
-                <div class="point-content-container">
-                    <div class="point-icon" id="native"></div>
-                    <h4 class="primary-point--title">Native.</h4>
-                    <p class="point-desc">Beeswax is the only wax that is essentially used in its native state, with only filtering for processing. </p>
-                </div>
-                </div>
-                <div class="point col-6 col-m-3 order-m-4 order-3 secondary-point">
-                <div class="point-content-container">
-                    <div class="point-icon" id="airquality"></div>
-                    <h4 class="secondary-point--title">Better air quality.</h4>
-                    <p class="point-desc">Natural beeswax candles can provide an important ingredient for a healthier home. They eliminate bacteria, dust, pollen, pet dander and pollutants from the air.</p>
-                </div>
-                </div>
-            </div>
             </div>
 
             <!-- About -->
@@ -217,14 +217,14 @@
                     </div>
                 </div>
                 <div class="slider-btn">
-                    <div onclick="plusSlides(-1)" class="arrow" id="previous">&#10094</div>
-                    <div onclick="plusSlides(1)" class="arrow" id="next">&#10095</div>
+                    <div onclick="plusSlides(1)" class="arrow" id="previous">&#10094</div>
+                    <div onclick="plusSlides(-1)" class="arrow" id="next">&#10095</div>
                 </div>
 
                 <div class="dots-container">
-                    <div onclick="currentSlide(1)" id="dot-one" class="dot"></div>
-                    <div onclick="currentSlide(2)" id="dot-two" class="dot"></div>
-                    <div onclick="currentSlide(3)" id="dot-three" class="dot"></div>
+                    <div onclick="currentSlides(1)" id="dot-one" class="dot"></div>
+                    <div onclick="currentSlides(2)" id="dot-two" class="dot"></div>
+                    <div onclick="currentSlides(3)" id="dot-three" class="dot"></div>
                 </div>
             </div>
 
@@ -319,8 +319,8 @@
                     </div>
                 </div>
                 <div class="slider-btn">
-                    <div onclick="plusSlidesB(-1)" class="arrow" id="previousB">&#10094</div>
-                    <div onclick="plusSlidesB(1)" class="arrow" id="nextB">&#10095</div>
+                    <div class="arrow" onclick="plusSlidesB(1)" id="previousB">&#10094</div>
+                    <div class="arrow" onclick="plusSlidesB(-1)" id="nextB">&#10095</div>
                 </div>
 
                 <div class="dots-container-b">
@@ -395,7 +395,45 @@
 
             <!-- Other -->
 
-            .contact>
+            <div class="contact">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-form-wrapper">
+                            <h2 class="contact-form--title">Get in touch</h2>
+                            <div class="contact-details contact-grid">
+                                <div class="contact-method">
+                                    <i class="far fa-map" aria-hidden="true"></i>
+                                    <p>Ashington, RH20 3BX</p>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="fa fas fa-phone"></i>
+                                    <p>0742424342523</p>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="far fa-envelope"></i>
+                                    <p>camwoodcandles@gmail.com</p>
+                                </div>
+                            </div>
+                            <form action="" class="contact-form">
+                                <div class="form-control">
+                                    <label for="">Name</label>
+                                    <input type="text" placeholder="Enter Name">
+                                </div>
+                                <div class="form-control">
+                                    <label for="">Email</label>
+                                    <input type="text" placeholder="Enter Email">
+                                </div>
+                                <div class="form-control">
+                                    <label for="">Message</label>
+                                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter message"></textarea>
+                                </div>
+                                <button class="btn btn-secondary">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12"><div id="map"></div></div>
+                </div>
+            </div>
 
             <!-- Contact -->
 
