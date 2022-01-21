@@ -45,15 +45,17 @@
             label
                 font-size: 0.75rem
                 @include fontWeight($styles: bold)
-                
+
+
 
             input, textarea
-                background-color: var(--colors-neutral-600)
+                @include colors($bg-color: --colors-neutral-600, $color: --colors-neutral-100)
+                
                 outline: none
                 border: none
                 padding: 1rem
                 font-family: Bitter
-                @include fontWeight($styles: bold)
+                @include fontWeight($styles: semiBold)
                 
 
             textarea
