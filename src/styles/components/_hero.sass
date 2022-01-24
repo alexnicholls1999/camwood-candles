@@ -19,7 +19,7 @@
             background-color: white         
 
             .hero-content-container
-                @include padding($p: 1rem)
+                @include padding($p: 1.75rem 1rem)
 
                 .social-media
                     @include flex($flow: row, $justify-content: flex-start, $align-items: flex-start)
@@ -44,25 +44,32 @@
                 @include margin($m: 0 auto)
 
                 .slogan
-                    font-size: 1rem
+                    font-size: 0.9rem
                     @include fontWeight($styles: $regular)
-                    
+                    margin: 0.5rem 0
                     color: var(--colors-neutral-500)
 
             .store-link-btn
-                @include marginThree($m-t: 1rem , $m-lr: 0, $m-b: 2.5rem)
+                @include marginThree($m-t: 0.75rem , $m-lr: 0, $m-b: 1.5rem)
                 @include button($btn-type: "store-link")
                 width: min(25rem, 100%)
 
     .scroll-down
         @include position($position-type: absolute)
-        bottom: 2rem
-        left: 2rem
+        bottom: 1rem
+        left: 1rem        
+        width: min(25vw, 8rem)
 
-        &::after
-            @include after($aft-img: $scroll-down-arrow, $aft-size: contain, $aft-pos: center, $aft-repeat: no-repeat)
-            margin-left: 1rem
-            padding: 0.6rem
+        .scroll-down-wrapper 
+            display: grid
+            grid-template-columns: 90% 10%
+            
+            .scroll-down--title
+                font-size: min(3vw, 0.8rem)
+
+            .scroll-down--arrow
+                @include bgImage($src: $scroll-down-arrow, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
+                
             
         
         

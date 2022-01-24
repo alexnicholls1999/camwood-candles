@@ -6,12 +6,11 @@
 \:root        
     @include root($breakpoint: default)
     
-
-body, button 
+body
     margin: 0
     padding: 0
     @include font-family($font-family-1: $font-family-bitter, $font-family-2: $font-family-georgia , $font-family-3: $font-family-arial)
-    @include body($color: --colors-neutral-900, $font-size: --fs-b)
+    @include body($color: --colors-neutral-900)
     
 .hyperlink 
     @include fontWeight($styles: $bold)
