@@ -18,42 +18,26 @@
     .about-info 
         padding-bottom: 2rem
 
-.point-container
-    width: 100%
-    position: relative
+.points 
+    .points-grid
+        display: grid
 
-    .point
-        display: flex
-        flex-flow: column
-        width: 100%
-        
-        .point-content-container
-            padding: 2rem 1rem 6rem
+        .point
+            padding: 3rem 1rem 4rem
 
-            .point-icon
-                @include size($height: 3rem, $min-height: 2rem, $width: 3rem, $min-width: 2rem)
-                
-            #natural-substance
-                @include bgImage($src: $symbol-natural-substance, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
-                
-            #burnefficency
-                @include bgImage($src: $symbol-burn-effiency, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
+        .primary-point
+            @include colors($bg-color: --colors-neutral-800, $color: --colors-neutral-100)
+            
+            p
+                color: var(--colors-neutral-100)
+                width: min(25rem, 100%)
 
-            #native
-                @include bgImage($src: $symbol-native, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
-
-            #airquality
-                @include bgImage($src: $symbol-air-quality, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
-
-            .point-desc
-                font-size: 0.9rem
-                @include fontWeight($styles: $light)
-                line-height: 2rem                
-
-    .primary-point
-        @include colors($bg-color: --colors-neutral-800, $color: --colors-neutral-100)
-
-        .primary-point--title
+        .point--desc
+            font-size: 0.9rem
+            @include fontWeight($styles: $light)
+            line-height: 1.5rem  
+            
+        .point--title
             &::after
                 content: ''
                 display: block
@@ -63,13 +47,9 @@
                 border-spacing: 1px
                 @include shadow($shadow-type: inset, $offset-x: 0, $offset-y: 1px, $blur: 1px, $spread: 0, $color: rgba(var(--colors-neutral-900), 0.5) )
                 width: 1.75rem
-         
-        p
-            color: white
-            width: min(25rem, 100%)
 
-    .secondary-point
-        @include colors($bg-color: --colors-primary-600, $color: --colors-neutral-900)
+        .secondary-point
+            @include colors($bg-color: --colors-primary-600, $color: --colors-neutral-900)
 
         .secondary-point--title
             &::after
@@ -81,6 +61,18 @@
                 border-spacing: 1px
                 @include shadow($shadow-type: inset, $offset-x: 0, $offset-y: 1px, $blur: 1px, $spread: 0, $color: rgba(black, 0.5) )
                 width: 1.75rem
-               
 
-        
+        .point-icon
+                @include size($height: 3rem, $min-height: 2rem, $width: 3rem, $min-width: 2rem)
+                
+        #natural-substance
+            @include bgImage($src: $symbol-natural-substance, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
+            
+        #burnefficency
+            @include bgImage($src: $symbol-burn-effiency, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
+
+        #native
+            @include bgImage($src: $symbol-native, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)
+
+        #airquality
+            @include bgImage($src: $symbol-air-quality, $bg-size: contain, $bg-position: center, $bg-repeat: no-repeat)

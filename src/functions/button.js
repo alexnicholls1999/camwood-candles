@@ -7,6 +7,14 @@ export function contactMe() {
     
 }
 
+export function top(){
+    const topBtn = document.querySelector('[data-ontopclick]');
+
+    topBtn.addEventListener("click", function() {
+        window.location = "/"
+    })
+}
+
 export function buttonToggle() {
     const contactBtn = document.querySelector('[data-oncontactclick]');
     const dimensionsBtn = document.querySelector('[data-ondimensionsclick]');

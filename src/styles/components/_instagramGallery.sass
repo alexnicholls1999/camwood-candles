@@ -1,16 +1,20 @@
 @import './../abstracts/_variables'
 @import './../abstracts/_mixins'
     
-.instagram-gallery
+.gallery-title 
+    text-align: center 
+    color: var(--colors-primary-800)
+    padding: 2rem 0
 
-.insta-image
-    height: 22rem
-    width: 5rem
-    @include margin($m: 1rem)
-    @include bgImage($src: "https://media.istockphoto.com/photos/holiday-candles-picture-id590612270?k=20&m=590612270&s=612x612&w=0&h=fvmInWbStL3WTgYAigcp7E-xCFduFdoS0zX72ZZr1Yk=", $bg-size: cover , $bg-position: center, $bg-repeat: no-repeat)
-    @include shadow($shadow-type: outset, $offset-x: 0, $offset-y: 0, $blur: 4rem, $spread: 0, $color: rgba(#979797, 0.5))
-    
+.gallery
+    display: grid
+    gap: 1rem
 
-.insta-title
-    color: var(--colors-primary-600)
-    @include padding($p: 2rem)
+    .grid--item 
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            display: block
+            
+    padding-bottom: 2rem

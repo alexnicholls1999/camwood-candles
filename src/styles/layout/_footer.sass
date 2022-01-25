@@ -6,11 +6,14 @@ footer
     @include colors($bg-color: --colors-neutral-900, $color: --colors-neutral-100)
     
     .social-media-footer
-        @include flex($flow: row, $justify-content: flex-start, $align-items: flex-start)
-        gap: 1rem
+        @include flex($flow: row, $justify-content: flex-start, $align-items: center)
+        gap: 1.5rem
         list-style: none
         padding: 0
         @include marginTwo($m-tb: 1rem, $m-lr: 0)
+
+        .top
+            display: none
         
         .media-icon
             font-size: 1.5rem
