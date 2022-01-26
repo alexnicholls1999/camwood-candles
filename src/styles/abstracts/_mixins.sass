@@ -21,6 +21,17 @@
         text-align: left
         font-family: $font-family-bitter
 
+    @else if $btn-type == "store-link-xl"
+        border: none
+        border-left: var(--colors-primary-600) 0.25rem solid
+        @include bgImage($src: $arrow-btn, $bg-size: 2.5rem, $bg-position: 95%, $bg-repeat: no-repeat)
+        @include colors($bg-color: --colors-neutral-100, $color: --colors-neutral-500)
+        @include padding($p: 1vw)
+        @include shadow($shadow-type: outset, $offset-x: 0, $offset-y: 1rem, $blur: 3.5rem, $spread: 0.1rem, $color: rgba(#CECECE, 0.5))
+        font-size: 1.5rem
+        text-align: left
+        font-family: $font-family-bitter
+
 // Size
 @mixin size($height, $min-height, $width, $min-width) 
     height: $height

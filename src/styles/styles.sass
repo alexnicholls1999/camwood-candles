@@ -109,6 +109,9 @@
             .skincare-section--info 
                 padding: 3rem
 
+                .skincare-section--ul
+                    width: 80%
+
     .gallery-title
         padding-top: 3rem
 
@@ -160,16 +163,220 @@
     \:root 
         @include root($breakpoint: breakpointC)
 
-    .slider
+    h1 
+        font-size: 7.5em 
 
-        .slideshow-container
+    p 
+        font-size: 2rem
+        line-height: 2.5rem
+
+    .btn 
+        font-size: 1.75rem
+        padding: 1.75rem 3rem
+        border-radius: 0.75rem
+
+    .container-fluid
+        padding: 0 1vw
+
+    header 
+        .container
+            width: 80%
+
+            .navbar
+
+                .nav-menu
+                    gap: 3rem
+                    font-size: 2rem
+
+                    .btn-wrapper
+                        min-width: 20rem
+                        gap: 2rem
+
+    
+    .hero
+        .hero-container
+            .hero-content
+                .hero-content-container
+                    @include padding($p: 6.75vw 2vw)
+
+                    .store-link-btn
+                        @include marginThree($m-t: 0.75rem , $m-lr: 0, $m-b: 2vw)
+                        @include button($btn-type: "store-link-xl")
+                        width: 80%
+
+                    .social-media
+                        gap: 3rem
+                        margin-left: 1vw
+                            
+                        .icon
+                            border-width: 0.2rem
+                            @include size($height: 1.5vw, $min-height: 1.5vw, $width: 1.5vw, $min-width: 1.5vw)
+                            @include flex($flow: column, $justify-content: center, $align-items: center)
+                            font-size: 2rem
+
+                        .primary-icon
+                            @include colors($bg-color: none, $color: --colors-primary-600)
+
+                        .secondary-icon
+                            @include colors($bg-color: none, $color: --colors-neutral-900)   
+
+                .hero-intro
+                    .slogan
+                        margin: 2.5rem 0
+                        font-size: 2.75rem
+                        line-height: 3.5rem
+        .scroll-down
+            bottom: 1vw
+            left: 1vw       
+            width: 10rem
+
+            .scroll-down-wrapper 
+                display: grid
+                grid-template-columns: 90% 10%
+                gap: 1rem
+                
+                .scroll-down--title
+                    font-size: 1.45rem
+
+                .scroll-down--arrow
+                    @include bgImage($src: $scroll-down-arrow, $bg-size: 1.35rem, $bg-position: center, $bg-repeat: no-repeat)
+
+    .about-container
+        .about-title
+            font-size: 2rem
+
+        .about-slogan
+            font-size: 2.75vw
+        
+    .points 
+        .points-grid
+
+            .primary-point p
+                width: 80%
+
+            .point-icon
+                $dimension: 1.5rem * 3
+                @include size($height: $dimension , $min-height: $dimension, $width: $dimension, $min-width: $dimension )
+                
+
+            .point
+                padding: 2vw 1vw 8vw
+
+            .point--desc
+                font-size: 1.6rem
+                line-height: 2.3rem
+
+            .point--title
+                font-size: 2rem
+
+                &::after
+                    margin-top: 0.5vw
+                    border-width: 4px
+                    width: 1vw
+        
+    .votives
+        @include paddingTwo($p-tb: 4vw, $p-lr: 0)
+
+        h2
+            font-size: 4rem
+        
+        .votives-image
+            padding: 2vw
+
+    .votives-content-container
+        width: 100%
+
+    .slider
+        .slideshow-container, .slideshow-container-b
             .slide
                 .slide-info
                     .slide-info-container
-                        @include paddingTwo($p-tb: 7vw, $p-lr: 4vw)
+                        @include paddingTwo($p-tb: 4vw, $p-lr: 4vw)
+
+                        h2
+                            font-size: 4rem
+                        
+                        ul 
+                            font-size: 2rem
+                            width: 80%
 
         .slider-btn
-            bottom: 5rem
+            bottom: 4vw
+            @include size($height: 1vw, $min-height: 1vw, $width: 2.25vw, $min-width: 2.25vw)
+            font-size: 0.6vw
+            @include fontWeight($styles: bold)
+            
 
-        .dots-container
+        .dots-container, .dots-container-b
             left: 22vw
+            bottom: 4rem
+
+            .dot
+                @include padding($p: 0.35vw)
+                @include marginTwo($m-tb: 0, $m-lr: 0.4vw)
+
+            .active
+                padding: 0.4vw
+
+    .skincare-section--info
+        padding: 10vw
+
+        h2
+            font-size: 4rem
+
+        .skincare-section--ul
+            font-size: 2rem
+            line-height: 3rem !important
+
+    .gallery-title 
+        padding: 2vw 0
+        font-size: 4rem
+
+    .contact-form-wrapper 
+        width: 60%
+        padding: 1.5vw 1rem
+
+        h2 
+            font-size: 4rem
+
+        .contact-grid 
+            padding-block: 2vw
+            gap: 2rem
+
+            .contact-method 
+                gap: 2rem
+
+                i 
+                    font-size: 1.5rem
+
+        .contact-form 
+            .form-control
+                gap: 2rem
+                margin-bottom: 2rem
+
+                label
+                    font-size: 1.75rem
+                   
+                input, textarea
+                    padding: 1vw
+                    font-size: 1.75rem
+                   
+                textarea
+                    resize: none
+
+            button 
+                width: min(100%, 10em)
+
+    footer
+        
+        .social-media-footer
+            gap: 2rem
+            
+            .media-icon
+                font-size: 2.25rem
+
+            .top
+                padding: 1rem 1.25rem
+
+        .copyright
+            font-size: 0.7vw
