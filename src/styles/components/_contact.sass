@@ -1,7 +1,5 @@
 @import ./../abstracts/_mixins
 
-
-
 .contact-form-wrapper 
     width: min(90%, 30em)
     background-color: var(--colors-neutral-800)
@@ -30,6 +28,18 @@
             p 
                 margin: 0
 
+    .serverMessage
+        padding: 0.75rem
+        margin-bottom: 2rem
+        border-radius: 0.2rem
+        @include fontWeight($styles: bold)
+        
+    .success
+        @include serverValidation($type: success)
+    
+    .error
+        @include serverValidation($type: err)
+
     .contact-form 
         display: flex
         flex-flow: column
@@ -46,8 +56,6 @@
                 font-size: 0.75rem
                 @include fontWeight($styles: bold)
 
-
-
             input, textarea
                 @include colors($bg-color: --colors-neutral-600, $color: --colors-neutral-100)
                 
@@ -56,7 +64,6 @@
                 padding: 1rem
                 font-family: Bitter
                 @include fontWeight($styles: semiBold)
-                
 
             textarea
                 resize: none

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/alexnicholls1999/camwood-candles#readme",
   "dependencies": {
+    "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "nodemailer": "^6.7.2"
   },

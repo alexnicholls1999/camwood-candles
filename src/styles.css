@@ -33,6 +33,11 @@
   --colors-neutral-500: #848484;
   --colors-neutral-300: #DFDFDF;
   --colors-neutral-100: #FFFFFF;
+  /* Feedback */
+  --colors-feedback-err-900: #FF5353;
+  --colors-feedback-err-100: #F7CCCC;
+  --colors-feedback-success-900: #0DB84C;
+  --colors-feedback-success-100: #c0f1c4;
   /* Typography */
   /* Font-Size */
   --fs-b: 1rem;
@@ -197,7 +202,7 @@ p {
 
   .order-m-4 {
     order: 4; } }
-@media (min-width: 160em) {
+@media (min-width: 120em) {
   .col-l-1 {
     flex: 0 0 8.3333333333%; }
 
@@ -666,13 +671,13 @@ header {
 
 .gallery {
   display: grid;
-  gap: 1rem;
-  padding-bottom: 2rem; }
+  gap: 1rem; }
   .gallery .grid--item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block; }
+    display: block;
+    padding-bottom: 2rem; }
 
 .btn {
   padding: 0.75rem;
@@ -811,6 +816,19 @@ header {
         color: var(--colors-neutral-100); }
       .contact-form-wrapper .contact-grid .contact-method p {
         margin: 0; }
+  .contact-form-wrapper .serverMessage {
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+    border-radius: 0.2rem;
+    font-weight: bold; }
+  .contact-form-wrapper .success {
+    border: 0.2rem solid var(--colors-feedback-success-900);
+    background: var(--colors-feedback-success-100);
+    color: var(--colors-feedback-success-900); }
+  .contact-form-wrapper .error {
+    border: 0.2rem solid var(--colors-feedback-err-900);
+    background: var(--colors-feedback-err-100);
+    color: var(--colors-feedback-err-900); }
   .contact-form-wrapper .contact-form {
     display: flex;
     flex-flow: column;
@@ -889,6 +907,8 @@ header {
 
   .points-grid {
     grid-template-columns: repeat(2, 1fr); }
+    .points-grid .point {
+      padding: 3rem 1rem 8rem; }
 
   /* Slider */
   .slider .slideshow-container, .slider .slideshow-container-b {
@@ -928,7 +948,8 @@ header {
     .skincare-section .skincare-row-height .skincare-section--info {
       padding: 3rem; }
       .skincare-section .skincare-row-height .skincare-section--info .skincare-section--ul {
-        width: 80%; }
+        width: 80%;
+        line-height: 2rem; }
 
   .gallery-title {
     padding-top: 3rem; }
@@ -968,18 +989,18 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 5rem; } }
-@media (min-width: 160em) {
+@media (min-width: 120em) {
   h1 {
-    font-size: 7.5em; }
+    font-size: 5em; }
 
   p {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 2.5rem; }
 
   .btn {
-    font-size: 1.75rem;
-    padding: 1.75rem 3rem;
-    border-radius: 0.75rem; }
+    font-size: 1.25rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: 0.5rem; }
 
   .container-fluid {
     padding: 0 1vw; }
@@ -987,11 +1008,11 @@ header {
   header .container {
     width: 80%; }
     header .container .navbar .nav-menu {
-      gap: 3rem;
-      font-size: 2rem; }
+      gap: 2rem;
+      font-size: 1.5rem; }
       header .container .navbar .nav-menu .btn-wrapper {
         min-width: 20rem;
-        gap: 2rem; }
+        gap: 1.5rem; }
 
   .hero .hero-container .hero-content .hero-content-container {
     padding: 6.75vw 2vw; }
@@ -1000,14 +1021,14 @@ header {
       border: none;
       border-left: var(--colors-primary-600) 0.25rem solid;
       background: url("./../src/assets/icons/side-arrow.svg");
-      background-size: 2.5rem;
+      background-size: 2rem;
       background-position: 95%;
       background-repeat: no-repeat;
       color: var(--colors-neutral-500);
       background-color: var(--colors-neutral-100);
       padding: 1vw;
       box-shadow: 0 1rem 3.5rem 0.1rem rgba(206, 206, 206, 0.5);
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       text-align: left;
       font-family: Bitter, serif;
       width: 80%; }
@@ -1024,7 +1045,7 @@ header {
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        font-size: 2rem; }
+        font-size: 1.25rem; }
       .hero .hero-container .hero-content .hero-content-container .social-media .primary-icon {
         color: var(--colors-primary-600);
         background-color: var(none); }
@@ -1032,9 +1053,9 @@ header {
         color: var(--colors-neutral-900);
         background-color: var(none); }
   .hero .hero-container .hero-content .hero-intro .slogan {
-    margin: 2.5rem 0;
-    font-size: 2.75rem;
-    line-height: 3.5rem; }
+    margin: 2rem 0;
+    font-size: 2rem;
+    line-height: 2.25rem; }
   .hero .scroll-down {
     bottom: 1vw;
     left: 1vw;
@@ -1044,32 +1065,34 @@ header {
       grid-template-columns: 90% 10%;
       gap: 1rem; }
       .hero .scroll-down .scroll-down-wrapper .scroll-down--title {
-        font-size: 1.45rem; }
+        font-size: 1rem; }
       .hero .scroll-down .scroll-down-wrapper .scroll-down--arrow {
         background: url("./../src/assets/icons/scroll-down-arrow.svg");
-        background-size: 1.35rem;
+        background-size: 1.25rem;
         background-position: center;
         background-repeat: no-repeat; }
 
   .about-container .about-title {
-    font-size: 2rem; }
+    font-size: 1.75rem; }
   .about-container .about-slogan {
-    font-size: 2.75vw; }
+    font-size: 2.5vw; }
+  .about-container .about-info {
+    font-size: 1.25rem; }
 
   .points .points-grid .primary-point p {
     width: 80%; }
   .points .points-grid .point-icon {
-    height: 4.5rem;
-    min-height: 4.5rem;
-    width: 4.5rem;
-    min-width: 4.5rem; }
+    height: 3.45rem;
+    min-height: 3.45rem;
+    width: 3.45rem;
+    min-width: 3.45rem; }
   .points .points-grid .point {
-    padding: 2vw 1vw 8vw; }
+    padding: 2vw 1vw 6vw; }
   .points .points-grid .point--desc {
-    font-size: 1.6rem;
+    font-size: 1.15rem;
     line-height: 2.3rem; }
   .points .points-grid .point--title {
-    font-size: 2rem; }
+    font-size: 1.5rem; }
     .points .points-grid .point--title::after {
       margin-top: 0.5vw;
       border-width: 4px;
@@ -1078,7 +1101,9 @@ header {
   .votives {
     padding: 4vw 0; }
     .votives h2 {
-      font-size: 4rem; }
+      font-size: 3rem; }
+    .votives p {
+      font-size: 1.25rem; }
     .votives .votives-image {
       padding: 2vw; }
 
@@ -1088,9 +1113,9 @@ header {
   .slider .slideshow-container .slide .slide-info .slide-info-container, .slider .slideshow-container-b .slide .slide-info .slide-info-container {
     padding: 4vw 4vw; }
     .slider .slideshow-container .slide .slide-info .slide-info-container h2, .slider .slideshow-container-b .slide .slide-info .slide-info-container h2 {
-      font-size: 4rem; }
+      font-size: 3rem; }
     .slider .slideshow-container .slide .slide-info .slide-info-container ul, .slider .slideshow-container-b .slide .slide-info .slide-info-container ul {
-      font-size: 2rem;
+      font-size: 1.5rem;
       width: 80%; }
   .slider .slider-btn {
     bottom: 4vw;
@@ -1112,35 +1137,37 @@ header {
   .skincare-section--info {
     padding: 10vw; }
     .skincare-section--info h2 {
-      font-size: 4rem; }
+      font-size: 3rem; }
     .skincare-section--info .skincare-section--ul {
-      font-size: 2rem;
+      font-size: 1.5rem !important;
       line-height: 3rem !important; }
 
   .gallery-title {
-    padding: 2vw 0;
-    font-size: 4rem; }
+    padding: 7.5vh 0 2vh;
+    font-size: 3rem; }
 
   .contact-form-wrapper {
-    width: 60%;
-    padding: 1.5vw 1rem; }
+    width: 80%;
+    padding: 5vw 1rem; }
     .contact-form-wrapper h2 {
-      font-size: 4rem; }
+      font-size: 3rem; }
     .contact-form-wrapper .contact-grid {
       padding-block: 2vw;
-      gap: 2rem; }
+      gap: 1rem; }
       .contact-form-wrapper .contact-grid .contact-method {
-        gap: 2rem; }
+        gap: 1rem; }
         .contact-form-wrapper .contact-grid .contact-method i {
           font-size: 1.5rem; }
+        .contact-form-wrapper .contact-grid .contact-method p {
+          font-size: 1.45rem; }
     .contact-form-wrapper .contact-form .form-control {
       gap: 2rem;
-      margin-bottom: 2rem; }
+      margin-bottom: 3rem; }
       .contact-form-wrapper .contact-form .form-control label {
-        font-size: 1.75rem; }
+        font-size: 1.25rem; }
       .contact-form-wrapper .contact-form .form-control input, .contact-form-wrapper .contact-form .form-control textarea {
         padding: 1vw;
-        font-size: 1.75rem; }
+        font-size: 1rem; }
       .contact-form-wrapper .contact-form .form-control textarea {
         resize: none; }
     .contact-form-wrapper .contact-form button {
@@ -1149,7 +1176,7 @@ header {
   footer .social-media-footer {
     gap: 2rem; }
     footer .social-media-footer .media-icon {
-      font-size: 2.25rem; }
+      font-size: 2rem; }
     footer .social-media-footer .top {
       padding: 1rem 1.25rem; }
   footer .copyright {

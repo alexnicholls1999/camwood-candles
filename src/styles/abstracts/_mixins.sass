@@ -24,11 +24,11 @@
     @else if $btn-type == "store-link-xl"
         border: none
         border-left: var(--colors-primary-600) 0.25rem solid
-        @include bgImage($src: $arrow-btn, $bg-size: 2.5rem, $bg-position: 95%, $bg-repeat: no-repeat)
+        @include bgImage($src: $arrow-btn, $bg-size: 2rem, $bg-position: 95%, $bg-repeat: no-repeat)
         @include colors($bg-color: --colors-neutral-100, $color: --colors-neutral-500)
         @include padding($p: 1vw)
         @include shadow($shadow-type: outset, $offset-x: 0, $offset-y: 1rem, $blur: 3.5rem, $spread: 0.1rem, $color: rgba(#CECECE, 0.5))
-        font-size: 1.5rem
+        font-size: 1.2rem
         text-align: left
         font-family: $font-family-bitter
 
@@ -146,6 +146,18 @@
     height: 100%
     object-fit: $img-fit
 
+// Validation 
+
+@mixin serverValidation($type) 
+    @if $type == "err"
+        border: 0.2rem solid var(--colors-feedback-err-900)
+        background: var(--colors-feedback-err-100)
+        color: var(--colors-feedback-err-900)
+    @else if $type == "success" 
+        border: 0.2rem solid var(--colors-feedback-success-900)
+        background: var(--colors-feedback-success-100)
+        color: var(--colors-feedback-success-900)
+
 // Animations
 
 // Keyframes
@@ -196,6 +208,12 @@
         --colors-neutral-500: #848484
         --colors-neutral-300: #DFDFDF
         --colors-neutral-100: #FFFFFF
+
+        /* Feedback
+        --colors-feedback-err-900: #FF5353
+        --colors-feedback-err-100: #F7CCCC
+        --colors-feedback-success-900: #0DB84C
+        --colors-feedback-success-100: #c0f1c4
 
         /* Typography
         /* Font-Size
