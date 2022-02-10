@@ -1,8 +1,11 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const app = express();
 const path = require("path");
 const router = express.Router();
 const nodemailer = require("nodemailer");
+
+dotenv.config();
 
 const index = __dirname + "/public/index.html";
 
@@ -35,7 +38,8 @@ app.post("/", (req, res) => {
 
   const mailOptions = {
     from: req.body.email,
-    to: "mailertest1999@gmail.com, azini@live.co.uk",
+    to: "mailertest1999@gmail.com",
+    cc: "azini@live.co.uk",
     subject: `Message from ${req.body.email}`,
     html: contactOutput,
   };
