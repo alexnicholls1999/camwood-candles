@@ -1,52 +1,56 @@
 export function contactMe() {
-    const contactBtn = document.querySelector('[data-oncontactclick]');
+  const contactBtn = document.querySelector("[data-oncontactclick]");
+  const purchaseBtn = document.querySelector("[data-purchasebtn]");
 
-    contactBtn.addEventListener("click", function() {
-        window.location = "#contact-me"
-    })
-    
+  purchaseBtn.addEventListener("click", function () {
+    window.location = "#contact-me";
+  });
+
+  contactBtn.addEventListener("click", function () {
+    window.location = "#contact-me";
+  });
 }
 
-export function top(){
-    const topBtn = document.querySelector('[data-ontopclick]');
+export function top() {
+  const topBtn = document.querySelector("[data-ontopclick]");
 
-    topBtn.addEventListener("click", function() {
-        window.location = "/"
-    })
+  topBtn.addEventListener("click", function () {
+    window.location = "/";
+  });
 }
 
 export function buttonToggle() {
-    const contactBtn = document.querySelector('[data-oncontactclick]');
-    const dimensionsBtn = document.querySelector('[data-ondimensionsclick]');
-    const sendBtn = document.querySelector('[data-onsendclick]');
-    
-    contactBtn.addEventListener("mouseover", function() {
-        contactBtn.classList.remove("btn-primary");
-        contactBtn.classList.add("btn-secondary");
-    })
+  const contactBtn = document.querySelector("[data-oncontactclick]");
+  const dimensionsBtn = document.querySelector("[data-ondimensionsclick]");
+  const sendBtn = document.querySelector("[data-onsendclick]");
 
-    contactBtn.addEventListener("mouseleave", function() {
-        contactBtn.classList.remove("btn-secondary");
-        contactBtn.classList.add("btn-primary");
-    })
+  contactBtn.addEventListener("mouseover", function () {
+    contactBtn.classList.remove("btn-primary");
+    contactBtn.classList.add("btn-secondary");
+  });
 
-    dimensionsBtn.addEventListener("mouseover", function() {
-        dimensionsBtn.classList.remove("btn-primary");
-        dimensionsBtn.classList.add("btn-secondary");
-    })
+  contactBtn.addEventListener("mouseleave", function () {
+    contactBtn.classList.remove("btn-secondary");
+    contactBtn.classList.add("btn-primary");
+  });
 
-    dimensionsBtn.addEventListener("mouseleave", function() {
-        dimensionsBtn.classList.remove("btn-secondary");
-        dimensionsBtn.classList.add("btn-primary");
-    })
+  dimensionsBtn.addEventListener("mouseover", function () {
+    dimensionsBtn.classList.remove("btn-primary");
+    dimensionsBtn.classList.add("btn-secondary");
+  });
 
-    sendBtn.addEventListener("mouseover", function() {
-        sendBtn.classList.remove("btn-secondary");
-        sendBtn.classList.add("btn-primary");
-    })
+  dimensionsBtn.addEventListener("mouseleave", function () {
+    dimensionsBtn.classList.remove("btn-secondary");
+    dimensionsBtn.classList.add("btn-primary");
+  });
 
-    sendBtn.addEventListener("mouseleave", function() {
-        sendBtn.classList.remove("btn-primary");
-        sendBtn.classList.add("btn-secondary");
-    })
+  sendBtn.addEventListener("mouseover", function () {
+    sendBtn.classList.remove("btn-secondary");
+    sendBtn.classList.add("btn-primary");
+  });
+
+  sendBtn.addEventListener("mouseleave", function () {
+    sendBtn.classList.remove("btn-primary");
+    sendBtn.classList.add("btn-secondary");
+  });
 }

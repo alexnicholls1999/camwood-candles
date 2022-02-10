@@ -52,8 +52,7 @@
         .order-m-#{$i}
             order: $i
 
-@include mediaQuery($breakpoint: breakpointC)
+@media (min-width: 1600px)
     @for $i from 1 through 12
         .col-l-#{$i}
             flex: 0 0 (100% / (12 / $i))
-
