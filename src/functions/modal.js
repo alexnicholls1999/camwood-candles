@@ -81,6 +81,7 @@ export function toggleModal(){
     const modalBtn = document.querySelector("[data-ondimensionsclick]");
     const closeBtn = document.querySelector("[data-closemodalclick]");
     const modalmobileBtn = document.querySelector("[data-ondimensionsmobileclick]");
+    const modalLink = document.querySelectorAll(".hyperlink");
     const modal = document.querySelector(".modal-wrapper");
 
     const openModal = (e) => {
@@ -93,7 +94,8 @@ export function toggleModal(){
         modal.classList.remove("open-modal")
     }
 
-    modalBtn.addEventListener("click", openModal)
-    modalmobileBtn.addEventListener("click", openModal)
-    closeBtn.addEventListener("click", closeModal)
+    modalBtn.addEventListener("click", openModal);
+    modalmobileBtn.addEventListener("click", openModal);
+    modalLink.addEventListener("click", openModal);
+    closeBtn.addEventListener("click", closeModal);
 }

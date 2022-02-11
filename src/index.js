@@ -7,7 +7,7 @@ import { mobileMenu } from "./functions/navigation/navigation.mobile.js";
 
 initMap();
 mobileMenu();
-// currentPageObserver()
+currentPageObserver()
 Modal();
 toggleModal();
 contactMe();
