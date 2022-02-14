@@ -35,6 +35,5 @@ export function mobileMenu() {
     mobileBtn.addEventListener("click", openMenu)
     closeBtn.addEventListener("click", closeMenu)
     
-    closeButton(closeBtn)
-    
+    closeButton(closeBtn);
 }

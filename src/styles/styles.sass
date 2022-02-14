@@ -45,13 +45,18 @@
 
                 .hero-content-container
                     @include padding($p: 2rem)
-                    padding-top: 5rem
+                    padding-top: 6rem
+
+                    .hero-intro
+                        .slogan
+                            font-size: 1.15rem
+
 
     .about-container
         @include paddingThree($p-t: 5%, $p-lr: 1rem, $p-b: 25%)
 
         .about-slogan
-            font-size: 3rem
+            font-size: 2rem
 
 
     .points-grid
@@ -114,7 +119,6 @@
                 padding: 3rem
 
                 .skincare-section--ul
-                    width: 80%
                     line-height: 1.5rem
 
     .gallery-title
@@ -382,6 +386,10 @@
 
             button 
                 width: min(100%, 10em)
+
+    .modal-wrapper 
+        .modal 
+            width: 65em
 
     footer
         

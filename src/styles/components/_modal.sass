@@ -12,8 +12,7 @@
     background: rgba(black, 0.7)
     
     .modal
-        max-width: 45em
-        width: 90%
+        width: min(90%, 45em)
         min-height: 45em
         height: 90%
         background-color: white
@@ -30,6 +29,10 @@
         .modal-footer
             @include flex($flow: row, $justify-content: flex-end, $align-items: flex-end)
             padding: 2rem
+            box-shadow: 0px 10px 5px #888
+
+            button 
+                padding: 1rem 2.5rem
 
         
 

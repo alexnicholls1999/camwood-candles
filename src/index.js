@@ -7,10 +7,10 @@ import { mobileMenu } from "./functions/navigation/navigation.mobile.js";
 
 initMap();
 mobileMenu();
-currentPageObserver()
 Modal();
 toggleModal();
 contactMe();
 top();
 buttonToggle();
 sendContactForm();
+currentPageObserver();
