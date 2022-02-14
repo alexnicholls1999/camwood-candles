@@ -19,6 +19,31 @@
         <link rel="stylesheet" href="src/styles.css">
     </head>
     <body>
+                
+        <button class="mobile-btn" data-open>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        
+        <div class="mobile-menu">
+            <h2>Menu</h2>
+            <div class="close" data-close></div>
+            <nav class="menu">
+                <li class="menu--item active-link"><a href="#top">Home</a></li>
+                <li class="menu--item"><a href="#aboutus">About Us</a></li>
+                <li class="menu--item"><a href="#votives">Candles</a></li>
+                <li class="menu--item"><a href="#meltsnburners">Melts & Burners</a></li>
+                <li class="menu--item"><a href="#skincare">Skincare</a></li>
+                <div class="btn-wrapper" style="margin-top: 0.75rem">
+                    <button class="btn btn-primary" data-ondimensionsmobileclick>Dimensions</button>
+                    <button class="btn btn-primary" data-oncontactmobileclick>Contact</button>
+                </div>
+            </nav>
+        </div>
+
         <header>
             <div class="container">
                 <div class="row">
@@ -44,30 +69,6 @@
             </div>
         </header>
         <!-- Header -->
-        
-        <button class="mobile-btn" data-open>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        
-        <div class="mobile-menu">
-            <h2>Menu</h2>
-            <div class="close" data-close></div>
-            <nav class="menu">
-                <li class="menu--item"><a href="#top">Home</a></li>
-                <li class="menu--item"><a href="#aboutus">About Us</a></li>
-                <li class="menu--item"><a href="#votives">Candles</a></li>
-                <li class="menu--item"><a href="#meltsandburners">Melts & Burners</a></li>
-                <li class="menu--item"><a href="#skincare">Skincare</a></li>
-                <div class="btn-wrapper" style="margin-top: 0.75rem">
-                    <button class="btn btn-primary" data-ondimensionsmobileclick>Dimensions</button>
-                    <button class="btn btn-primary" data-oncontactmobileclick>Contact</button>
-                </div>
-            </nav>
-        </div>
 
         <div class="dimensions"></div>
 
@@ -171,7 +172,7 @@
 
         <!-- Votives -->
         
-        <div class="slider" id="pillarsanddinining">
+        <div class="slider" id="meltsandburners">
             <div class="slideshow-container">
                 <div class="slide fade">
                     <div class="slide-image">

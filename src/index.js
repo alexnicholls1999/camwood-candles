@@ -1,4 +1,4 @@
-import { buttonToggle, contactMe, top } from "./functions/button.js";
+import { buttonToggle, contactMe, root } from "./functions/button.js";
 import { sendContactForm } from "./functions/contactForm.js";
 import { initMap } from "./functions/map.js";
 import { Modal, toggleModal } from "./functions/modal.js";
@@ -10,7 +10,7 @@ mobileMenu();
 Modal();
 toggleModal();
 contactMe();
-top();
+root();
 buttonToggle();
 sendContactForm();
 currentPageObserver();

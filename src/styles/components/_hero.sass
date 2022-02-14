@@ -14,8 +14,11 @@
         .hero-image
             @include bgImage($src: $bg-image , $bg-size: cover, $bg-position: center, $bg-repeat: no-repeat)
             @include shadow($shadow-type: inset, $offset-x: 0, $offset-y: 0, $blur: 0, $spread: 100vmax, $color: #00000066)
+
+        .hero-image-404
+            @include bgImage($src: $beeHive-image, $bg-size: 75%, $bg-position: right, $bg-repeat: no-repeat)
             
-        .hero-content
+        .hero-content, .hero-content-404
             background-color: white         
 
             .hero-content-container

@@ -8,12 +8,20 @@ const nodemailer = require("nodemailer");
 dotenv.config();
 
 const index = __dirname + "/public/index.html";
+const notFound = __dirname + "/public/404.html";
 
-app.use(express.static("public"));
 app.use(express.json());
+app.use(express.static("public"));
+app.use("/", router);
+app.use("/src", express.static("src"));
+app.listen(process.env.port || 3000);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(index));
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(notFound));
 });
 
 app.post("/", (req, res) => {
@@ -54,7 +62,3 @@ app.post("/", (req, res) => {
     }
   });
 });
-
-app.use("/", router);
-app.use("/src", express.static("src"));
-app.listen(process.env.port || 3000);

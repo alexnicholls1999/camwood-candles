@@ -11,10 +11,10 @@ export function contactMe() {
   });
 }
 
-export function top() {
+export function root() {
   const topBtn = document.querySelector("[data-ontopclick]");
 
-  topBtn.addEventListener("click", function () {
+  topBtn.addEventListener("click", () => {
     window.location = "/";
   });
 }

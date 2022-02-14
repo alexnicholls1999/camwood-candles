@@ -31,6 +31,7 @@
     \:root 
         @include root($breakpoint: breakpointA)
 
+
     .hero
         .hero-container
             > *
@@ -40,9 +41,8 @@
             .hero-image
                 order: 2    
             
-            .hero-content    
-                order: 1
 
+            .hero-content, .hero-content-404
                 .hero-content-container
                     @include padding($p: 2rem)
                     padding-top: 6rem
@@ -51,6 +51,8 @@
                         .slogan
                             font-size: 1.15rem
 
+            .hero-content    
+                order: 1
 
     .about-container
         @include paddingThree($p-t: 5%, $p-lr: 1rem, $p-b: 25%)
