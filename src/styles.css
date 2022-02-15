@@ -1139,7 +1139,8 @@ header {
     .slider .slideshow-container .slide .slide-info .slide-info-container h2, .slider .slideshow-container-b .slide .slide-info .slide-info-container h2 {
       font-size: 3rem; }
     .slider .slideshow-container .slide .slide-info .slide-info-container ul, .slider .slideshow-container-b .slide .slide-info .slide-info-container ul {
-      font-size: 1.5rem;
+      font-size: 1.5vh !important;
+      line-height: 3vh;
       width: 80%; }
   .slider .slider-btn {
     bottom: 4vw;
@@ -1163,7 +1164,7 @@ header {
     .skincare-section--info h2 {
       font-size: 3rem; }
     .skincare-section--info .skincare-section--ul {
-      font-size: 1.5rem !important;
+      font-size: 1.5vh !important;
       line-height: 3rem !important; }
 
   .gallery-title {
