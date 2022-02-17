@@ -292,7 +292,8 @@ footer {
     flex-flow: column;
     list-style: none;
     gap: 0.65rem;
-    margin: 0 1rem; }
+    margin: 0 1rem;
+    padding: 0; }
     .mobile-menu .menu .menu--item a {
       display: block;
       padding: 1rem;
@@ -770,8 +771,7 @@ header {
   background: rgba(0, 0, 0, 0.7); }
   .modal-wrapper .modal {
     width: min(90%, 45em);
-    min-height: 45em;
-    height: 90%;
+    height: min(90%, 45em);
     background-color: white;
     border-radius: 0.25rem; }
     .modal-wrapper .modal .modal-container {
