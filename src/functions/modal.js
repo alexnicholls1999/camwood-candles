@@ -78,7 +78,7 @@ export function renderProducts() {
 export function Modal() {
   const modal = document.querySelector(".dimensions");
 
-    modal.innerHTML = `
+  modal.innerHTML = `
         <div class="modal-wrapper">
             <div class="modal">
                 <div class="modal-container">

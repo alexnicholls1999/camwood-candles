@@ -1,5 +1,8 @@
 export function contactMe() {
   const contactBtn = document.querySelector("[data-oncontactclick]");
+  const contactMobileBtn = document.querySelector(
+    "[data-oncontactmobileclick]"
+  );
   const purchaseBtn = document.querySelector("[data-purchasebtn]");
 
   purchaseBtn.addEventListener("click", function () {
@@ -7,6 +10,10 @@ export function contactMe() {
   });
 
   contactBtn.addEventListener("click", function () {
+    window.location = "#contact-me";
+  });
+
+  contactMobileBtn.addEventListener("click", function () {
     window.location = "#contact-me";
   });
 }
