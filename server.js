@@ -9,7 +9,7 @@ dotenv.config();
 
 const index = __dirname + "/public/index.html";
 const notFound = __dirname + "/public/404.html";
-const port = process.env.port || 5000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.static("public"));
