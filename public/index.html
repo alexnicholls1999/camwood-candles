@@ -500,6 +500,31 @@
 
         <script type="module" src="/src/index.js"></script>
 
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+                apiKey: "AIzaSyCI9IDtsdQ-yXQWNOGlTUdNLlwvPXNCNwo",
+                authDomain: "camwood-candles.firebaseapp.com",
+                databaseURL: "https://camwood-candles-default-rtdb.europe-west1.firebasedatabase.app",
+                projectId: "camwood-candles",
+                storageBucket: "camwood-candles.appspot.com",
+                messagingSenderId: "731468955905",
+                appId: "1:731468955905:web:4524331ae3b9da563a9b00",
+                measurementId: "G-HVN9WC8C6K"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
+
         <script>
             let slideIndex = 1;
             showSlides(slideIndex);
