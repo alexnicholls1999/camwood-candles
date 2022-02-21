@@ -9,12 +9,13 @@ dotenv.config();
 
 const index = __dirname + "/public/index.html";
 const notFound = __dirname + "/public/404.html";
+const port = process.env.port || 5000;
 
 app.use(express.json());
 app.use(express.static("public"));
 app.use("/", router);
 app.use("/src", express.static("src"));
-app.listen(process.env.port || 3000);
+app.listen(port);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(index));
