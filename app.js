@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use("/", router);
 app.use("/src", express.static("src"));
-app.listen(port);
+app.listen(process.env.PORT, "0.0.0.0");
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(index));
