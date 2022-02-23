@@ -36,12 +36,11 @@ app.post("/", (req, res) => {
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.GMAIL_EMAIL_ADDRESS,
       pass: process.env.GMAIL_PASSWORD,
-    },
-    tls: {
-      rejectUnauthorized: false,
     },
   });
 
