@@ -39,8 +39,8 @@ app.post("/", (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: "mailertest1999@gmail.com",
-      pass: "test1234!",
+      user: process.env.GMAIL_EMAIL_ADDRESS,
+      pass: process.env.GMAIL_PASSWORD,
     },
   });
 
