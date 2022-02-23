@@ -34,32 +34,32 @@ app.post("/", (req, res) => {
     <p>Regards <br> ${req.body.name} </p>
   `;
 
-  //   const transporter = nodemailer.createTransport({
-  //     service: "gmail",
-  //     auth: {
-  //       user: process.env.GMAIL_EMAIL_ADDRESS,
-  //       pass: process.env.GMAIL_PASSWORD,
-  //     },
-  //     tls: {
-  //       rejectUnauthorized: false,
-  //     },
-  //   });
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.GMAIL_EMAIL_ADDRESS,
+      pass: process.env.GMAIL_PASSWORD,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
 
-  //   const mailOptions = {
-  //     from: req.body.email,
-  //     to: "mailertest1999@gmail.com",
-  //     cc: "azini@live.co.uk",
-  //     subject: `Message from ${req.body.email}`,
-  //     html: contactOutput,
-  //   };
+  const mailOptions = {
+    from: req.body.email,
+    to: "mailertest1999@gmail.com",
+    cc: "azini@live.co.uk",
+    subject: `Message from ${req.body.email}`,
+    html: contactOutput,
+  };
 
-  //   transporter.sendMail(mailOptions, (error, info) => {
-  //     if (error) {
-  //       console.log(error);
-  //       res.send("error" + error);
-  //     } else {
-  //       console.log(`Email sent: ` + info.response);
-  //       res.send("success");
-  //     }
-  //   });
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.send("error" + error);
+    } else {
+      console.log(`Email sent: ` + info.response);
+      res.send("success");
+    }
+  });
 });
