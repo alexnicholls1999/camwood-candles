@@ -14,10 +14,16 @@
   --colors-neutral-700: #2A2A2A;
   --colors-neutral-800: #1C1C1C;
   --colors-neutral-900: #000000;
+  --font-family-Bitter: Bitter;
+  --font-family-Arial: Arial;
 }
 
 body {
-  background-color: black;
+  font-family: var(--font-family-Bitter), var(--font-family-Arial);
+}
+
+h1 {
+  font-size: clamp(1.2rem, calc(1rem + 1vw), 3rem);
 }
 
 /*# sourceMappingURL=styles.css.map */

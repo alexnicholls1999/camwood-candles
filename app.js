@@ -21,6 +21,9 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(index));
 });
 
+
+
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(notFound));
 });

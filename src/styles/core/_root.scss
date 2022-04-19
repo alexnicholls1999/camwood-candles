@@ -3,8 +3,9 @@
 
 :root {
     @include mixin.colorVariables();
+    @include mixin.fontVariables();
 }
 
 body {
-    background-color: black;
+    @include mixin.fontFamily();
 }

@@ -1,0 +1,14 @@
+@use '../functions';
+
+@mixin fontVariables() {
+    --font-family-Bitter: #{functions.typography(bitter)};
+    --font-family-Arial: #{functions.typography(arial)};
+}
+
+@mixin fontFamily() {
+    font-family: var(--font-family-Bitter), var(--font-family-Arial);
+}
+
+@mixin heading($fontMax, $fontSizeA, $fontSizeB, $fontMin) {
+    font-size: clamp(#{$fontMin, calc($fontSizeA + $fontSizeB), $fontMax});
+}
