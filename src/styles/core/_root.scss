@@ -1,0 +1,10 @@
+@use '../abstract' as mixin;
+@import url(mixin.$fontsImport);
+
+:root {
+    @include mixin.colorVariables();
+}
+
+body {
+    background-color: black;
+}

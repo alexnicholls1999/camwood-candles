@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --colors-primary-100: #fff8e6;
+  --colors-primary-200: #fffbde;
+  --colors-primary-300: #FFECBC;
+  --colors-primary-400: #FFF6B6;
+  --colors-primary-500: #f5cb5c;
+  --colors-primary-700: #F1B002;
+  --colors-primary-800: #FCC32C;
+  --colors-neutral-100: #FFFFFF;
+  --colors-neutral-300: #DFDFDF;
+  --colors-neutral-500: #848484;
+  --colors-neutral-600: #171717;
+  --colors-neutral-700: #2A2A2A;
+  --colors-neutral-800: #1C1C1C;
+  --colors-neutral-900: #000000;
+}
+
+body {
+  background-color: black;
+}
+
+/*# sourceMappingURL=styles.css.map */

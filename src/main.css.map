@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAQ,iMAAyL;ACEjM,IAAI;EACA,gBAAgB,ED0BC,IAAI;ECzBrB,WAAW,EDEO,eAAO",
-"sources": ["styles/variables.sass","styles/main.sass"],
-"names": [],
-"file": "main.css"
-}

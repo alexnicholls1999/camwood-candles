@@ -1,0 +1,32 @@
+@use '../variables' as var;
+@use '../functions' as func;
+
+@mixin colorPrimaryVariables {
+    --colors-primary-100: #{func.colorsPrimary(100)};
+    --colors-primary-200: #{func.colorsPrimary(200)};
+    --colors-primary-300: #{func.colorsPrimary(300)};
+    --colors-primary-400: #{func.colorsPrimary(400)};
+    --colors-primary-500: #{func.colorsPrimary(500)};
+    --colors-primary-700: #{func.colorsPrimary(700)};
+    --colors-primary-800: #{func.colorsPrimary(800)};
+}
+
+@mixin colorNeutralVariables {
+    --colors-neutral-100: #{func.colorsNeutral(100)};
+    --colors-neutral-300: #{func.colorsNeutral(300)};
+    --colors-neutral-500: #{func.colorsNeutral(500)};
+    --colors-neutral-600: #{func.colorsNeutral(600)};
+    --colors-neutral-700: #{func.colorsNeutral(700)};
+    --colors-neutral-800: #{func.colorsNeutral(800)};
+    --colors-neutral-900: #{func.colorsNeutral(900)};
+}
+
+@mixin colorVariables {
+    @include colorPrimaryVariables();
+    @include colorNeutralVariables();
+}
+
+@mixin colors($color, $bg-color) {
+    background-color: $bg-color;
+    color: $color;
+}
