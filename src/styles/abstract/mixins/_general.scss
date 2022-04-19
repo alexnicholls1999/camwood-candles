@@ -1,0 +1,15 @@
+@mixin size($height, $width, $min-height, $min-width) {
+    min-height: $min-height;
+    min-width: $min-width;
+    height: $height;
+    width: $width;
+}
+
+@mixin borderRadius(
+    $t-left: 10px,
+    $t-right: null,
+    $b-right: null,
+    $b-left: null
+) {
+    border-radius: $t-left $t-right $b-right $b-left;
+}

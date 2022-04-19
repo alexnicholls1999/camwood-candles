@@ -1,0 +1,28 @@
+@use '../abstract/' as mixin;
+
+.btn {
+    @include mixin.fontFamily();
+    @include mixin.fontWeight(700);
+    @include mixin.padding(0.75rem);
+    @include mixin.borderRadius(0.25rem);
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    @include mixin.colors(var(--colors-neutral-900), var(--colors-primary-600));
+}
+
+.btn-secondary {
+    @include mixin.colors(var(--colors-neutral-100), var(--colors-primary-900));
+}
+
+.btn-wrapper {
+    @include mixin.flex(row, space-evenly, center);
+    gap: 1rem;
+
+    > * {
+        flex-basis: 100%;
+    }
+}

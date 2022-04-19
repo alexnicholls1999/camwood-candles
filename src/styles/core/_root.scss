@@ -4,6 +4,7 @@
 :root {
     @include mixin.colorVariables();
     @include mixin.fontVariables();
+    @include mixin.fontWeightVariables();
 }
 
 body {
