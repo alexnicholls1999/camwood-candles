@@ -1,27 +1,12 @@
 @mixin size($height, $width, $min-height, $min-width) {
-<<<<<<< HEAD
-  min-height: $min-height;
-  min-width: $min-width;
-  height: $height;
-  width: $width;
-}
-
-@mixin border($b-width, $b-style, $color) {
-  border: $b-width $b-style $color;
-}
-
-@mixin borderRadius(
-  $t-left: 10px,
-  $t-right: null,
-  $b-right: null,
-  $b-left: null
-) {
-  border-radius: $t-left $t-right $b-right $b-left;
-=======
     min-height: $min-height;
     min-width: $min-width;
     height: $height;
     width: $width;
+}
+
+@mixin border($b-width, $b-style, $color) {
+    border: $b-width $b-style $color;
 }
 
 @mixin borderRadius(
@@ -31,5 +16,4 @@
     $b-left: null
 ) {
     border-radius: $t-left $t-right $b-right $b-left;
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 }

@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use 'variables' as var;
 
 @function colorsPrimary($key) {
     @if map-has-key(var.$colors-primary, $key) {
@@ -9,12 +9,11 @@
 }
 
 @function colorsNeutral($key) {
-<<<<<<< HEAD
-  @if map-has-key(var.$colors-neutral, $key) {
-    @return map-get(var.$colors-neutral, $key);
-  }
+    @if map-has-key(var.$colors-neutral, $key) {
+        @return map-get(var.$colors-neutral, $key);
+    }
 
-  @warn "Unknown `#{$key}` in colors-neutral.";
+    @warn "Unknown `#{$key}` in colors-neutral.";
 }
 
 @function colorsFeedback($type, $key) {
@@ -23,7 +22,7 @@
             @return map-get(var.$colors-feedback-success, $key);
         }
 
-        @warn "Unknown `#{$key}` in colors-success."; 
+        @warn "Unknown `#{$key}` in colors-success.";
     }
 
     @if ($type == 'error') {
@@ -31,38 +30,21 @@
             @return map-get(var.$colors-feedback-err, $key);
         }
 
-        @warn "Unknown `#{$key}` in colors-error."; 
+        @warn "Unknown `#{$key}` in colors-error.";
     }
-=======
-    @if map-has-key(var.$colors-neutral, $key) {
-        @return map-get(var.$colors-neutral, $key);
-    }
-
-    @warn "Unknown `#{$key}` in colors-neutral.";
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 }
 
 @function typography($key) {
     @if map-has-key(var.$fonts, $key) {
-<<<<<<< HEAD
         @return map-get(var.$fonts, $key);
     }
 
-=======
-      @return map-get(var.$fonts, $key);
-    }
-  
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
     @warn "Unknown `#{$key}` in fonts.";
 }
 
 @function fontWeight($key) {
     @if map-has-key(var.$fontsWeight, $key) {
-<<<<<<< HEAD
         @return map-get(var.$fontsWeight, $key);
-=======
-    @return map-get(var.$fontsWeight, $key);
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
     }
 
     @warn "Unknown `#{$key}` in font weights.";
@@ -70,11 +52,7 @@
 
 @function breakPoints($key) {
     @if map-has-key(var.$breakpoints, $key) {
-<<<<<<< HEAD
         @return map-get(var.$breakpoints, $key);
-=======
-    @return map-get(var.$breakpoints, $key);
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
     }
 
     @warn "Unknown `#{$key}` in Media Query.";
