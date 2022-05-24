@@ -1,0 +1,5 @@
+@mixin nth-type($i) {
+    &:nth-of-type(#{$i}) {
+        @content;
+    }
+}

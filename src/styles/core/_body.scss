@@ -1,0 +1,6 @@
+@use '../abstract/' as mixins;
+
+body {
+  margin: 0;
+  @include mixins.fontFamily();
+}

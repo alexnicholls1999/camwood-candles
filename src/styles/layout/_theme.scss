@@ -1,0 +1,19 @@
+@use '../abstract/' as *;
+
+.primary {
+  @include theme($type: 'primary');
+}
+
+.secondary {
+  @include theme($type: 'secondary');
+}
+
+.primary--title,
+.primary--link {
+  @include theme($type: 'primary-font');
+}
+
+.secondary--title,
+.secondary--link {
+  @include theme($type: 'secondary-font');
+}

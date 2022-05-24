@@ -1,0 +1,115 @@
+@use '../abstract/' as *;
+
+.hero {
+  @include size(
+    $height: 100vh,
+    $min-height: 100vh,
+    $width: 100%,
+    $min-width: 100%
+  );
+
+  > * {
+    height: 50%;
+    width: 100%;
+  }
+
+  .hero-image {
+    @include bgImage($bg-image, cover, center, no-repeat);
+    @include shadow($type: inset, $offset: 0 0 0 100vmax, $color: #00000066);
+  }
+
+  .hero-content {
+    h1 {
+      margin: 1.75rem 0 0;
+    }
+
+    .pt-5 {
+      padding: 0;
+    }
+
+    .slogan {
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1.5rem;
+      margin: 0.5rem 0;
+      color: var(--colors-neutral-500);
+    }
+  }
+
+  .store-link-btn {
+    @include margin(0.75rem, 0, 1.5rem);
+    @include padding(1rem);
+    @include bgImage(
+      $src: $arrow-btn,
+      $bg-size: 1.5rem,
+      $bg-position: 95%,
+      $bg-repeat: no-repeat
+    );
+    @include colors(
+      $bg-color: var(--colors-neutral-100),
+      $color: var(--colors-neutral-500)
+    );
+    @include shadow('dark');
+    @include fontFamily();
+
+    border: none;
+    border-left: var(--colors-primary-600) 0.25rem solid;
+    cursor: pointer;
+    width: min(25rem, 100%);
+    font-size: 0.75rem;
+    text-align: left;
+  }
+
+  .scroll-down {
+    @include positionAlign(
+      $fixed: false,
+      $align: 'Bottom Left',
+      $p-v: 1rem,
+      $p-h: 1rem
+    );
+    width: min(25vw, 8rem);
+
+    .scroll-down-wrapper {
+      display: grid;
+      grid-template-columns: 90% 10%;
+    }
+
+    .scroll-down--title {
+      font-size: min(3vw, 0.8rem);
+    }
+
+    .scroll-down--arrow {
+      @include bgImage($scroll-down-arrow, contain, center, no-repeat);
+    }
+  }
+}
+
+@include mediaQuery(md) {
+  .hero {
+    > * {
+      height: 100%;
+      width: 50%;
+    }
+
+    .hero-content {
+      order: 1;
+
+      .pt-5 {
+        padding-top: 5rem;
+      }
+    }
+
+    .hero-image {
+      order: 2;
+    }
+  }
+}
+
+@include mediaQuery(lg) {
+  .hero {
+    > * {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

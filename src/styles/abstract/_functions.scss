@@ -1,0 +1,59 @@
+@use "variables" as var;
+
+@function colorsPrimary($key) {
+    @if map-has-key(var.$colors-primary, $key) {
+        @return map-get(var.$colors-primary, $key);
+    }
+
+    @warn "Unknown `#{$key}` in colors-primary.";
+}
+
+@function colorsNeutral($key) {
+  @if map-has-key(var.$colors-neutral, $key) {
+    @return map-get(var.$colors-neutral, $key);
+  }
+
+  @warn "Unknown `#{$key}` in colors-neutral.";
+}
+
+@function colorsFeedback($type, $key) {
+    @if ($type == 'success') {
+        @if map-has-key(var.$colors-feedback-success, $key) {
+            @return map-get(var.$colors-feedback-success, $key);
+        }
+
+        @warn "Unknown `#{$key}` in colors-success."; 
+    }
+
+    @if ($type == 'error') {
+        @if map-has-key(var.$colors-feedback-err, $key) {
+            @return map-get(var.$colors-feedback-err, $key);
+        }
+
+        @warn "Unknown `#{$key}` in colors-error."; 
+    }
+}
+
+@function typography($key) {
+    @if map-has-key(var.$fonts, $key) {
+        @return map-get(var.$fonts, $key);
+    }
+
+    @warn "Unknown `#{$key}` in fonts.";
+}
+
+@function fontWeight($key) {
+    @if map-has-key(var.$fontsWeight, $key) {
+        @return map-get(var.$fontsWeight, $key);
+    }
+
+    @warn "Unknown `#{$key}` in font weights.";
+}
+
+@function breakPoints($key) {
+    @if map-has-key(var.$breakpoints, $key) {
+        @return map-get(var.$breakpoints, $key);
+    }
+
+    @warn "Unknown `#{$key}` in Media Query.";
+}

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "watch": "sass --watch src/styles/styles.scss:src/styles.css"
   },
   "repository": {
     "type": "git",

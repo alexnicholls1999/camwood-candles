@@ -1,0 +1,17 @@
+@use '../abstract/' as *;
+
+.section-image {
+  padding: 1.5rem;
+
+  > * {
+    display: block;
+    max-width: 100%;
+    box-shadow: 0 0 1rem 0.25rem rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+@include mediaQuery(lg) {
+  .section-image {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,56 @@
+@use '../abstract/' as mixin;
+
+// Mobile Button
+.mobile-btn {
+  @include mixin.positionAlign(true, 'Bottom Right', 2.5rem, 2.5rem);
+  @include mixin.colors(var(--colors-neutral-100), var(--colors-primary-500));
+  @include mixin.padding(1.1rem);
+  @include mixin.borderRadius(100%);
+  @include mixin.shadow(
+    'default',
+    0 0 1.1rem 0.5rem,
+    var(--colors-primary-500)
+  );
+  border: none;
+  z-index: 2;
+
+  .hamburger {
+    @include mixin.position(relative);
+    @include mixin.flex(column nowrap, space-around, self-end);
+    @include mixin.size(
+      $min-height: 1.5rem,
+      $min-width: 1.7rem,
+      $height: 1.5rem,
+      $width: 1.7rem
+    );
+
+    span {
+      @include mixin.size(
+        $height: 3px,
+        $width: 100%,
+        $min-height: 3px,
+        $min-width: 100%
+      );
+      background: var(--colors-neutral-100);
+      @include mixin.borderRadius(0.5rem);
+
+      @include mixin.nth-type(1) {
+        width: 90%;
+        min-width: 90%;
+      }
+
+      @include mixin.nth-type(3) {
+        width: 70%;
+        min-width: 70%;
+      }
+    }
+  }
+}
+
+// Mobile Menu
+
+@include mixin.mediaQuery(lg) {
+  .mobile-btn {
+    display: none;
+  }
+}

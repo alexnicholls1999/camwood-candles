@@ -1,0 +1,61 @@
+// Flex
+@mixin flex($flow, $justify-content, $align-items) {
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+// Grid
+@mixin grid($template-cols, $justify-content, $align-items) {
+    display: grid;
+    grid-template-columns: $template-cols;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin position($position) {
+    position: $position;
+}
+
+@mixin inset($position, $inset) {
+    position: $position;
+    inset: $inset;
+}
+
+// Position Align
+@mixin positionAlign($fixed, $align, $p-v, $p-h) {
+    @if ($fixed == true) {
+        position: fixed;
+    }
+
+    @if ($fixed == false) {
+        position: absolute;
+    }
+
+    @if ($align == 'Top Right') {
+        top: $p-v;
+        right: $p-h;
+    }
+    @if ($align == 'Top Left') {
+        top: $p-v;
+        left: $p-h;
+    }
+    @if ($align == 'Bottom Right') {
+        bottom: $p-v;
+        right: $p-h;
+    }
+    @if ($align == 'Bottom Left') {
+        bottom: $p-v;
+        left: $p-h;
+    }
+}
+
+// Margin and Padding
+@mixin margin($m-t, $m-r: null, $m-b: null, $m-l: null) {
+    margin: $m-t $m-r $m-b $m-l;
+}
+
+@mixin padding($p-t, $p-r: null, $p-b: null, $p-l: null) {
+    padding: $p-t $p-r $p-b $p-l;
+}

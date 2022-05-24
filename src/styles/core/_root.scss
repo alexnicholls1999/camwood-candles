@@ -1,0 +1,8 @@
+@use '../abstract/' as mixins;
+@import url(mixins.$fontsImport);
+
+:root {
+    @include mixins.colorVariables();
+    @include mixins.fontVariables();
+    @include mixins.fontWeightVariables();
+}

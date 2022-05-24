@@ -1,0 +1,36 @@
+@use '../abstract/' as *;
+
+.social-media {
+  @include flex(row, flex-start, flex-start);
+  gap: 1rem;
+  margin-left: 1rem;
+
+  .icon {
+    @include border(1px, solid, var(--colors-neutral-300));
+    @include borderRadius(50%);
+    @include size(
+      $height: 1.8rem,
+      $min-height: 1rem,
+      $width: 1.8rem,
+      $min-width: 1rem
+    );
+    @include flex(
+      $flow: column,
+      $justify-content: center,
+      $align-items: center
+    );
+    font-size: 0.95rem;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .primary-icon {
+    @include colors($color: var(--colors-primary-600));
+  }
+
+  .secondary-icon {
+    @include colors($color: var(--colors-neutral-900));
+  }
+}

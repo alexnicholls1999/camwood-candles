@@ -1,0 +1,32 @@
+@use '../abstract/' as *;
+
+.footer {
+  @include colors(
+    $color: var(--colors-neutral-100),
+    $bg-color: var(--colors-neutral-900)
+  );
+
+  .social-media-footer {
+    @include flex(
+      $flow: row,
+      $justify-content: flex-start,
+      $align-items: center
+    );
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+
+    .media-icon,
+    .media-icon--link {
+      font-size: 1.5rem;
+      @include colors($color: var(--colors-neutral-100));
+    }
+  }
+}
+
+@include mediaQuery(md) {
+  .social-media-footer {
+    justify-content: flex-end !important;
+  }
+}

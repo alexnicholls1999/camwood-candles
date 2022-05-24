@@ -1,22 +1,21 @@
 export function currentPageObserver() {
-  const pages = document.querySelectorAll(".page-section");
+  const pages = document.querySelectorAll('.page-section');
 
   const toggleActiveClass = (target) => {
-    document.querySelector(".active-link").classList.remove("active-link");
+    document.querySelector('.active-link').classList.remove('active-link');
 
-    const id = target.getAttribute("id");
+    const id = target.getAttribute('id');
     const newLink = document
       .querySelector(`[href="#${id}"]`)
-      .classList.add("active-link");
+      .classList.add('active-link');
   };
 
   const options = {
-    threshold: 0.55,
+    threshold: 0.55
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      // verify the element is intersecting
       const { isIntersecting, intersectionRatio, target } = entry;
 
       if (isIntersecting && intersectionRatio >= 0.55)

@@ -1,0 +1,109 @@
+@use '../abstract/' as *;
+
+.slider {
+  position: relative;
+  @include size(100vh, 100%, 100vh, 100%);
+}
+.slideshow-container {
+  position: relative;
+  @include size(100%, 100%, 100%, 100%);
+
+  .slide {
+    height: 100%;
+    width: 100%;
+
+    .slide-image,
+    .slide-info {
+      min-height: 50%;
+      height: 50%;
+    }
+
+    .slide-info {
+      display: grid;
+      place-items: center;
+
+      h2 {
+        margin-top: 1rem;
+      }
+
+      .product-description {
+        list-style: none;
+        padding-left: 0;
+        font-size: min(3.5vw, 1rem);
+
+        li {
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+
+    .slide-image img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.slider-btn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  padding: 1rem;
+
+  @include flex(
+    $flow: row,
+    $justify-content: space-between,
+    $align-items: center
+  );
+  @include colors(
+    $color: var(--colors-primary-800),
+    $bg-color: var(--colors-neutral-100)
+  );
+  @include size(1rem, 3rem, 1rem, 3rem);
+  @include borderRadius(2rem);
+}
+
+@include mediaQuery(md) {
+  .slider {
+    position: relative;
+    min-height: 40vh;
+    height: 40vh;
+  }
+
+  .slide-image,
+  .slide-info {
+    min-height: 100% !important;
+    height: 100% !important;
+  }
+
+  .slide-info {
+    place-items: flex-start !important;
+
+    h2 {
+      margin-top: 2rem !important;
+    }
+  }
+
+  .slider-btn {
+    bottom: 2rem;
+    top: auto;
+  }
+}
+
+@include mediaQuery(lg) {
+  .slider {
+    min-height: 60vh;
+    height: 60vh;
+
+    .slide-info {
+      .container h2 {
+        margin-top: 4rem !important;
+      }
+    }
+
+    .product-description li {
+      padding-bottom: 1rem !important;
+    }
+  }
+}

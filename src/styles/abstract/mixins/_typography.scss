@@ -1,0 +1,31 @@
+@use "./../functions";
+
+@mixin fontVariables() {
+    --font-family-Bitter: #{functions.typography(bitter)};
+    --font-family-Arial: #{functions.typography(arial)};
+}
+
+@mixin fontWeightVariables {
+    --font-weight-100: #{functions.fontWeight(thin)};
+    --font-weight-200: #{functions.fontWeight(extra-light)};
+    --font-weight-300: #{functions.fontWeight(light)};
+    --font-weight-400: #{functions.fontWeight(regular)};
+    --font-weight-500: #{functions.fontWeight(medium)};
+    --font-weight-600: #{functions.fontWeight(semi-bold)};
+    --font-weight-700: #{functions.fontWeight(bold)};
+    --font-weight-800: #{functions.fontWeight(x-bold)};
+    --font-weight-900: #{functions.fontWeight(black)};
+}
+
+@mixin fontFamily() {
+    font-family: var(--font-family-Bitter),
+        var(--font-family-Arial);
+}
+
+@mixin fontWeight($fontWeight) {
+    font-weight: $fontWeight;
+}
+
+@mixin heading($fontMax, $fontSizeA, $fontSizeB, $fontMin) {
+    font-size: clamp(#{$fontMin, calc($fontSizeA + $fontSizeB), $fontMax});
+}
