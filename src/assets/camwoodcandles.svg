@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1160px" height="1160px" viewBox="0 0 1160 1160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-365.000000, -322.000000)">
+            <g id="Group" transform="translate(365.736262, 324.959330)">
+                <polygon id="Path-27" fill="#000000" points="480.770894 891.811277 575.017756 1156.81128 669.264617 891.811277"></polygon>
+                <polygon id="Polygon" stroke="#000000" stroke-width="7" fill="#000000" transform="translate(576.763738, 302.540670) rotate(30.000000) translate(-576.763738, -302.540670) " points="576.763738 116.04067 738.277476 209.29067 738.277476 395.79067 576.763738 489.04067 415.25 395.79067 415.25 209.29067"></polygon>
+                <polygon id="Path-31" fill="#F1B002" points="719.742201 557.604766 434.415497 557.604766 390.263738 632.336334 429.353583 744.082192 722.525365 744.082192 763.263738 632.336334"></polygon>
+                <polygon id="Polygon" stroke="#E8E8E8" stroke-width="16" fill="#F1F1F1" transform="translate(903.763738, 462.540670) rotate(30.000000) translate(-903.763738, -462.540670) " points="903.763738 276.04067 1065.27748 369.29067 1065.27748 555.79067 903.763738 649.04067 742.25 555.79067 742.25 369.29067"></polygon>
+                <polygon id="Polygon" stroke="#E8E8E8" stroke-width="16" fill="#F1F1F1" transform="translate(254.763738, 462.540670) rotate(30.000000) translate(-254.763738, -462.540670) " points="254.763738 276.04067 416.277476 369.29067 416.277476 555.79067 254.763738 649.04067 93.25 555.79067 93.25 369.29067"></polygon>
+                <line x1="669.013738" y1="161.026933" x2="733.074291" y2="0" id="Path-28" stroke="#000000" stroke-width="14"></line>
+                <line x1="424.013738" y1="161.026933" x2="488.074291" y2="0" id="Path-28" stroke="#000000" stroke-width="14" transform="translate(456.044014, 80.513466) scale(-1, 1) translate(-456.044014, -80.513466) "></line>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,9 @@
+@mixin nth-type($i) {
+    &:nth-of-type(#{$i}) {
+        @content;
+    }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62

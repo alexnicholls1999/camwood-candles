@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+@use '../abstract/' as mixins;
+@import url(mixins.$fontsImport);
+
+:root {
+    @include mixins.colorVariables();
+    @include mixins.fontVariables();
+    @include mixins.fontWeightVariables();
+}
+=======
+@use '../abstract' as mixin;
+@import url(mixin.$fontsImport);
+
+:root {
+    @include mixin.colorVariables();
+    @include mixin.fontVariables();
+    @include mixin.fontWeightVariables();
+}
+
+body {
+    @include mixin.fontFamily();
+}
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62

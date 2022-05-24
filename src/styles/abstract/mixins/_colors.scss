@@ -1,0 +1,118 @@
+<<<<<<< HEAD
+@use './../functions';
+@use './../variables' as var;
+
+@mixin colorPrimaryVariables {
+  --colors-primary-100: #{functions.colorsPrimary(100)};
+  --colors-primary-200: #{functions.colorsPrimary(200)};
+  --colors-primary-300: #{functions.colorsPrimary(300)};
+  --colors-primary-400: #{functions.colorsPrimary(400)};
+  --colors-primary-500: #{functions.colorsPrimary(500)};
+  --colors-primary-600: #{functions.colorsPrimary(600)};
+  --colors-primary-700: #{functions.colorsPrimary(700)};
+  --colors-primary-800: #{functions.colorsPrimary(800)};
+}
+
+@mixin colorNeutralVariables {
+  --colors-neutral-100: #{functions.colorsNeutral(100)};
+  --colors-neutral-300: #{functions.colorsNeutral(300)};
+  --colors-neutral-500: #{functions.colorsNeutral(500)};
+  --colors-neutral-600: #{functions.colorsNeutral(600)};
+  --colors-neutral-700: #{functions.colorsNeutral(700)};
+  --colors-neutral-800: #{functions.colorsNeutral(800)};
+  --colors-neutral-900: #{functions.colorsNeutral(900)};
+}
+
+@mixin colorFeedbackVariables {
+  --colors-feedback-success-100: #{functions.colorsFeedback('success', 100)};
+  --colors-feedback-success-900: #{functions.colorsFeedback('success', 900)};
+  --colors-feedback-error-100: #{functions.colorsFeedback('error', 100)};
+  --colors-feedback-error-900: #{functions.colorsFeedback('error', 900)};
+}
+
+@mixin colorVariables {
+  @include colorPrimaryVariables();
+  @include colorNeutralVariables();
+  @include colorFeedbackVariables();
+}
+
+@mixin colors($color: null, $bg-color: null) {
+  background-color: $bg-color;
+  color: $color;
+}
+
+@mixin shadow($type: 'default', $offset: null, $color: null) {
+  @if ($type == 'dark') {
+    box-shadow: 0 1rem 3.5rem 0.1rem rgb(206 206 206 / 50%);
+  }
+
+  @if ($type == 'inset') {
+    box-shadow: inset $offset $color;
+  }
+
+  @if ($type == default) {
+    box-shadow: $offset $color;
+  }
+}
+
+@mixin theme($type) {
+  @if ($type == 'primary') {
+    @include colors(
+      $color: var(--colors-neutral-100),
+      $bg-color: var(--colors-neutral-800)
+    );
+  }
+  @if ($type == 'secondary') {
+    @include colors(
+      $color: var(--colors-neutral-900),
+      $bg-color: var(--colors-primary-600)
+    );
+  }
+  @if ($type == 'primary-font') {
+    @include colors($color: var(--colors-primary-800));
+  }
+  @if ($type == 'secondary-font') {
+    @include colors($color: var(--colors-neutral-900));
+  }
+=======
+@use '../variables' as var;
+@use '../functions' as func;
+
+@mixin colorPrimaryVariables {
+    --colors-primary-100: #{func.colorsPrimary(100)};
+    --colors-primary-200: #{func.colorsPrimary(200)};
+    --colors-primary-300: #{func.colorsPrimary(300)};
+    --colors-primary-400: #{func.colorsPrimary(400)};
+    --colors-primary-500: #{func.colorsPrimary(500)};
+    --colors-primary-600: #{func.colorsPrimary(600)};
+    --colors-primary-700: #{func.colorsPrimary(700)};
+    --colors-primary-800: #{func.colorsPrimary(800)};
+}
+
+@mixin colorNeutralVariables {
+    --colors-neutral-100: #{func.colorsNeutral(100)};
+    --colors-neutral-300: #{func.colorsNeutral(300)};
+    --colors-neutral-500: #{func.colorsNeutral(500)};
+    --colors-neutral-600: #{func.colorsNeutral(600)};
+    --colors-neutral-700: #{func.colorsNeutral(700)};
+    --colors-neutral-800: #{func.colorsNeutral(800)};
+    --colors-neutral-900: #{func.colorsNeutral(900)};
+}
+
+@mixin colorVariables {
+    @include colorPrimaryVariables();
+    @include colorNeutralVariables();
+}
+
+@mixin colors($color: null, $bg-color: null) {
+    background-color: $bg-color;
+    color: $color;
+}
+
+@mixin shadow($type: 'default', $offset: null, $color: null) {
+    @if ($type: 'dark') {
+        box-shadow: 0 0 2rem 0 rgba(black, 0.5);
+    }
+    box-shadow: $offset $color;
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
+}

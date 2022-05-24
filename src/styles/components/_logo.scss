@@ -1,0 +1,23 @@
+@use '../abstract/' as *;
+
+.logo {
+  @include bgImage(
+    $src: $logo-secondary,
+    $bg-size: contain,
+    $bg-position: left,
+    $bg-repeat: no-repeat
+  );
+  padding: 1.75rem;
+  margin-top: 1rem;
+}
+
+@include mediaQuery(md) {
+  .logo {
+    @include bgImage(
+      $src: $logo-primary,
+      $bg-size: contain,
+      $bg-position: left,
+      $bg-repeat: no-repeat
+    );
+  }
+}

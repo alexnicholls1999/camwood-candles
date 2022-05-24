@@ -1,0 +1,142 @@
+@use '../abstract/' as mixin;
+
+<<<<<<< HEAD
+// Mobile Button
+.mobile-btn {
+  @include mixin.positionAlign(true, 'Bottom Right', 2.5rem, 2.5rem);
+  @include mixin.colors(var(--colors-neutral-100), var(--colors-primary-500));
+  @include mixin.padding(1.1rem);
+  @include mixin.borderRadius(100%);
+  @include mixin.shadow(
+    'default',
+    0 0 1.1rem 0.5rem,
+    var(--colors-primary-500)
+  );
+  border: none;
+  z-index: 2;
+
+  .hamburger {
+    @include mixin.position(relative);
+    @include mixin.flex(column nowrap, space-around, self-end);
+    @include mixin.size(
+      $min-height: 1.5rem,
+      $min-width: 1.7rem,
+      $height: 1.5rem,
+      $width: 1.7rem
+    );
+
+    span {
+      @include mixin.size(
+        $height: 3px,
+        $width: 100%,
+        $min-height: 3px,
+        $min-width: 100%
+      );
+      background: var(--colors-neutral-100);
+      @include mixin.borderRadius(0.5rem);
+
+      @include mixin.nth-type(1) {
+        width: 90%;
+        min-width: 90%;
+      }
+
+      @include mixin.nth-type(3) {
+        width: 70%;
+        min-width: 70%;
+      }
+    }
+  }
+}
+
+// Mobile Menu
+
+@include mixin.mediaQuery(lg) {
+  .mobile-btn {
+    display: none;
+  }
+=======
+.mobile-btn {
+    @include mixin.positionAlign(true, 'Bottom Right', 2.5rem, 2.5rem);
+    @include mixin.padding(1.1rem, 1rem);
+    @include mixin.colors(var(--colors-primary-500), var(--colors-neutral-100));
+    @include mixin.borderRadius(100%);
+    @include mixin.shadow(0 0 1.1rem 0.5rem, var(--colors-primary-500));
+    border: none;
+    z-index: 2;
+
+    .hamburger {
+        @include mixin.position(relative);
+        @include mixin.flex(column nowrap, space-around, self-end);
+        @include mixin.size(1.5rem, 1.5rem, 1.7rem, 1.7rem);
+        margin: 0 auto;
+
+        span {
+            @include mixin.size(3px, 3px, 100%, 100%);
+            background: var(--colors-neutral-100);
+            border-radius: 0.5rem;
+
+            @include mixin.nth-type(1) {
+                width: 90%;
+                min-width: 90%;
+            }
+
+            @include mixin.nth-type(3) {
+                width: 70%;
+                min-width: 70%;
+            }
+        }
+    }
+}
+
+.mobile-menu {
+    @include mixin.positionAlign(true, 'Bottom Right', 0, 5%);
+    @include mixin.colors(var(--colors-neutral-100), var(--colors-neutral-800));
+    @include mixin.padding(1rem, 0, 4rem);
+    @include mixin.shadow(dark);
+    @include mixin.borderRadius(0.5rem 0.5rem 0 0);
+    width: min(360px, 90%);
+    z-index: 2;
+
+    h2 {
+        @include mixin.margin(0.83rem, 0);
+        @include mixin.padding(1rem, 0.85rem, 0);
+        font-size: 1.75rem;
+    }
+
+    .close {
+        @include mixin.positionAlign(false, 'Top Right', 1.5rem, 1rem);
+    }
+
+    .menu {
+        @include mixin.flex(column, flex-start, flex-start);
+        @include mixin.margin(0, 1rem);
+        @include mixin.padding(0);
+        list-style: none;
+        gap: 0.65rem;
+
+        li {
+            width: 100%;
+        }
+
+        .menu--item a {
+            display: block;
+            @include mixin.padding(1rem);
+            text-decoration: none;
+            @include mixin.colors($color: var(--colors-neutral-100));
+            cursor: pointer;
+        }
+    }
+}
+
+.active-link {
+    @include mixin.colors($bg-color: var(--colors-neutral-700));
+    @include mixin.fontWeight(var(--font-weight-700));
+    @include mixin.borderRadius(0.3rem);
+}
+
+@include mixin.mediaQuery(lg) {
+    .mobile-btn {
+        display: none;
+    }
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
+}

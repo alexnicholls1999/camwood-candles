@@ -1,0 +1,14 @@
+@mixin bgImage($src, $bg-size, $bg-position, $bg-repeat) {
+  background: url($src);
+  background-size: $bg-size;
+  background-position: $bg-position;
+  background-repeat: $bg-repeat;
+}
+
+@mixin image($img-fit) {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  object-fit: $img-fit;
+}

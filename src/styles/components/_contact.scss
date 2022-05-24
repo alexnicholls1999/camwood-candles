@@ -1,0 +1,57 @@
+@use '../abstract/' as *;
+
+.contact-form-wrapper {
+  width: min(90%, 30rem);
+  @include padding(3rem, 1rem);
+  margin-inline: auto;
+
+  h2 {
+    color: var(--colors-primary-800);
+    margin: 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    margin-inline: auto;
+    padding-block: 2rem;
+    gap: 1rem;
+
+    .contact-method {
+      @include flex(row, flex-start, center);
+      gap: 0.45rem;
+
+      i,
+      p {
+        color: var(--colors-neutral-100);
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#map {
+  min-height: 50vh;
+  z-index: 0;
+}
+
+@include mediaQuery(md) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #map {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 50%;
+  }
+}
+
+@include mediaQuery(lg) {
+  .contact-form-wrapper {
+    margin-left: 1rem;
+  }
+}

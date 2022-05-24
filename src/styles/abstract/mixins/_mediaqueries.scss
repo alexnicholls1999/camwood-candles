@@ -1,0 +1,21 @@
+@use '../functions';
+
+@mixin mediaQuery($breakpoint) {
+    @if $breakpoint == md {
+        @media (min-width: #{functions.breakPoints(md)}) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (min-width: #{functions.breakPoints(lg)}) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (min-width: #{functions.breakPoints(xl)}) {
+            @content;
+        }
+    }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
