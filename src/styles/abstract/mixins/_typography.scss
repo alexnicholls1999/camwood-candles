@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @use "./../functions";
+=======
+@use '../functions';
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 
 @mixin fontVariables() {
     --font-family-Bitter: #{functions.typography(bitter)};
@@ -18,8 +22,12 @@
 }
 
 @mixin fontFamily() {
+<<<<<<< HEAD
     font-family: var(--font-family-Bitter),
         var(--font-family-Arial);
+=======
+    font-family: var(--font-family-Bitter), var(--font-family-Arial);
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 }
 
 @mixin fontWeight($fontWeight) {
@@ -28,4 +36,8 @@
 
 @mixin heading($fontMax, $fontSizeA, $fontSizeB, $fontMin) {
     font-size: clamp(#{$fontMin, calc($fontSizeA + $fontSizeB), $fontMax});
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62

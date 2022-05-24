@@ -1,0 +1,10 @@
+@use '../abstract';
+
+h1 {
+    @include abstract.heading(
+        $fontMax: 5rem,
+        $fontSizeA: 1.1rem,
+        $fontSizeB: 3.25vw,
+        $fontMin: 1.75rem
+    );
+}

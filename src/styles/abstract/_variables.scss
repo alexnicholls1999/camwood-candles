@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Images
 $bg-image: '../src/assets/3f63f54e-b823-4e15-9cf3-7d9aba23bdfa.jpg';
 $pillars_dinning_1: '../src/assets/pillars_dinning.jpg';
@@ -26,6 +27,12 @@ $fontsImport: 'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0
 $fonts: (
   bitter: 'Bitter',
   arial: 'Arial'
+=======
+$fontsImport: 'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+$fonts: (
+    bitter: "Bitter",
+    arial: "Arial"
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 );
 $fontsWeight: (
   thin: 100,
@@ -36,6 +43,7 @@ $fontsWeight: (
   semi-bold: 600,
   bold: 700,
   x-bold: 800,
+<<<<<<< HEAD
   black: 900
 );
 
@@ -79,3 +87,44 @@ $breakpoints: (
   lg: 75rem,
   xl: 150rem
 );
+=======
+  black: 900,
+);
+
+$colors-neutral: (
+    900: #000000,
+    800: #1C1C1C,
+    700: #2A2A2A,
+    600: #171717,
+    500: #848484,
+    300: #DFDFDF,
+    100: #FFFFFF,
+);
+
+$colors-primary: (
+    800: #FCC32C,
+    700: #F1B002,
+    600: #fecb3d,
+    500: #f5cb5c,
+    400: #FFF6B6,
+    300: #FFECBC, 
+    200: #fffbde,
+    100: #fff8e6,
+);
+
+$colors-feedback-error: (
+    900: #FF5353,
+    100: #F7CCCC,
+);
+
+$colors-feedback-success: (
+    900: #0DB84C,
+    100: #1d221d,
+);
+
+$breakpoints: (
+  md: 48rem,
+  lg: 75rem,
+  xl: 150rem,
+);
+>>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
