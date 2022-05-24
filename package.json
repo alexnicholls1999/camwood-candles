@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "camwood-candles",
   "version": "1.0.0",
   "description": "",
@@ -27,35 +26,4 @@
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
-=======
-    "name": "camwood-candles",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "node app.js",
-        "dev": "nodemon app.js",
-        "watch": "sass -w src/styles/styles.scss:src/styles.css"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexnicholls1999/camwood-candles.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/alexnicholls1999/camwood-candles/issues"
-    },
-    "homepage": "https://github.com/alexnicholls1999/camwood-candles#readme",
-    "dependencies": {
-        "dotenv": "^14.3.2",
-        "express": "^4.17.2",
-        "nodemailer": "^6.7.2",
-        "sass": "^1.50.0"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.15"
-    }
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 }

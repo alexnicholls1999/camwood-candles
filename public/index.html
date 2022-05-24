@@ -1,262 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Camwood Candles</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" />
-
-    <!-- FontAwesome CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <!-- Leaflet Map CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
-
-    <!-- Leaflet Map JS -->
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
-
-    <link rel="stylesheet" href="src/styles.css" />
-  </head>
-  <body>
-    <div class="mobile-btn" data-open>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-    <div class="mobile-menu"></div>
-    <!-- Mobile Menu -->
-
-    <header>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="logo"></div>
-          </div>
-          <div class="col-md-6 col-lg-8">
-            <nav class="navbar">
-              <ul class="nav-menu"></ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- Header -->
-
-    <div class="dimensions"></div>
-
-    <div class="content">
-      <div class="hero page-section row">
-        <div class="hero-image col-md-6 col-lg-8"></div>
-        <div class="hero-content col-md-6 col-lg-4">
-          <div class="pt-5 container">
-            <div class="hero-intro">
-              <h1 class="h-1 primary--title">Camwood Candles</h1>
-              <p class="slogan">
-                Beeswax is natures gift to us <br />
-                This is our gift to you!
-              </p>
-            </div>
-            <button class="store-link-btn" data-purchasebtn>
-              Purchase A Gift Now
-            </button>
-            <div class="social-media"></div>
-            <div class="scroll-down">
-              <div class="scroll-down-wrapper">
-                <p class="scroll-down--title">Scroll Down</p>
-                <div class="scroll-down--arrow"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Hero Section -->
-
-      <div class="about container-fluid page-section">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="h-2 about-title secondary--title">About Us</h2>
-            <h3 class="about-slogan primary--title">
-              "A shining light in the dark"
-            </h3>
-          </div>
-          <div class="col-md-6">
-            <div class="about-info">
-              Hello, my name is Carol and I make candles. In 2017 I attended a
-              candle making course and fell in love with beeswax. Beeswax is a
-              natural wax produced by the honey bee and I loved the idea that
-              nature was helping me make my candles, so in 2018 I founded
-              Camwood Candles. I have created some beautiful beeswax candles for
-              everyone to enjoy and last year expanded my beeswax range to
-              include lip and hand balm and soaps.
-              <br />
-              <br />
-              I hope you enjoy browsing through my beeswax range.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="points">
-        <div class="points-grid"></div>
-      </div>
-
-      <!-- About -->
-
-      <div class="container-fluid votives primary page-section"></div>
-
-      <!-- Votives -->
-
-      <div class="slider">
-        <div id="pillarsnDinning" class="slideshow-container secondary"></div>
-        <div class="slider-btn">
-          <div class="arrow" id="previous">&#10094;</div>
-          <div class="arrow" id="next">&#10095;</div>
-        </div>
-        <div class="dots-container">
-          <div onclick="currentSlides(1)" id="dot-one" class="dot"></div>
-          <div onclick="currentSlides(2)" id="dot-two" class="dot"></div>
-          <div onclick="currentSlides(3)" id="dot-three" class="dot"></div>
-        </div>
-      </div>
-
-      <!-- PillarsnDinning -->
-
-      <div class="slider">
-        <div id="meltsnBurners" class="slideshow-container primary"></div>
-        <div class="slider-btn">
-          <div class="arrow" id="previous-2">&#10094;</div>
-          <div class="arrow" id="next-2">&#10095;</div>
-        </div>
-        <div class="dots-container">
-          <div onclick="currentSlides(1)" id="dot-one" class="dot"></div>
-          <div onclick="currentSlides(2)" id="dot-two" class="dot"></div>
-          <div onclick="currentSlides(3)" id="dot-three" class="dot"></div>
-        </div>
-      </div>
-
-      <!-- MeltsnBurners -->
-
-      <div class="container-fluid waxproducts page-section"></div>
-      <!-- WaxProducts -->
-
-      <div class="container gallery">
-        <h2 class="h-2 primary--title text-center">View us on Instagram</h2>
-        <div class="gallery-grid"></div>
-      </div>
-      <!-- Instagram Gallery -->
-    </div>
-
-    <div class="contact">
-      <div class="row">
-        <div class="col-md-5 col-lg-5 primary">
-          <div class="contact-form-wrapper">
-            <h2 class="h-2 primary--title">Get in Touch</h2>
-            <div class="contact-details contact-grid"></div>
-            <div class="serverMessage" id="serverError"></div>
-            <form class="contact-form">
-              <div class="form-control">
-                <label>Name</label>
-                <input type="text" id="name" placeholder="Enter Name" />
-              </div>
-              <div class="form-control">
-                <label>Email</label>
-                <input type="text" id="email" placeholder="Enter Email" />
-              </div>
-              <div class="form-control">
-                <label>Message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="8"
-                  placeholder="Enter message"
-                ></textarea>
-              </div>
-              <button class="btn btn-secondary" data-onsendclick>Send</button>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-7 col-lg-7">
-          <div id="map"></div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="copyright">
-              &copy;<span id="year"
-                ><script>
-                  document.write(`${new Date().getFullYear()} Camwood Candles`);
-                </script></span
-              >
-            </p>
-          </div>
-          <div class="col-md-6">
-            <ul class="social-media-footer">
-              <li class="media-icon">
-                <a
-                  class="media-icon--link"
-                  href="https://www.facebook.com/beautifulbeeswax"
-                  ><i class="fab fa-facebook-square"></i
-                ></a>
-              </li>
-              <li class="media-icon">
-                <a
-                  class="media-icon--link"
-                  href="https://www.instagram.com/camwoodcandles/?hl=en-gb"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </li>
-              <li class="media-icon"><i class="fab fa-twitter"></i></li>
-              <li>
-                <button class="btn btn-primary top" data-ontopclick>
-                  &#8593;
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script type="module" src="/src/index.js"></script>
-  </body>
-=======
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Candles Company in Chichester | Camwood Candles</title>
-        <meta
-            name="description"
-            content="Beeswax is natures gift to us. This is our gift to you!"
-        />
+        <title>Camwood Candles</title>
+        <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" />
+
         <!-- FontAwesome CSS -->
         <link
             rel="stylesheet"
@@ -292,38 +45,258 @@
             </div>
         </div>
 
-        <div class="mobile-menu">
-            <h2>Menu</h2>
-            <div class="close" data-close></div>
-            <nav>
-                <ul class="menu">
-                    <li class="menu--item active-link">
-                        <a href="#top">Home</a>
-                    </li>
-                    <li class="menu--item"><a href="#aboutus">About Us</a></li>
-                    <li class="menu--item"><a href="#votives">Votives</a></li>
-                    <li class="menu--item">
-                        <a href="#meltsnburners">Melts & Burners</a>
-                    </li>
-                    <li class="menu--item"><a href="#skincare">Skincare</a></li>
-                    <li class="btn-wrapper" style="margin-top: 0.75rem">
-                        <button
-                            class="btn btn-primary"
-                            data-ondimensionsmobileclick
-                        >
-                            Dimensions
-                        </button>
-                        <button
-                            class="btn btn-primary"
-                            data-oncontactmobileclick
-                        >
-                            Contact
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <div class="mobile-menu"></div>
         <!-- Mobile Menu -->
+
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="logo"></div>
+                    </div>
+                    <div class="col-md-6 col-lg-8">
+                        <nav class="navbar">
+                            <ul class="nav-menu"></ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header -->
+
+        <div class="dimensions"></div>
+
+        <div class="content">
+            <div class="hero page-section row">
+                <div class="hero-image col-md-6 col-lg-8"></div>
+                <div class="hero-content col-md-6 col-lg-4">
+                    <div class="pt-5 container">
+                        <div class="hero-intro">
+                            <h1 class="h-1 primary--title">Camwood Candles</h1>
+                            <p class="slogan">
+                                Beeswax is natures gift to us <br />
+                                This is our gift to you!
+                            </p>
+                        </div>
+                        <button class="store-link-btn" data-purchasebtn>
+                            Purchase A Gift Now
+                        </button>
+                        <div class="social-media"></div>
+                        <div class="scroll-down">
+                            <div class="scroll-down-wrapper">
+                                <p class="scroll-down--title">Scroll Down</p>
+                                <div class="scroll-down--arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Section -->
+
+            <div class="about container-fluid page-section">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="h-2 about-title secondary--title">
+                            About Us
+                        </h2>
+                        <h3 class="about-slogan primary--title">
+                            "A shining light in the dark"
+                        </h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-info">
+                            Hello, my name is Carol and I make candles. In 2017
+                            I attended a candle making course and fell in love
+                            with beeswax. Beeswax is a natural wax produced by
+                            the honey bee and I loved the idea that nature was
+                            helping me make my candles, so in 2018 I founded
+                            Camwood Candles. I have created some beautiful
+                            beeswax candles for everyone to enjoy and last year
+                            expanded my beeswax range to include lip and hand
+                            balm and soaps.
+                            <br />
+                            <br />
+                            I hope you enjoy browsing through my beeswax range.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="points">
+                <div class="points-grid"></div>
+            </div>
+
+            <!-- About -->
+
+            <div class="container-fluid votives primary page-section"></div>
+
+            <!-- Votives -->
+
+            <div class="slider">
+                <div
+                    id="pillarsnDinning"
+                    class="slideshow-container secondary"
+                ></div>
+                <div class="slider-btn">
+                    <div class="arrow" id="previous">&#10094;</div>
+                    <div class="arrow" id="next">&#10095;</div>
+                </div>
+                <div class="dots-container">
+                    <div
+                        onclick="currentSlides(1)"
+                        id="dot-one"
+                        class="dot"
+                    ></div>
+                    <div
+                        onclick="currentSlides(2)"
+                        id="dot-two"
+                        class="dot"
+                    ></div>
+                    <div
+                        onclick="currentSlides(3)"
+                        id="dot-three"
+                        class="dot"
+                    ></div>
+                </div>
+            </div>
+
+            <!-- PillarsnDinning -->
+
+            <div class="slider">
+                <div
+                    id="meltsnBurners"
+                    class="slideshow-container primary"
+                ></div>
+                <div class="slider-btn">
+                    <div class="arrow" id="previous-2">&#10094;</div>
+                    <div class="arrow" id="next-2">&#10095;</div>
+                </div>
+                <div class="dots-container">
+                    <div
+                        onclick="currentSlides(1)"
+                        id="dot-one"
+                        class="dot"
+                    ></div>
+                    <div
+                        onclick="currentSlides(2)"
+                        id="dot-two"
+                        class="dot"
+                    ></div>
+                    <div
+                        onclick="currentSlides(3)"
+                        id="dot-three"
+                        class="dot"
+                    ></div>
+                </div>
+            </div>
+
+            <!-- MeltsnBurners -->
+
+            <div class="container-fluid waxproducts page-section"></div>
+            <!-- WaxProducts -->
+
+            <div class="container gallery">
+                <h2 class="h-2 primary--title text-center">
+                    View us on Instagram
+                </h2>
+                <div class="gallery-grid"></div>
+            </div>
+            <!-- Instagram Gallery -->
+        </div>
+
+        <div class="contact">
+            <div class="row">
+                <div class="col-md-5 col-lg-5 primary">
+                    <div class="contact-form-wrapper">
+                        <h2 class="h-2 primary--title">Get in Touch</h2>
+                        <div class="contact-details contact-grid"></div>
+                        <div class="serverMessage" id="serverError"></div>
+                        <form class="contact-form">
+                            <div class="form-control">
+                                <label>Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Enter Name"
+                                />
+                            </div>
+                            <div class="form-control">
+                                <label>Email</label>
+                                <input
+                                    type="text"
+                                    id="email"
+                                    placeholder="Enter Email"
+                                />
+                            </div>
+                            <div class="form-control">
+                                <label>Message</label>
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    cols="30"
+                                    rows="8"
+                                    placeholder="Enter message"
+                                ></textarea>
+                            </div>
+                            <button class="btn btn-secondary" data-onsendclick>
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-7">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            &copy;<span id="year"
+                                ><script>
+                                    document.write(
+                                        `${new Date().getFullYear()} Camwood Candles`
+                                    )
+                                </script></span
+                            >
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="social-media-footer">
+                            <li class="media-icon">
+                                <a
+                                    class="media-icon--link"
+                                    href="https://www.facebook.com/beautifulbeeswax"
+                                    ><i class="fab fa-facebook-square"></i
+                                ></a>
+                            </li>
+                            <li class="media-icon">
+                                <a
+                                    class="media-icon--link"
+                                    href="https://www.instagram.com/camwoodcandles/?hl=en-gb"
+                                    ><i class="fab fa-instagram"></i
+                                ></a>
+                            </li>
+                            <li class="media-icon">
+                                <i class="fab fa-twitter"></i>
+                            </li>
+                            <li>
+                                <button
+                                    class="btn btn-primary top"
+                                    data-ontopclick
+                                >
+                                    &#8593;
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type="module" src="/src/index.js"></script>
     </body>
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 </html>
