@@ -2,51 +2,63 @@ import React from 'react';
 import { Col, Container, Row } from '../../Layouts/Grid/Grid';
 import Hyperlink from '../Atoms/Hyperlink';
 
-import slideImg from '../../assets/burners/burners_blue.jpg';
-
-const description = [
-  'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
-  'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-  'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
-];
-
 function Slider({ slider }) {
   return (
-    <div className="slider" id="meltsnburners">
-      <div className="slideshow-container">
-        <Row className="slide">
-          <Col className="slide-image" md={6}>
-            <img src={slideImg} alt="burner" />
+    <div
+      className={`slider ${slider.isSecondary ? 'primary' : 'secondary'}`}
+      id={slider.id}
+    >
+      <div className='slideshow-container'>
+        <Row className='slide'>
+          <Col
+            className={`slide-image ${slider.isSecondary ? 'order-2' : null}`}
+            md={6}
+          >
+            <img src={slider.slide.img.src} alt={slider.slide.img.src} />
           </Col>
-          <Col className="slide-info" md={6}>
+          <Col
+            className={`slide-info ${slider.isSecondary ? 'order-1' : null}`}
+            md={6}
+          >
             <Container>
-              <h2 className="primary--title">Melts & Burners</h2>
-              <ul className="product-description">
-                {description.map((desc) => {
+              <h2
+                className={`${
+                  slider.isSecondary ? 'primary--title' : 'secondary--title'
+                }`}
+              >
+                {slider.slide.title}
+              </h2>
+              <ul className='product-description'>
+                {slider.slide.description.map((desc) => {
                   return <li>{desc}</li>;
                 })}
                 <li>
                   Please{' '}
-                  <Hyperlink hyperlink={{ path: '#', isSecondary: false }} /> to
-                  see dimensions sheet for sizes and prices.
+                  <Hyperlink
+                    hyperlink={{
+                      path: '#',
+                      isSecondary: slider.isSecondary
+                    }}
+                  />{' '}
+                  to see dimensions sheet for sizes and prices.
                 </li>
               </ul>
             </Container>
           </Col>
         </Row>
       </div>
-      <div className="slider-btn">
-        <div className="arrow" id="previous">
+      <div className='slider-btn'>
+        <div className='arrow' id='previous'>
           &#10094;
         </div>
-        <div className="arrow" id="next">
+        <div className='arrow' id='next'>
           &#10095;
         </div>
       </div>
-      <div className="dots-container">
-        <div className="dot" id="dot-one"></div>
-        <div className="dot" id="dot-two"></div>
-        <div className="dot" id="dot-three"></div>
+      <div className='dots-container'>
+        <div className='dot' id='dot-one'></div>
+        <div className='dot' id='dot-two'></div>
+        <div className='dot' id='dot-three'></div>
       </div>
     </div>
   );
