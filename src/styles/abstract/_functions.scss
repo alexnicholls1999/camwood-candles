@@ -9,7 +9,6 @@
 }
 
 @function colorsNeutral($key) {
-<<<<<<< HEAD
   @if map-has-key(var.$colors-neutral, $key) {
     @return map-get(var.$colors-neutral, $key);
   }
@@ -33,36 +32,19 @@
 
         @warn "Unknown `#{$key}` in colors-error."; 
     }
-=======
-    @if map-has-key(var.$colors-neutral, $key) {
-        @return map-get(var.$colors-neutral, $key);
-    }
-
-    @warn "Unknown `#{$key}` in colors-neutral.";
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 }
 
 @function typography($key) {
     @if map-has-key(var.$fonts, $key) {
-<<<<<<< HEAD
         @return map-get(var.$fonts, $key);
     }
 
-=======
-      @return map-get(var.$fonts, $key);
-    }
-  
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
     @warn "Unknown `#{$key}` in fonts.";
 }
 
 @function fontWeight($key) {
     @if map-has-key(var.$fontsWeight, $key) {
-<<<<<<< HEAD
         @return map-get(var.$fontsWeight, $key);
-=======
-    @return map-get(var.$fontsWeight, $key);
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
     }
 
     @warn "Unknown `#{$key}` in font weights.";
@@ -70,11 +52,7 @@
 
 @function breakPoints($key) {
     @if map-has-key(var.$breakpoints, $key) {
-<<<<<<< HEAD
         @return map-get(var.$breakpoints, $key);
-=======
-    @return map-get(var.$breakpoints, $key);
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
     }
 
     @warn "Unknown `#{$key}` in Media Query.";

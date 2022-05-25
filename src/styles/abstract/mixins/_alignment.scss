@@ -56,20 +56,6 @@
     margin: $m-t $m-r $m-b $m-l;
 }
 
-<<<<<<< HEAD
 @mixin padding($p-t, $p-r: null, $p-b: null, $p-l: null) {
     padding: $p-t $p-r $p-b $p-l;
 }
-=======
-@mixin paddingTwo($p-tb, $p-lr) {
-    padding: $p-tb $p-lr;
-}
-
-@mixin paddingThree($p-t, $p-lr, $p-b) {
-    padding: $p-t $p-lr $p-b;
-}
-
-@mixin padding($p-t, $p-r: null, $p-b: null, $p-l: null) {
-    padding: $p-t $p-r $p-b $p-l;
-}
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62

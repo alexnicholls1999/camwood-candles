@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @use './../functions';
 @use './../variables' as var;
 
@@ -74,45 +73,4 @@
   @if ($type == 'secondary-font') {
     @include colors($color: var(--colors-neutral-900));
   }
-=======
-@use '../variables' as var;
-@use '../functions' as func;
-
-@mixin colorPrimaryVariables {
-    --colors-primary-100: #{func.colorsPrimary(100)};
-    --colors-primary-200: #{func.colorsPrimary(200)};
-    --colors-primary-300: #{func.colorsPrimary(300)};
-    --colors-primary-400: #{func.colorsPrimary(400)};
-    --colors-primary-500: #{func.colorsPrimary(500)};
-    --colors-primary-600: #{func.colorsPrimary(600)};
-    --colors-primary-700: #{func.colorsPrimary(700)};
-    --colors-primary-800: #{func.colorsPrimary(800)};
-}
-
-@mixin colorNeutralVariables {
-    --colors-neutral-100: #{func.colorsNeutral(100)};
-    --colors-neutral-300: #{func.colorsNeutral(300)};
-    --colors-neutral-500: #{func.colorsNeutral(500)};
-    --colors-neutral-600: #{func.colorsNeutral(600)};
-    --colors-neutral-700: #{func.colorsNeutral(700)};
-    --colors-neutral-800: #{func.colorsNeutral(800)};
-    --colors-neutral-900: #{func.colorsNeutral(900)};
-}
-
-@mixin colorVariables {
-    @include colorPrimaryVariables();
-    @include colorNeutralVariables();
-}
-
-@mixin colors($color: null, $bg-color: null) {
-    background-color: $bg-color;
-    color: $color;
-}
-
-@mixin shadow($type: 'default', $offset: null, $color: null) {
-    @if ($type: 'dark') {
-        box-shadow: 0 0 2rem 0 rgba(black, 0.5);
-    }
-    box-shadow: $offset $color;
->>>>>>> badc4c595c5347b0b363af281e39aa3006faae62
 }

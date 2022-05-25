@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Hyperlink() {
+function Hyperlink({ hyperlink }) {
   return (
-    <div>Hyperlink</div>
-  )
+    <a className={`hyperlink ${hyperlink.isSecondary}`} href={hyperlink.path}>
+      click here
+    </a>
+  );
 }
 
-export default Hyperlink
+export default Hyperlink;

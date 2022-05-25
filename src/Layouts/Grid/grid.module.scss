@@ -1,0 +1,68 @@
+@use '../../styles/abstract/' as *;
+
+.container {
+  width: min(90%, 100em);
+  margin-inline: auto;
+}
+
+.containerFluid {
+  @include padding(0, 1rem);
+  margin-inline: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-basis {
+  > * {
+    flex-basis: 100%;
+  }
+}
+
+[class^='col-'] {
+  flex-basis: 100%;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.pt-2 {
+  padding-top: 1.5rem;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+@include mediaQuery(md) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      flex: 0 0 (100% / (12 / $i));
+    }
+  }
+
+  @for $i from 1 to 4 {
+    .order-#{$i} {
+      order: $i;
+    }
+  }
+}
+
+@include mediaQuery(lg) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      flex: 0 0 (100% / (12 / $i));
+    }
+  }
+}
+
+@include mediaQuery(xl) {
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      flex: 0 0 (100% / (12 / $i));
+    }
+  }
+}

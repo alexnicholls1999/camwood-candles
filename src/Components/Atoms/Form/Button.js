@@ -1,9 +1,7 @@
-import atoms from '../atoms.module.scss';
-
 function Button({ button }) {
   return (
     <button
-      className={button.secondary ? atoms.btnSecondary : atoms.btnPrimary}
+      className={`btn ${button.secondary ? 'btn-secondary' : 'btn-primary'}`}
       onClick={button.onClick}
     >
       {button.text}

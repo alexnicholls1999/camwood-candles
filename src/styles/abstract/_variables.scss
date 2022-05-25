@@ -1,5 +1,5 @@
 // Images
-$bg-image: '../src/assets/3f63f54e-b823-4e15-9cf3-7d9aba23bdfa.jpg';
+$bg-image: '../../../src/assets/3f63f54e-b823-4e15-9cf3-7d9aba23bdfa.jpg';
 $pillars_dinning_1: '../src/assets/pillars_dinning.jpg';
 $sphere_green: '../src/assets/sphere_green.jpg';
 $burner_blue: '../src/assets/burners_blue.jpg';
@@ -10,22 +10,22 @@ $beeHive-image: '../src/assets/beehive.svg';
 // Icons
 $arrow-btn: './../src/assets/icons/side-arrow.svg';
 $scroll-down-arrow: './../src/assets/icons/scroll-down-arrow.svg';
-$symbol-natural-substance: './../src/assets/icons/natural.svg';
-$symbol-burn-effiency: './../src/assets/icons/burn-effiency.svg';
-$symbol-native: './../src/assets/icons/native.svg';
-$symbol-air-quality: './../src/assets/icons/air-quality.svg';
+$symbol-natural-substance: './../../../src/assets/icons/natural.svg';
+$symbol-burn-effiency: './../../../src/assets/icons/burn-effiency.svg';
+$symbol-native: './../../../src/assets/icons/native.svg';
+$symbol-air-quality: './../../../src/assets/icons/air-quality.svg';
 $close-circle: './../src/assets/icons/close-circle.svg';
 
 // Logos
-$logo-primary: './../src/assets/camwoodcandles.svg';
-$logo-secondary: './../src/assets/camwoodcandleswhitelogo.svg';
+$logo-primary: './../../../src/assets/camwoodcandles.svg';
+$logo-secondary: './../../../src/assets/camwoodcandleswhitelogo.svg';
 
 // Typography
 
 $fontsImport: 'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
 $fonts: (
   bitter: 'Bitter',
-  arial: 'Arial'
+  arial: 'Arial',
 );
 $fontsWeight: (
   thin: 100,
@@ -36,7 +36,7 @@ $fontsWeight: (
   semi-bold: 600,
   bold: 700,
   x-bold: 800,
-  black: 900
+  black: 900,
 );
 
 // Colors
@@ -49,7 +49,7 @@ $colors-primary: (
   400: #fff6b6,
   300: #ffecbc,
   200: #fffbde,
-  100: #fff8e6
+  100: #fff8e6,
 );
 
 $colors-neutral: (
@@ -59,17 +59,17 @@ $colors-neutral: (
   600: #171717,
   500: #848484,
   300: #dfdfdf,
-  100: #ffffff
+  100: #ffffff,
 );
 
 $colors-feedback-success: (
   100: #c0f1c4,
-  900: #0db84c
+  900: #0db84c,
 );
 
 $colors-feedback-err: (
   100: #f7cccc,
-  900: #ff5353
+  900: #ff5353,
 );
 
 // Mediaquery Breakpoints
@@ -77,5 +77,5 @@ $colors-feedback-err: (
 $breakpoints: (
   md: 48rem,
   lg: 75rem,
-  xl: 150rem
+  xl: 150rem,
 );
