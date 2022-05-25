@@ -25,6 +25,7 @@ import galleryImage6 from './../assets/gallery/273077638_292961712838222_2380055
 import galleryImage7 from './../assets/gallery/273080435_509908090525839_8494720692570817881_n.jpg';
 import galleryImage8 from './../assets/gallery/273263557_1020114465514838_9085530217992514366_n.jpg';
 import galleryImage9 from './../assets/gallery/272896555_646407579938897_4415084328210236413_n.jpg';
+import Button from '../Components/Atoms/Form/Button';
 
 const points = [
   {
@@ -33,14 +34,14 @@ const points = [
     title: 'Natural Substance.',
     isSecondary: false,
     message:
-      'Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives.'
+      'Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives.',
   },
   {
     id: 1,
     pointId: 'burnefficency',
     title: 'Burn Efficency.',
     isSecondary: true,
-    message: 'Beeswax burns longer, cleaner and brighter than any other waxes.'
+    message: 'Beeswax burns longer, cleaner and brighter than any other waxes.',
   },
   {
     id: 2,
@@ -48,7 +49,7 @@ const points = [
     title: 'Native.',
     isSecondary: false,
     message:
-      'Beeswax is the only wax that is essentially used in its native state, with only filtering for processing.'
+      'Beeswax is the only wax that is essentially used in its native state, with only filtering for processing.',
   },
   {
     id: 3,
@@ -56,8 +57,8 @@ const points = [
     title: 'Better air quality.',
     isSecondary: true,
     message:
-      'Natural beeswax candles can provide an important ingredient for a healthier home. They help eliminate bacteria, dust, pollen, pet dander and bacteria from the air when burned.'
-  }
+      'Natural beeswax candles can provide an important ingredient for a healthier home. They help eliminate bacteria, dust, pollen, pet dander and bacteria from the air when burned.',
+  },
 ];
 
 const votives = [
@@ -66,25 +67,25 @@ const votives = [
     title: 'Small Votives',
     information: [
       'Our hand-made beeswax Votive selection made with fun in mind, make that perfect gift for all your friends and family. We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-      'Small Votives include: Rose, Owl, Parcel, Hive, Teddy. Medium Votives include: Lotus Flower, Heart, Sheep. Please click here to see dimensions sheet for sizes and prices.'
+      'Small Votives include: Rose, Owl, Parcel, Hive, Teddy. Medium Votives include: Lotus Flower, Heart, Sheep. Please click here to see dimensions sheet for sizes and prices.',
     ],
     img: {
       alt: 'small_medium_votives_1',
-      src: smallVotives
-    }
+      src: smallVotives,
+    },
   },
   {
     isSecondary: true,
     title: 'Medium Votives',
     information: [
       'Our hand-made beeswax Votive selection made with fun in mind, make that perfect gift for all your friends and family. We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-      'Small Votives include: Rose, Owl, Parcel, Hive, Teddy. Medium Votives include: Lotus Flower, Heart, Sheep. Please click here to see dimensions sheet for sizes and prices.'
+      'Small Votives include: Rose, Owl, Parcel, Hive, Teddy. Medium Votives include: Lotus Flower, Heart, Sheep. Please click here to see dimensions sheet for sizes and prices.',
     ],
     img: {
       alt: 'small_medium_votives_2',
-      src: mediumVotives
-    }
-  }
+      src: mediumVotives,
+    },
+  },
 ];
 
 const waxnproducts = [
@@ -95,24 +96,24 @@ const waxnproducts = [
       'Our hand-made beeswax cute puppy candle is one of our favourites and is very popular.',
       'Our hand-made beeswax Hive candle is very realistic with its little bee.',
       'Our hand-made beeswax romantic Figurine is a wonderful gift for your special someone.',
-      'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn. Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn. Please see our info sheet for sizes and prices.'
+      'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn. Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn. Please see our info sheet for sizes and prices.',
     ],
     img: {
       alt: 'other',
-      src: other
-    }
+      src: other,
+    },
   },
   {
     isSecondary: true,
     title: 'Skincare',
     information: [
       'Beeswax lip balm using natures natural ingredients.',
-      'Beeswax hand balm using natures natural ingredients.'
+      'Beeswax hand balm using natures natural ingredients.',
     ],
     img: {
       alt: 'skincare_handbalm',
-      src: handbalm
-    }
+      src: handbalm,
+    },
   },
   {
     isSecondary: false,
@@ -120,80 +121,80 @@ const waxnproducts = [
     information: [''],
     img: {
       alt: 'skincare_lipbalm',
-      src: lipbalm
-    }
-  }
+      src: lipbalm,
+    },
+  },
 ];
 
 const galleryItems = [
   {
     src: galleryImage1,
-    alt: 'instagram-image'
+    alt: 'instagram-image',
   },
   {
     src: galleryImage2,
-    alt: 'instagram-image'
+    alt: 'instagram-image',
   },
   {
     src: galleryImage3,
-    alt: 'instagram-image'
+    alt: 'instagram-image',
   },
   {
     src: galleryImage4,
-    alt: 'instagram-image'
+    alt: 'instagram-image',
   },
   {
     src: galleryImage5,
-    alt: 'instagram-image'
+    alt: 'instagram-image',
   },
   {
     src: galleryImage6,
-    alt: 'instagram-image'
+    alt: 'instagram-image',
   },
   {
     src: galleryImage7,
-    alt: 'instagram-image'
+    alt: 'instagram-image',
   },
   {
     src: galleryImage8,
-    alt: 'instagram-image'
+    alt: 'instagram-image',
   },
   {
     src: galleryImage9,
-    alt: 'instagram-image'
-  }
+    alt: 'instagram-image',
+  },
 ];
 
 function Home() {
   return (
     <MainLayout>
-      <Row className='hero page-section'>
-        <Col className='hero-image' md={6} lg={8}></Col>
-        <Col className='hero-content' md={6} lg={4}>
-          <Container className='pt-5'>
-            <div className='hero-intro'>
-              <h1 className='h-1 primary--title'>Camwood Candles</h1>
-              <p className='slogan'>
+      <Row className="hero page-section">
+        <Col className="hero-image" md={6} lg={8}></Col>
+        <Col className="hero-content" md={6} lg={4}>
+          <Container className="pt-5">
+            <div className="hero-intro">
+              <h1 className="h-1 primary--title">Camwood Candles</h1>
+              <p className="slogan">
                 Beeswax is natures gift to us <br />
                 This is our gift to you!
               </p>
             </div>
-            <button className='store-link-btn'>Purchase A Gift Now</button>
+            <button className="store-link-btn">Purchase A Gift Now</button>
           </Container>
         </Col>
       </Row>
       {/* Hero Section */}
 
-      <Container fluid className='about page-section'>
+      <Container fluid className="about page-section">
         <Row>
           <Col md={6}>
-            <h2 className='h-2 about-title secondary--title'>About Us</h2>
-            <h3 className='about-slogan primary--title'>
+            <h2 className="h-2 about-title secondary--title">About Us</h2>
+            <h3 className="about-slogan primary--title">
               "A shining light in the dark"
             </h3>
           </Col>
           <Col md={6}>
-            <div className='about-info'>
+            <div className="about-info">
               Hello, my name is Carol and I make candles. In 2017 I attended a
               candle making course and fell in love with beeswax. Beeswax is a
               natural wax produced by the honey bee and I loved the idea that
@@ -208,8 +209,8 @@ function Home() {
         </Row>
       </Container>
 
-      <div className='points'>
-        <div className='points-grid'>
+      <div className="points">
+        <div className="points-grid">
           {points.map((point) => {
             return (
               <Point
@@ -217,7 +218,7 @@ function Home() {
                   pointId: point.pointId,
                   isSecondary: point.isSecondary,
                   title: point.title,
-                  message: point.message
+                  message: point.message,
                 }}
               />
             );
@@ -225,7 +226,7 @@ function Home() {
         </div>
       </div>
 
-      <Container fluid className='votives primary page-section' id='votives'>
+      <Container fluid className="votives primary page-section" id="votives">
         {votives.map(({ isSecondary, title, information, img }) => {
           return (
             <Section
@@ -235,8 +236,8 @@ function Home() {
                 information: information,
                 img: {
                   src: img.src,
-                  alt: img.alt
-                }
+                  alt: img.alt,
+                },
               }}
             />
           );
@@ -250,14 +251,14 @@ function Home() {
             title: 'Pillars and Dinning',
             img: {
               alt: 'Pillars_1',
-              src: pillar
+              src: pillar,
             },
             description: [
               'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
               'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-              'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-            ]
-          }
+              'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+            ],
+          },
         }}
       />
       <Slider
@@ -267,18 +268,18 @@ function Home() {
             title: 'Melts and Burners',
             img: {
               alt: 'MeltsnBurners_1',
-              src: burner
+              src: burner,
             },
             description: [
               'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
               'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-              'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-            ]
-          }
+              'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+            ],
+          },
         }}
       />
 
-      <Container fluid className='waxnproducts page-section' id='waxnproducts'>
+      <Container fluid className="waxnproducts page-section" id="waxnproducts">
         {waxnproducts.map(({ isSecondary, title, information, img }) => {
           return (
             <Section
@@ -288,26 +289,62 @@ function Home() {
                 information: information,
                 img: {
                   src: img.src,
-                  alt: img.alt
-                }
+                  alt: img.alt,
+                },
               }}
             />
           );
         })}
       </Container>
 
-      <Container className='gallery'>
-        <h2 className='h-2 primary--title text-center'>View us on Instagram</h2>
-        <div className='gallery-grid'>
+      <Container className="gallery">
+        <h2 className="h-2 primary--title text-center">View us on Instagram</h2>
+        <div className="gallery-grid">
           {galleryItems.map((item) => {
             return (
-              <div className='grid--item'>
+              <div className="grid--item">
                 <img src={item.src} alt={item.alt} />
               </div>
             );
           })}
         </div>
       </Container>
+
+      <div className="contact">
+        <Row>
+          <Col className="primary" md={5} lg={4}>
+            <div className="contact-form-wrapper">
+              <h2 className="h-2 primary--title">Get in Touch</h2>
+              <div className="contact-details contact-grid"></div>
+              <div className="serverMessage" id="serverErr"></div>
+              <form className="contact-form">
+                <div className="form-control">
+                  <label>Name</label>
+                  <input type="text" placeholder="Enter Name" id="name" />
+                </div>
+                <div className="form-control">
+                  <label>Message</label>
+                  <input type="text" placeholder="Enter Email" id="email" />
+                </div>
+                <div className="form-control">
+                  <label>Name</label>
+                  <textarea
+                    type="text"
+                    cols={30}
+                    rows={8}
+                    placeholder="Enter Email"
+                    id="name"
+                  />
+                </div>
+                <Button button={{ secondary: true, text: 'Send' }} />
+              </form>
+            </div>
+          </Col>
+          <Col md={7} lg={8}>
+            <div id="map"></div>
+          </Col>
+        </Row>
+      </div>
     </MainLayout>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Hamburger from '../Components/Atoms/Iconography/Hamburger';
+import Footer from '../Components/Organisms/Footer';
 import Header from '../Components/Organisms/Header';
 
 function MainLayout({ children }) {
@@ -8,6 +9,7 @@ function MainLayout({ children }) {
       <Hamburger />
       <Header />
       {children}
+      <Footer />
     </>
   );
 }
