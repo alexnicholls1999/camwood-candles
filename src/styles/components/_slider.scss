@@ -64,6 +64,32 @@
   @include borderRadius(2rem);
 }
 
+.dots-container {
+  @include positionAlign(
+    $fixed: false,
+    $align: 'Bottom Left',
+    $p-v: 1rem,
+    $p-h: 0
+  );
+
+  @include flex($flow: row, $justify-content: center, $align-items: center);
+  gap: 1rem;
+  margin: 0 auto;
+
+  .dot {
+    cursor: pointer;
+    margin: 0 2px;
+    padding: 0.325rem;
+    background-color: var(--colors-neutral-700);
+    border-radius: 50%;
+  }
+
+  .active {
+    background-color: var(--colors-primary-600);
+    padding: 0.4rem;
+  }
+}
+
 @include mediaQuery(md) {
   .slider {
     position: relative;
@@ -88,6 +114,16 @@
   .slider-btn {
     bottom: 2rem;
     top: auto;
+  }
+
+  .dotsLeft {
+    left: 22vw;
+    justify-content: flex-start;
+  }
+
+  .dotsRight {
+    right: 22vw;
+    justify-content: flex-end;
   }
 }
 

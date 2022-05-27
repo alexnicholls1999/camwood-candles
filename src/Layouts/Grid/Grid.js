@@ -10,8 +10,12 @@ export function Container({ children, fluid, className }) {
   );
 }
 
-export function Row({ children, className }) {
-  return <div className={`${grid.row} ${className}`}>{children}</div>;
+export function Row({ children, className, ...props }) {
+  return (
+    <div className={`${grid.row} ${className}`} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export function Col({ sm, md, lg, xl, className, children }) {

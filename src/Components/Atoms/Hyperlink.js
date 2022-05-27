@@ -4,7 +4,7 @@ function Hyperlink({ hyperlink }) {
   return (
     <a
       className={`hyperlink ${
-        hyperlink.isSecondary ? 'primary--link' : 'secondary--link'
+        hyperlink.isSecondary ? 'secondary--link' : 'primary--link'
       }`}
       href={hyperlink.path}
     >
