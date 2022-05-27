@@ -39,12 +39,12 @@
   .store-link-btn {
     @include margin(0.75rem, 0, 1.5rem);
     @include padding(1rem);
-    // @include bgImage(
-    //   $src: $arrow-btn,
-    //   $bg-size: 1.5rem,
-    //   $bg-position: 95%,
-    //   $bg-repeat: no-repeat
-    // );
+    @include bgImage(
+      $src: $arrow-btn,
+      $bg-size: 1.5rem,
+      $bg-position: 95%,
+      $bg-repeat: no-repeat
+    );
     @include colors(
       $bg-color: var(--colors-neutral-100),
       $color: var(--colors-neutral-500)
@@ -79,7 +79,7 @@
     }
 
     .scroll-down--arrow {
-      // @include bgImage($scroll-down-arrow, contain, center, no-repeat);
+      @include bgImage($scroll-down-arrow, contain, center, no-repeat);
     }
   }
 }
