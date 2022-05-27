@@ -8,39 +8,38 @@ import MainLayout from '../Layouts/MainLayout';
 import Button from '../Components/Atoms/Form/Button';
 import Map from '../Components/Organisms/Map';
 import { ContentContext } from '../content/ContextProvider';
+import SocialMedia from '../Components/Molecules/SocialMedia';
 
 function Home() {
   const content = useContext(ContentContext);
 
   return (
     <MainLayout>
-      <Row className='hero page-section'>
-        <Col className='hero-image' md={6} lg={8}></Col>
-        <Col className='hero-content' md={6} lg={4}>
-          <Container className='pt-5'>
-            <div className='hero-intro'>
-              <h1 className='h-1 primary--title'>Camwood Candles</h1>
-              <p className='slogan'>
-                Beeswax is natures gift to us <br />
-                This is our gift to you!
-              </p>
+      <Row className="hero page-section">
+        <Col className="hero-image" md={6} lg={8}></Col>
+        <Col className="hero-content" md={6} lg={4}>
+          <Container className="pt-5">
+            <div className="hero-intro">
+              <h1 className="h-1 primary--title">{content.hero.title}</h1>
+              <p className="slogan">{content.hero.slogan}</p>
             </div>
-            <button className='store-link-btn'>Purchase A Gift Now</button>
+            <button className="store-link-btn">{content.hero.store}</button>
+            <SocialMedia socialmedias={content.hero.socialmedias} />
           </Container>
         </Col>
       </Row>
       {/* Hero Section */}
 
-      <Container fluid className='about page-section'>
+      <Container fluid className="about page-section">
         <Row>
           <Col md={6}>
-            <h2 className='h-2 about-title secondary--title'>About Us</h2>
-            <h3 className='about-slogan primary--title'>
+            <h2 className="h-2 about-title secondary--title">About Us</h2>
+            <h3 className="about-slogan primary--title">
               "A shining light in the dark"
             </h3>
           </Col>
           <Col md={6}>
-            <div className='about-info'>
+            <div className="about-info">
               Hello, my name is Carol and I make candles. In 2017 I attended a
               candle making course and fell in love with beeswax. Beeswax is a
               natural wax produced by the honey bee and I loved the idea that
@@ -55,8 +54,8 @@ function Home() {
         </Row>
       </Container>
 
-      <div className='points'>
-        <div className='points-grid'>
+      <div className="points">
+        <div className="points-grid">
           {content.points.map((point) => {
             return (
               <Point
@@ -64,7 +63,7 @@ function Home() {
                   pointId: point.pointId,
                   isSecondary: point.isSecondary,
                   title: point.title,
-                  message: point.message
+                  message: point.message,
                 }}
               />
             );
@@ -72,7 +71,7 @@ function Home() {
         </div>
       </div>
 
-      <Container fluid className='votives primary page-section' id='votives'>
+      <Container fluid className="votives primary page-section" id="votives">
         {content.votives.map(({ isSecondary, title, information, img }) => {
           return (
             <Section
@@ -82,8 +81,8 @@ function Home() {
                 information: information,
                 img: {
                   src: img.src,
-                  alt: img.alt
-                }
+                  alt: img.alt,
+                },
               }}
             />
           );
@@ -94,7 +93,7 @@ function Home() {
 
       <Slider dotNumber={5} slides={content.meltsnburners} />
 
-      <Container fluid className='waxnproducts page-section' id='waxnproducts'>
+      <Container fluid className="waxnproducts page-section" id="waxnproducts">
         {content.waxnproducts.map(
           ({ isSecondary, title, information, img }) => {
             return (
@@ -105,8 +104,8 @@ function Home() {
                   information: information,
                   img: {
                     src: img.src,
-                    alt: img.alt
-                  }
+                    alt: img.alt,
+                  },
                 }}
               />
             );
@@ -114,14 +113,14 @@ function Home() {
         )}
       </Container>
 
-      <Container className='gallery'>
-        <h2 className='h-2 primary--title text-center'>
+      <Container className="gallery">
+        <h2 className="h-2 primary--title text-center">
           {content.galleryItemsTitle}
         </h2>
-        <div className='gallery-grid'>
+        <div className="gallery-grid">
           {content.galleryItems.map((item) => {
             return (
-              <div className='grid--item'>
+              <div className="grid--item">
                 <img src={item.src} alt={item.alt} />
               </div>
             );
@@ -129,43 +128,43 @@ function Home() {
         </div>
       </Container>
 
-      <div className='contact'>
+      <div className="contact">
         <Row>
-          <Col className='primary' md={5} lg={4}>
-            <div className='contact-form-wrapper'>
-              <h2 className='h-2 primary--title'>Get in Touch</h2>
-              <div className='contact-details contact-grid'>
-                <div class='contact-method'>
-                  <i class='far fa-map'></i>
+          <Col className="primary" md={5} lg={4}>
+            <div className="contact-form-wrapper">
+              <h2 className="h-2 primary--title">Get in Touch</h2>
+              <div className="contact-details contact-grid">
+                <div class="contact-method">
+                  <i class="far fa-map"></i>
                   <p>Ashington, RH20 3BX</p>
                 </div>
-                <div class='contact-method'>
-                  <i class='fa fas fa-phone'></i>
+                <div class="contact-method">
+                  <i class="fa fas fa-phone"></i>
                   <p>0742424342523</p>
                 </div>
-                <div class='contact-method'>
-                  <i class='far fa-envelope'></i>
+                <div class="contact-method">
+                  <i class="far fa-envelope"></i>
                   <p>camwoodcandles@outlook.com</p>
                 </div>
               </div>
-              <div className='serverMessage' id='serverErr'></div>
-              <form className='contact-form'>
-                <div className='form-control'>
+              <div className="serverMessage" id="serverErr"></div>
+              <form className="contact-form">
+                <div className="form-control">
                   <label>Name</label>
-                  <input type='text' placeholder='Enter Name' id='name' />
+                  <input type="text" placeholder="Enter Name" id="name" />
                 </div>
-                <div className='form-control'>
+                <div className="form-control">
                   <label>Email</label>
-                  <input type='text' placeholder='Enter Email' id='email' />
+                  <input type="text" placeholder="Enter Email" id="email" />
                 </div>
-                <div className='form-control'>
+                <div className="form-control">
                   <label>Message</label>
                   <textarea
-                    type='text'
+                    type="text"
                     cols={30}
                     rows={8}
-                    placeholder='Enter Message'
-                    id='message'
+                    placeholder="Enter Message"
+                    id="message"
                   />
                 </div>
                 <Button button={{ secondary: true, text: 'Send' }} />

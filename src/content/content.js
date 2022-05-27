@@ -1,7 +1,13 @@
+import {
+  faFacebookF,
+  faInstagram,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+
 import smallVotives from './../assets/votives/small_medium_votives_1.jpg';
 import mediumVotives from './../assets/votives/small_medium_votives_2.jpg';
 import pillar from './../assets/pillars_dinning/pillar1.jpg';
-import burner from './../assets/burners/burners_blue.jpg';
+import burner from './../assets/burners/burners_blue.jpg'; 
 import other from './../assets/other.jpg';
 import handbalm from './../assets/handbalm.jpg';
 import lipbalm from './../assets/lipbalm.jpg';
@@ -18,6 +24,25 @@ import galleryImage8 from './../assets/gallery/273263557_1020114465514838_908553
 import galleryImage9 from './../assets/gallery/272896555_646407579938897_4415084328210236413_n.jpg';
 
 export const content = {
+  hero: {
+    title: 'Camwood Candles',
+    slogan: 'Beeswax is natures gift to us. This is our gift to you!',
+    store: 'Purchase A Gift Now',
+    socialmedias: [
+      {
+        path: 'https://www.facebook.com/beautifulbeeswax',
+        icon: faFacebookF,
+      },
+      {
+        path: 'https://www.instagram.com/camwood/?hl=en-gb',
+        icon: faInstagram,
+      },
+      {
+        path: '',
+        icon: faTwitter,
+      },
+    ],
+  },
   points: [
     {
       id: 0,
@@ -25,7 +50,7 @@ export const content = {
       title: 'Natural Substance.',
       isSecondary: false,
       message:
-        'Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives.'
+        'Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives.',
     },
     {
       id: 1,
@@ -33,7 +58,7 @@ export const content = {
       title: 'Burn Efficency.',
       isSecondary: true,
       message:
-        'Beeswax burns longer, cleaner and brighter than any other waxes.'
+        'Beeswax burns longer, cleaner and brighter than any other waxes.',
     },
     {
       id: 2,
@@ -41,7 +66,7 @@ export const content = {
       title: 'Native.',
       isSecondary: false,
       message:
-        'Beeswax is the only wax that is essentially used in its native state, with only filtering for processing.'
+        'Beeswax is the only wax that is essentially used in its native state, with only filtering for processing.',
     },
     {
       id: 3,
@@ -49,103 +74,103 @@ export const content = {
       title: 'Better air quality.',
       isSecondary: true,
       message:
-        'Natural beeswax candles can provide an important ingredient for a healthier home. They help eliminate bacteria, dust, pollen, pet dander and bacteria from the air when burned.'
-    }
+        'Natural beeswax candles can provide an important ingredient for a healthier home. They help eliminate bacteria, dust, pollen, pet dander and bacteria from the air when burned.',
+    },
   ],
   pillars: [
     {
       isSecondary: true,
       img: {
         src: pillar,
-        alt: 'pillar_1'
+        alt: 'pillar_1',
       },
       title: 'Pillars & Dinning',
       descriptions: [
         'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
         'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-      ]
+        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+      ],
     },
     {
       isSecondary: true,
       img: {
         src: pillar,
-        alt: 'pillar_2'
+        alt: 'pillar_2',
       },
       title: 'Pillars & Dinning',
       descriptions: [
         'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
         'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-      ]
-    }
+        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+      ],
+    },
   ],
   meltsnburners: [
     {
       isSecondary: false,
       img: {
         src: pillar,
-        alt: 'pillar_1'
+        alt: 'pillar_1',
       },
       title: 'Melts & Burners',
       descriptions: [
         'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
         'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-      ]
+        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+      ],
     },
     {
       isSecondary: false,
       img: {
         src: pillar,
-        alt: 'pillar_2'
+        alt: 'pillar_2',
       },
       title: 'Melts & Burners',
       descriptions: [
         'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
         'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-      ]
+        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+      ],
     },
     {
       isSecondary: false,
       img: {
         src: pillar,
-        alt: 'pillar_2'
+        alt: 'pillar_2',
       },
       title: 'Melts & Burners',
       descriptions: [
         'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
         'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-      ]
+        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+      ],
     },
     {
       isSecondary: false,
       img: {
         src: pillar,
-        alt: 'pillar_2'
+        alt: 'pillar_2',
       },
       title: 'Melts & Burners',
       descriptions: [
         'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
         'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-      ]
+        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+      ],
     },
     {
       isSecondary: false,
       img: {
         src: pillar,
-        alt: 'pillar_2'
+        alt: 'pillar_2',
       },
       title: 'Melts & Burners',
       descriptions: [
         'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
         'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.'
-      ]
-    }
+        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
+      ],
+    },
   ],
   votives: [
     {
@@ -153,25 +178,25 @@ export const content = {
       title: 'Small Votives',
       information: [
         'Our hand-made beeswax Votive selection made with fun in mind, make that perfect gift for all your friends and family. We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Small Votives include: Rose, Owl, Parcel, Hive, Teddy. Medium Votives include: Lotus Flower, Heart, Sheep. Please click here to see dimensions sheet for sizes and prices.'
+        'Small Votives include: Rose, Owl, Parcel, Hive, Teddy. Medium Votives include: Lotus Flower, Heart, Sheep. Please click here to see dimensions sheet for sizes and prices.',
       ],
       img: {
         alt: 'small_medium_votives_1',
-        src: smallVotives
-      }
+        src: smallVotives,
+      },
     },
     {
       isSecondary: true,
       title: 'Medium Votives',
       information: [
         'Our hand-made beeswax Votive selection made with fun in mind, make that perfect gift for all your friends and family. We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Small Votives include: Rose, Owl, Parcel, Hive, Teddy. Medium Votives include: Lotus Flower, Heart, Sheep. Please click here to see dimensions sheet for sizes and prices.'
+        'Small Votives include: Rose, Owl, Parcel, Hive, Teddy. Medium Votives include: Lotus Flower, Heart, Sheep. Please click here to see dimensions sheet for sizes and prices.',
       ],
       img: {
         alt: 'small_medium_votives_2',
-        src: mediumVotives
-      }
-    }
+        src: mediumVotives,
+      },
+    },
   ],
   waxnproducts: [
     {
@@ -181,24 +206,24 @@ export const content = {
         'Our hand-made beeswax cute puppy candle is one of our favourites and is very popular.',
         'Our hand-made beeswax Hive candle is very realistic with its little bee.',
         'Our hand-made beeswax romantic Figurine is a wonderful gift for your special someone.',
-        'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn. Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn. Please see our info sheet for sizes and prices.'
+        'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn. Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn. Please see our info sheet for sizes and prices.',
       ],
       img: {
         alt: 'other',
-        src: other
-      }
+        src: other,
+      },
     },
     {
       isSecondary: true,
       title: 'Skincare',
       information: [
         'Beeswax lip balm using natures natural ingredients.',
-        'Beeswax hand balm using natures natural ingredients.'
+        'Beeswax hand balm using natures natural ingredients.',
       ],
       img: {
         alt: 'skincare_handbalm',
-        src: handbalm
-      }
+        src: handbalm,
+      },
     },
     {
       isSecondary: false,
@@ -206,47 +231,47 @@ export const content = {
       information: [''],
       img: {
         alt: 'skincare_lipbalm',
-        src: lipbalm
-      }
-    }
+        src: lipbalm,
+      },
+    },
   ],
   galleryItemsTitle: 'View us on Instagram',
   galleryItems: [
     {
       src: galleryImage1,
-      alt: 'instagram-image'
+      alt: 'instagram-image',
     },
     {
       src: galleryImage2,
-      alt: 'instagram-image'
+      alt: 'instagram-image',
     },
     {
       src: galleryImage3,
-      alt: 'instagram-image'
+      alt: 'instagram-image',
     },
     {
       src: galleryImage4,
-      alt: 'instagram-image'
+      alt: 'instagram-image',
     },
     {
       src: galleryImage5,
-      alt: 'instagram-image'
+      alt: 'instagram-image',
     },
     {
       src: galleryImage6,
-      alt: 'instagram-image'
+      alt: 'instagram-image',
     },
     {
       src: galleryImage7,
-      alt: 'instagram-image'
+      alt: 'instagram-image',
     },
     {
       src: galleryImage8,
-      alt: 'instagram-image'
+      alt: 'instagram-image',
     },
     {
       src: galleryImage9,
-      alt: 'instagram-image'
-    }
-  ]
+      alt: 'instagram-image',
+    },
+  ],
 };

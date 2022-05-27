@@ -1,9 +1,19 @@
-import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function SocialMediaIcon() {
+function SocialMediaIcon({ socialMedia }) {
+  const handleOnClickLink = () => {
+    window.open(`${socialMedia.path}`, '_blank');
+  };
+
   return (
-    <div>SocialMediaIcon</div>
-  )
+    <div className="icon">
+      <FontAwesomeIcon
+        onClick={handleOnClickLink}
+        className="fab"
+        icon={socialMedia.icon}
+      />
+    </div>
+  );
 }
 
 export default SocialMediaIcon;
