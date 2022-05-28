@@ -11,6 +11,7 @@ import { ContentContext } from '../content/ContextProvider';
 import SocialMedia from '../Components/Molecules/SocialMedia';
 import Form from '../Components/Organisms/Form';
 import { ControlsContext } from '../react-context/ControlsProvider';
+import ScrollBtn from '../Components/Atoms/ScrollBtn';
 
 function Home() {
   const content = useContext(ContentContext);
@@ -24,11 +25,15 @@ function Home() {
           <Container className="pt-5">
             <div className="hero-intro">
               <h1 className="h-1 primary--title">{content.hero.title}</h1>
-              <p className="slogan">{content.hero.slogan}</p>
+              <p className="slogan">
+                Beeswax is natures gift to us. <br /> This is our gift to you!
+              </p>
             </div>
             <button className="store-link-btn">{content.hero.store}</button>
             <SocialMedia socialmedias={content.hero.socialmedias} />
           </Container>
+
+          <ScrollBtn />
         </Col>
       </Row>
       {/* Hero Section */}

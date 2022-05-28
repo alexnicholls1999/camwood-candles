@@ -15,6 +15,13 @@
     $bg-color: var(--colors-primary-600),
     $color: var(--colors-neutral-900)
   );
+
+  &:hover {
+    @include colors(
+      $bg-color: var(--colors-neutral-900),
+      $color: var(--colors-neutral-100)
+    );
+  }
 }
 
 .btn-secondary {
@@ -22,6 +29,13 @@
     $bg-color: var(--colors-neutral-900),
     $color: var(--colors-neutral-100)
   );
+
+  &:hover {
+    @include colors(
+      $bg-color: var(--colors-primary-600),
+      $color: var(--colors-neutral-900)
+    );
+  }
 }
 
 .btn-wrapper {
