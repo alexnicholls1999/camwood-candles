@@ -18,11 +18,6 @@ function Slider({ dotNumber, slides, secondary }) {
     slideIndex: 1
   });
 
-  useEffect(() => {
-    const interval = setInterval(nextSlide, slideIndex * 4000);
-    return () => clearInterval(interval);
-  }, [slideIndex]);
-
   const nextSlide = () => {
     dispatch(nextSlideAction());
     if (slideIndex === slides.length) return dispatch(resetSlideAction());
@@ -34,7 +29,7 @@ function Slider({ dotNumber, slides, secondary }) {
   };
 
   return (
-    <div className={`slider ${secondary ? 'secondary' : 'primary'}`}>
+    <div className={`slider`}>
       <div className='slideshow-container'>
         {slides.map((slide, i) => (
           <Slide

@@ -6,10 +6,12 @@ function SocialMediaIcon({ socialMedia }) {
   };
 
   return (
-    <div className="icon">
+    <div className='icon'>
       <FontAwesomeIcon
         onClick={handleOnClickLink}
-        className="fab"
+        className={`fab ${
+          socialMedia.isSecondary ? 'secondary-icon' : 'primary-icon'
+        }`}
         icon={socialMedia.icon}
       />
     </div>

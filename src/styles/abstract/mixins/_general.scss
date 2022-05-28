@@ -17,3 +17,22 @@
 ) {
   border-radius: $t-left $t-right $b-right $b-left;
 }
+
+// Animations
+// Keyframes
+@mixin keyFrames($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// Transition
+@mixin transition($transition, $transform) {
+  transition: $transition;
+  transform: $transform;
+}
+
+@mixin animation($a-name, $a-duration) {
+  animation-name: $a-name;
+  animation-duration: $a-duration;
+}

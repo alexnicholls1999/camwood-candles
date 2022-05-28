@@ -16,7 +16,9 @@ function Slide({ slide, active }) {
       </Col>
       <Col
         md={6}
-        className={`slide-info ${slide.isSecondary ? 'order-2' : 'order-1'}`}
+        className={`slide-info ${
+          slide.isSecondary ? 'secondary order-2' : 'primary order-1'
+        }`}
       >
         <Container>
           <h2
