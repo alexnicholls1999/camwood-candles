@@ -7,14 +7,17 @@ import 'leaflet/dist/leaflet.css';
 import './styles/styles.scss';
 import ContentProvider from './content/ContextProvider';
 import { content } from './content/content';
+import ControlsProvider from './react-context/ControlsProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ContentProvider content={content}>
-      <Router>
-        <App />
-      </Router>
+      <ControlsProvider>
+        <Router>
+          <App />
+        </Router>
+      </ControlsProvider>
     </ContentProvider>
   </React.StrictMode>
 );

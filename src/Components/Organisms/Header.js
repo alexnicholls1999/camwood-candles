@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Col, Container, Row } from '../../Layouts/Grid/Grid';
+import { ControlsContext } from '../../react-context/ControlsProvider';
 import Logo from '../Atoms/Iconography/Logo';
 import Navbar from '../Molecules/Navbar';
 
 function Header() {
+  const { topRef } = useContext(ControlsContext);
+
   return (
-    <header>
+    <header ref={topRef}>
       <Container fluid>
         <Row>
           <Col md={6} lg={4}>

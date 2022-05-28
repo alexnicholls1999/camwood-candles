@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ControlsContext } from '../../react-context/ControlsProvider';
 import Button from '../Atoms/Form/Button';
 import Navlink from '../Atoms/Navlink';
 
@@ -26,6 +27,8 @@ const links = [
 ];
 
 function Navbar() {
+  const { handleContact } = useContext(ControlsContext);
+
   return (
     <nav className="navbar">
       <ul className="nav-menu">
@@ -46,6 +49,7 @@ function Navbar() {
             button={{
               secondary: false,
               text: 'Contact',
+              onClick: handleContact,
             }}
           />
         </li>

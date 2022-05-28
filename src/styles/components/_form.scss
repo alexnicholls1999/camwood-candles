@@ -11,9 +11,24 @@
 }
 
 .serverMessage {
+  display: none;
   padding: 0.75rem;
   margin-bottom: 2rem;
   border-radius: 0.2rem;
+}
+
+.serverErr {
+  display: block;
+  border: 0.2rem solid var(--colors-feedback-err-900);
+  background: var(--colors-feedback-err-100);
+  color: var(--colors-feedback-err-900);
+}
+
+.serverResult {
+  display: block;
+  border: 0.2rem solid var(--colors-feedback-success-900);
+  background: var(--colors-feedback-success-100);
+  color: var(--colors-feedback-success-900);
 }
 
 .form-control {

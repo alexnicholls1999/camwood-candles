@@ -9,9 +9,12 @@ import Button from '../Components/Atoms/Form/Button';
 import Map from '../Components/Organisms/Map';
 import { ContentContext } from '../content/ContextProvider';
 import SocialMedia from '../Components/Molecules/SocialMedia';
+import Form from '../Components/Organisms/Form';
+import { ControlsContext } from '../react-context/ControlsProvider';
 
 function Home() {
   const content = useContext(ContentContext);
+  const { contactRef } = useContext(ControlsContext);
 
   return (
     <MainLayout>
@@ -128,7 +131,7 @@ function Home() {
         </div>
       </Container>
 
-      <div className="contact">
+      <div className="contact" ref={contactRef}>
         <Row>
           <Col className="primary" md={5} lg={4}>
             <div className="contact-form-wrapper">
@@ -147,28 +150,7 @@ function Home() {
                   <p>camwoodcandles@outlook.com</p>
                 </div>
               </div>
-              <div className="serverMessage" id="serverErr"></div>
-              <form className="contact-form">
-                <div className="form-control">
-                  <label>Name</label>
-                  <input type="text" placeholder="Enter Name" id="name" />
-                </div>
-                <div className="form-control">
-                  <label>Email</label>
-                  <input type="text" placeholder="Enter Email" id="email" />
-                </div>
-                <div className="form-control">
-                  <label>Message</label>
-                  <textarea
-                    type="text"
-                    cols={30}
-                    rows={8}
-                    placeholder="Enter Message"
-                    id="message"
-                  />
-                </div>
-                <Button button={{ secondary: true, text: 'Send' }} />
-              </form>
+              <Form button={{ submit: true }} />
             </div>
           </Col>
           <Col md={7} lg={8}>
