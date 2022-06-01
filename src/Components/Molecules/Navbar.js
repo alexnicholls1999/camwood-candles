@@ -6,50 +6,50 @@ import Navlink from '../Atoms/Navlink';
 const links = [
   {
     title: 'Home',
-    path: '#top',
+    path: '#top'
   },
   {
     title: 'About',
-    path: '#aboutus',
+    path: '#aboutus'
   },
   {
     title: 'Votives',
-    path: '#votives',
+    path: '#votives'
   },
   {
     title: 'Melts & Burners',
-    path: '#meltsnburners',
+    path: '#meltsnburners'
   },
   {
     title: 'Skincare',
-    path: '#skincare',
-  },
+    path: '#skincare'
+  }
 ];
 
 function Navbar() {
   const { handleContact } = useContext(ControlsContext);
 
   return (
-    <nav className="navbar">
-      <ul className="nav-menu">
+    <nav className='navbar'>
+      <ul className='nav-menu'>
         {links.map((link) => {
           const { title, path } = link;
 
           return <Navlink navlink={{ title: title, path: path }} />;
         })}
 
-        <li className="btn-wrapper">
+        <li className='btn-wrapper'>
           <Button
             button={{
               secondary: false,
-              text: 'Dimensions',
+              text: 'Dimensions'
             }}
           />
           <Button
             button={{
               secondary: false,
               text: 'Contact',
-              onClick: handleContact,
+              onClick: handleContact
             }}
           />
         </li>

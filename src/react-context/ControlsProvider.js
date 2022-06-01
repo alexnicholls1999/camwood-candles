@@ -1,8 +1,9 @@
-import { useRef, createContext, useMemo } from 'react';
+import { useRef, createContext, useMemo, useState } from 'react';
 
 export const ControlsContext = createContext(null);
 
 export default function ControlsProvider({ children }) {
+  const [dimensions, setDimensions] = useState(false);
   const topRef = useRef();
   const contactRef = useRef();
 
@@ -14,14 +15,20 @@ export default function ControlsProvider({ children }) {
     contactRef.current.scrollIntoView({ block: 'end', behavior: 'smooth' });
   };
 
+  const handleOpenModal = () => {
+    setDimensions(!dimensions);
+  };
+
   const controls = useMemo(
     () => ({
       topRef,
       contactRef,
+      dimensions,
       handleViewTop,
       handleContact,
+      handleOpenModal
     }),
-    [topRef, contactRef]
+    [topRef, contactRef, dimensions]
   );
 
   return (
