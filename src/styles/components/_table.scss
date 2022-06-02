@@ -1,0 +1,36 @@
+.products-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+
+  thead tr {
+    color: var(--colors-neutral-100);
+    text-align: left;
+    background-color: var(--colors-primary-700);
+
+    th {
+      padding: 1rem;
+
+      &:nth-child(1) {
+        border-radius: 1rem 0 0 0;
+      }
+
+      &:nth-child(3) {
+        border-radius: 0 1rem 0 0;
+      }
+    }
+  }
+
+  tbody tr {
+    td {
+      padding: 1rem;
+    }
+  }
+
+  .secondary-row {
+    background-color: var(--colors-primary-200);
+  }
+}

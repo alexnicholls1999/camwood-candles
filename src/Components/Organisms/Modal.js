@@ -6,14 +6,17 @@ function Modal({ onClose, show, children }) {
   };
 
   return (
-    <div class={`modal-wrapper ${show && 'open-modal'}`}>
-      <div class='modal'>
-        <div class='modal-container'>
+    <div
+      class={`modal-wrapper ${show && 'open-modal'}`}
+      onClick={handleOnClose}
+    >
+      <div class="modal">
+        <div class="modal-container">
           <h2>Dimensions</h2>
-          <div class='products'>{children}</div>
+          <div class="products">{children}</div>
         </div>
-        <div class='modal-footer'>
-          <button onClick={handleOnClose} class='btn btn-primary'>
+        <div class="modal-footer">
+          <button onClick={handleOnClose} class="btn btn-primary">
             CLOSE
           </button>
         </div>

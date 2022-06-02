@@ -49,6 +49,73 @@
 
 // Mobile Menu
 
+.mobile-menu {
+  @include mixin.positionAlign(true, 'Bottom Right', 0, 2.5rem);
+  @include mixin.colors(
+    $bg-color: var(--colors-neutral-800),
+    $color: var(--colors-neutral-100)
+  );
+  @include mixin.padding(1rem, 0, 4rem);
+  @include mixin.shadow('dark');
+  display: block;
+  bottom: 0;
+  right: 5%;
+  width: min(360px, 90%);
+  z-index: 2;
+  border-radius: 0.5rem 0.5rem 0 0;
+
+  /* Animate In */
+  visibility: hidden;
+  @include mixin.transition(
+    $transition: 0.5s ease-out,
+    $transform: translateY(130%)
+  );
+
+  h2 {
+    color: var(--colors-neutral-100);
+    margin: 0.83rem 0;
+    @include mixin.padding(1rem, 0.85rem, 0);
+  }
+
+  .close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    gap: 0.65rem;
+    margin: 0 1rem;
+    padding: 0;
+
+    .menu--item a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      color: var(--colors-neutral-100);
+      cursor: pointer;
+    }
+  }
+}
+
+.active-link {
+  background-color: var(--colors-neutral-700);
+  @include mixin.fontWeight($fontWeight: var(--font-weight-700));
+  border-radius: 0.3rem;
+}
+
+.open {
+  /* Animate In */
+  visibility: visible;
+  @include mixin.transition(
+    $transition: 0.75s ease-in,
+    $transform: translateY(0)
+  );
+}
+
 @include mixin.mediaQuery(lg) {
   .mobile-btn {
     display: none;

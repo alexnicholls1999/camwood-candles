@@ -1,4 +1,5 @@
 import { useRef, createContext, useMemo, useState } from 'react';
+import Menu from '../Components/Organisms/Menu';
 
 export const ControlsContext = createContext(null);
 
@@ -26,7 +27,7 @@ export default function ControlsProvider({ children }) {
       dimensions,
       handleViewTop,
       handleContact,
-      handleOpenModal
+      handleOpenModal,
     }),
     [topRef, contactRef, dimensions]
   );

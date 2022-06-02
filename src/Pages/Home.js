@@ -138,7 +138,7 @@ function Home() {
 
       <div className="contact" ref={contactRef}>
         <Row>
-          <Col className="primary" md={5} lg={4}>
+          <Col className="primary" md={5} lg={4} xl={3}>
             <div className="contact-form-wrapper">
               <h2 className="h-2 primary--title">Get in Touch</h2>
               <div className="contact-details contact-grid">
@@ -158,7 +158,7 @@ function Home() {
               <Form button={{ submit: true }} />
             </div>
           </Col>
-          <Col md={7} lg={8}>
+          <Col md={7} lg={8} xl={9}>
             <Map />
           </Col>
         </Row>

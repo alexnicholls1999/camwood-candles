@@ -1,6 +1,6 @@
-function Hamburger() {
+function Hamburger({ onClick }) {
   return (
-    <div className="mobile-btn">
+    <div className="mobile-btn" onClick={onClick}>
       <div className="hamburger">
         <span></span>
         <span></span>
