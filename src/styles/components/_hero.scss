@@ -18,6 +18,15 @@
     @include shadow($type: inset, $offset: 0 0 0 100vmax, $color: #00000066);
   }
 
+  .hero-image-404 {
+    @include bgImage(
+      $src: $beeHive-image,
+      $bg-size: 75%,
+      $bg-position: right,
+      $bg-repeat: no-repeat
+    );
+  }
+
   .hero-content {
     h1 {
       margin: 1.75rem 0 0;

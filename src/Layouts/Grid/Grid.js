@@ -12,7 +12,7 @@ export function Container({ children, fluid, className }) {
 
 export function Row({ children, className, ...props }) {
   return (
-    <div className={`${grid.row} ${className}`} {...props}>
+    <div className={`${grid.row} ${className ? className : ''}`} {...props}>
       {children}
     </div>
   );
@@ -25,5 +25,9 @@ export function Col({ sm, md, lg, xl, className, children }) {
     (lg ? `${grid[`col-lg-${lg}`]} ` : '') +
     (xl ? `${grid[`col-xl-${xl}`]} ` : '');
 
-  return <div className={`${columnClassNames} ${className}`}>{children}</div>;
+  return (
+    <div className={`${columnClassNames} ${className ? className : ''}`}>
+      {children}
+    </div>
+  );
 }

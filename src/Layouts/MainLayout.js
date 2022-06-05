@@ -6,7 +6,7 @@ import Modal from '../Components/Organisms/Modal';
 import Table from '../Components/Organisms/Table';
 import { ControlsContext } from '../react-context/ControlsProvider';
 
-function MainLayout({ children }) {
+function MainLayout({ children, secondary }) {
   const { dimensions, handleOpenModal } = useContext(ControlsContext);
   const productsArr = [
     {
@@ -15,8 +15,8 @@ function MainLayout({ children }) {
         row1Arr: ['Large Pillar', '15cm x 6cm', '£8 - £12'],
         row2Arr: ['Sunflower', '10cm x 5cm', '£8'],
         row3Arr: ['Wheatsheaf', '9.5cm x 4cm', '£10'],
-        row4Arr: ['Dining Taper', '2.5cm length', '£3.50'],
-      },
+        row4Arr: ['Dining Taper', '2.5cm length', '£3.50']
+      }
     },
     {
       title: 'Large Votives',
@@ -24,8 +24,8 @@ function MainLayout({ children }) {
         row1Arr: ['Large Pillar', '15cm x 6cm', '£8 - £12'],
         row2Arr: ['Sunflower', '10cm x 5cm', '£8'],
         row3Arr: ['Wheatsheaf', '9.5cm x 4cm', '£10'],
-        row4Arr: ['Dining Taper', '2.5cm length', '£3.50'],
-      },
+        row4Arr: ['Dining Taper', '2.5cm length', '£3.50']
+      }
     },
     {
       title: 'Other',
@@ -33,14 +33,14 @@ function MainLayout({ children }) {
         row1Arr: ['Large Pillar', '15cm x 6cm', '£8 - £12'],
         row2Arr: ['Sunflower', '10cm x 5cm', '£8'],
         row3Arr: ['Wheatsheaf', '9.5cm x 4cm', '£10'],
-        row4Arr: ['Dining Taper', '2.5cm length', '£3.50'],
-      },
-    },
+        row4Arr: ['Dining Taper', '2.5cm length', '£3.50']
+      }
+    }
   ];
 
   return (
     <>
-      <div className="dimensions">
+      <div className='dimensions'>
         <Modal show={dimensions} onClose={handleOpenModal}>
           {productsArr.map((product) => {
             const { title, table } = product;
@@ -52,7 +52,7 @@ function MainLayout({ children }) {
                   rows: table.row1Arr,
                   rows2: table.row2Arr,
                   rows3: table.row3Arr,
-                  rows4: table.row4Arr,
+                  rows4: table.row4Arr
                 }}
               />
             );
@@ -61,7 +61,7 @@ function MainLayout({ children }) {
       </div>
 
       <Hamburger />
-      <Header />
+      <Header secondary={secondary} />
       {children}
       <Footer />
     </>

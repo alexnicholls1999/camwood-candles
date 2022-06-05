@@ -4,7 +4,7 @@ import { ControlsContext } from '../../react-context/ControlsProvider';
 import Logo from '../Atoms/Iconography/Logo';
 import Navbar from '../Molecules/Navbar';
 
-function Header() {
+function Header({ secondary }) {
   const { topRef } = useContext(ControlsContext);
 
   return (
@@ -15,7 +15,7 @@ function Header() {
             <Logo />
           </Col>
           <Col md={6} lg={8}>
-            <Navbar />
+            <Navbar secondary={secondary} />
           </Col>
         </Row>
       </Container>

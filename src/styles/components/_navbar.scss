@@ -4,6 +4,10 @@
   display: none;
 }
 
+.navbar.dark .nav-menu .nav-link > a {
+  @include colors($bg-color: transparent, $color: var(--colors-neutral-900));
+}
+
 @include mediaQuery(lg) {
   .navbar {
     @include flex($flow: row, $align-items: center, $justify-content: flex-end);
