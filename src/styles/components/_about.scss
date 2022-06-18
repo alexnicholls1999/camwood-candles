@@ -97,4 +97,8 @@
   .points-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .last-point {
+    order: 4;
+  }
 }

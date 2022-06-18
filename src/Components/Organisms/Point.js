@@ -1,9 +1,14 @@
 import React from 'react';
 
 function Point({ point }) {
+  const pointClassNames =
+    (point.isSecondary ? 'secondary' : 'primary') +
+    (point.isThird ? ' order-3' : ' ') +
+    (point.isLastPoint ? 'last-point' : '');
+
   return (
     <>
-      <div className={`point ${point.isSecondary ? 'secondary' : 'primary'}`}>
+      <div className={`point ${pointClassNames}`}>
         <div className="point-content-container">
           <div className="point-icon" id={point.pointId}></div>
           <h4 className="point--title">{point.title}</h4>

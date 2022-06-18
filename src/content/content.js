@@ -62,6 +62,8 @@ export const content = {
       pointId: 'natural-substance',
       title: 'Natural Substance.',
       isSecondary: false,
+      isThird: false,
+      isLastPoint: false,
       message:
         'Beeswax is a completely all-natural substance straight from Mother Nature herself. It is the purest and most natural of all waxes with no additives.',
     },
@@ -70,6 +72,8 @@ export const content = {
       pointId: 'burnefficency',
       title: 'Burn Efficency.',
       isSecondary: true,
+      isThird: false,
+      isLastPoint: false,
       message:
         'Beeswax burns longer, cleaner and brighter than any other waxes.',
     },
@@ -78,6 +82,8 @@ export const content = {
       pointId: 'native',
       title: 'Native.',
       isSecondary: false,
+      isThird: true,
+      isLastPoint: false,
       message:
         'Beeswax is the only wax that is essentially used in its native state, with only filtering for processing.',
     },
@@ -86,6 +92,8 @@ export const content = {
       pointId: 'airquality',
       title: 'Better air quality.',
       isSecondary: true,
+      isThird: false,
+      isLastPoint: true,
       message:
         'Natural beeswax candles can provide an important ingredient for a healthier home. They help eliminate bacteria, dust, pollen, pet dander and bacteria from the air when burned.',
     },

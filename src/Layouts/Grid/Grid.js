@@ -18,7 +18,17 @@ export function Row({ children, className, ...props }) {
   );
 }
 
-export function Col({ sm, md, lg, xl, className, children }) {
+export function Col({
+  sm,
+  md,
+  lg,
+  xl,
+  order,
+  ordermd,
+  orderlg,
+  className,
+  children,
+}) {
   const columnClassNames =
     (sm ? `${grid[`col-${sm}`]} ` : '') +
     (md ? `${grid[`col-md-${md}`]} ` : '') +
