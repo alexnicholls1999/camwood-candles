@@ -5,20 +5,20 @@ import Hyperlink from '../Atoms/Hyperlink';
 function Slide({ slide, active }) {
   return (
     <Row
-      className='slide fade'
+      className={`slide fade ${
+        slide.isSecondary ? 'secondary order-2' : 'primary order-1'
+      }`}
       style={{ display: `${active ? 'flex' : 'none'}` }}
     >
       <Col
-        className={`slide-image ${slide.isSecondary ? 'order-1' : 'order-2'}`}
+        className={`slide-image ${slide.isSecondary ? 'burners' : ''}`}
         md={6}
       >
         <img src={slide.img.src} alt={slide.img.alt} />
       </Col>
       <Col
         md={6}
-        className={`slide-info ${
-          slide.isSecondary ? 'secondary order-2' : 'primary order-1'
-        }`}
+        className={`slide-info ${slide.isSecondary ? 'burners' : ''}`}
       >
         <Container>
           <h2

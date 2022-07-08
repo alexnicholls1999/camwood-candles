@@ -5,17 +5,16 @@ import {
   moveDotsAction,
   nextSlideAction,
   prevSlideAction,
-  resetSlideAction
+  resetSlideAction,
 } from '../../react-reducers/slider.actions';
 import useSliderReducer from '../../react-reducers/slider.reducer';
-import Hyperlink from '../Atoms/Hyperlink';
 import SliderBtn from '../Atoms/SliderBtn';
 import Dots from '../Molecules/Dots';
 import Slide from '../Molecules/Slide';
 
 function Slider({ dotNumber, slides, secondary }) {
   const [{ slideIndex }, dispatch] = useReducer(useSliderReducer, {
-    slideIndex: 1
+    slideIndex: 1,
   });
 
   const nextSlide = () => {
@@ -40,9 +39,9 @@ function Slider({ dotNumber, slides, secondary }) {
               title: slide.title,
               img: {
                 src: slide.img.src,
-                alt: slide.img.alt
+                alt: slide.img.alt,
               },
-              descriptions: slide.descriptions
+              descriptions: slide.descriptions,
             }}
           />
         ))}

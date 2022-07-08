@@ -3,12 +3,12 @@ import Dot from '../Atoms/Iconography/Dot';
 
 function Dots({ i, secondary, slideIndex, moveDot }) {
   return (
-    <div className={`dots-container ${secondary ? 'dotsLeft' : 'dotsRight'}`}>
+    <div className={`dots-container ${secondary ? 'dotsRight' : 'dotsLeft'}`}>
       {Array.from({ length: i }).map((item, index) => (
         <Dot
           dot={{
             onClick: () => moveDot(index + 1),
-            active: slideIndex === index + 1
+            active: slideIndex === index + 1,
           }}
         />
       ))}

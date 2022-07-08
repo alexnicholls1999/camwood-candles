@@ -26,6 +26,7 @@ export function Col({
   order,
   ordermd,
   orderlg,
+  id,
   className,
   children,
 }) {
@@ -36,7 +37,10 @@ export function Col({
     (xl ? `${grid[`col-xl-${xl}`]} ` : '');
 
   return (
-    <div className={`${columnClassNames} ${className ? className : ''}`}>
+    <div
+      id={id}
+      className={`${columnClassNames} ${className ? className : ''}`}
+    >
       {children}
     </div>
   );

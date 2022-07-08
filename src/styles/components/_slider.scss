@@ -11,7 +11,8 @@
 
 .slider {
   position: relative;
-  @include size(100vh, 100%, 100vh, 100%);
+  height: 100vh;
+  width: 100%;
 }
 
 .fade {
@@ -20,7 +21,8 @@
 
 .slideshow-container {
   position: relative;
-  @include size(100%, 100%, 100%, 100%);
+  height: 100%;
+  width: 100%;
 
   .slide {
     height: 100%;
@@ -34,7 +36,7 @@
 
     .slide-info {
       display: grid;
-      place-items: center;
+      place-items: flex-start;
 
       h2 {
         margin-top: 1rem;
@@ -49,6 +51,10 @@
           padding-bottom: 0.5rem;
         }
       }
+    }
+
+    .slide-image {
+      order: 2;
     }
 
     .slide-image img {
@@ -79,12 +85,10 @@
 }
 
 .dots-container {
-  @include positionAlign(
-    $fixed: false,
-    $align: 'Bottom Left',
-    $p-v: 1rem,
-    $p-h: 0
-  );
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
 
   @include flex($flow: row, $justify-content: center, $align-items: center);
   gap: 1rem;
@@ -118,8 +122,6 @@
   }
 
   .slide-info {
-    place-items: flex-start !important;
-
     h2 {
       margin-top: 2rem !important;
     }
@@ -130,6 +132,10 @@
     top: auto;
   }
 
+  .dots-container {
+    bottom: 2rem;
+  }
+
   .dotsLeft {
     left: 22vw;
     justify-content: flex-start;
@@ -138,6 +144,10 @@
   .dotsRight {
     right: 22vw;
     justify-content: flex-end;
+  }
+
+  .burners {
+    order: 1;
   }
 }
 
