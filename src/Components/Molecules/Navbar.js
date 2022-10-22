@@ -42,7 +42,7 @@ function Navbar({ secondary }) {
           <Button
             button={{
               secondary: false,
-              text: 'Dimensions',
+              text: 'Pricing',
               onClick: handleOpenModal
             }}
           />

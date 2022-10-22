@@ -37,7 +37,7 @@ import galleryImage9 from './../assets/gallery/273561239_900940113909391_2377606
 export const content = {
   hero: {
     title: 'Camwood Candles',
-    store: 'Purchase A Gift Now',
+    store: 'View our products',
     socialmedias: [
       {
         isSecondary: false,

@@ -2,11 +2,16 @@ $fontSizes: (
   1: 1.75rem,
   2: 1.75rem,
   3: 1.75rem,
-  4: 1.75rem
+  4: 1.75rem,
 );
 
-@each $i, $size in $fontSizes {
-  .h-#{$i} {
-    font-size: $size;
-  }
+// @each $i, $size in $fontSizes {
+//   .h-#{$i} {
+//     font-size: $size;
+//   }
+// }
+
+.h-1 {
+  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 0.1rem + 2vw, 3.75rem);
 }

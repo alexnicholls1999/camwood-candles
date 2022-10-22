@@ -32,8 +32,6 @@ function Home() {
             <button className='store-link-btn'>{content.hero.store}</button>
             <SocialMedia socialmedias={content.hero.socialmedias} />
           </Container>
-
-          <ScrollBtn />
         </Col>
       </Row>
       {/* Hero Section */}
