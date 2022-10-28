@@ -1,5 +1,4 @@
 import { useRef, createContext, useMemo, useState } from 'react';
-import Menu from '../Components/Organisms/Menu';
 
 export const ControlsContext = createContext(null);
 
@@ -7,9 +6,14 @@ export default function ControlsProvider({ children }) {
   const [dimensions, setDimensions] = useState(false);
   const topRef = useRef();
   const contactRef = useRef();
+  const votivesRef = useRef();
 
   const handleViewTop = () => {
     topRef.current.scrollIntoView({ block: 'end', behavior: 'smooth' });
+  };
+
+  const handleVotives = () => {
+    votivesRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleContact = () => {
@@ -24,12 +28,14 @@ export default function ControlsProvider({ children }) {
     () => ({
       topRef,
       contactRef,
+      votivesRef,
       dimensions,
       handleViewTop,
       handleContact,
       handleOpenModal,
+      handleVotives,
     }),
-    [topRef, contactRef, dimensions]
+    [topRef, contactRef, votivesRef, dimensions]
   );
 
   return (

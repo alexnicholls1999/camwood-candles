@@ -4,24 +4,27 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
-import smallVotives from './../assets/votives/small_medium_votives_1.jpg';
-import mediumVotives from './../assets/votives/small_medium_votives_2.jpg';
+import smallVotives from './../assets/votives/small_votives.jpg';
+import mediumVotives from './../assets/votives/medium_votives.jpg';
 
 // Pillars
-import pillar from './../assets/pillars_dinning/pillar1.jpg';
-import pillar2 from './../assets/pillars_dinning/pillar2.jpg';
-import pillar3 from './../assets/pillars_dinning/pillar3.jpg';
+import pillar from './../assets/pillars/pillar1.jpg';
+import pillar2 from './../assets/pillars/pillar2.jpg';
+import pillar3 from './../assets/pillars/pillar2.jpg';
 
 // Burners
-import burnerGreen from './../assets/burners/burners_green.jpg';
-import burnerBlue from './../assets/burners/burners_blue.jpg';
-import burnerWhite from './../assets/burners/burners_white.jpg';
-import burnerPink from './../assets/burners/burners_pink.jpg';
-import burnerLBlue from './../assets/burners/burners_lightblue.jpg';
+import burnerGreen from './../assets/burners.jpg';
+import burnerBlue from './../assets/burners.jpg';
+import burnerWhite from './../assets/burners.jpg';
+import burnerPink from './../assets/burners.jpg';
+import burnerLBlue from './../assets/burners.jpg';
 
+// Other
 import other from './../assets/other.jpg';
-import handbalm from './../assets/handbalm.jpg';
-import lipbalm from './../assets/lipbalm.jpg';
+
+// Skincare
+import skincare from './../assets/skincare/skincare.jpg';
+import skincare2 from './../assets/skincare/skincare2.jpg';
 
 // Gallery Images
 import galleryImage1 from './../assets/gallery/272896555_646407579938897_4415084328210236413_n.jpg';
@@ -151,92 +154,21 @@ export const content = {
         'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
       ],
     },
-    {
-      isSecondary: true,
-      img: {
-        src: pillar3,
-        alt: 'dining-candle_2',
-      },
-      title: 'Pillars & Dinning',
-      descriptions: [
-        'Our hand-made selection of beeswax pillar and taper dinning candles make a beatiful centrepiece and add a touch of elegance to every home.',
-        'We are passionate about making our candles. All our products are made by hand, using high quality British beeswax and 100% cotton wicks, which ensure a drip free burn.',
-        'Beeswax is the most natural of waxes and does not release toxic by-products, therefore provides a cleaner, healthier burn.',
-      ],
-    },
   ],
-  meltsnburners: [
-    {
-      isSecondary: false,
-      img: {
-        src: burnerGreen,
-        alt: 'burner_Green',
-      },
-      title: 'Melts & Burners - Green',
-      descriptions: [
-        'Our beautiful ceramic burners are hand-dipped to create a colourful marbled effect. No two are the same. This makes for the ideal gift when your looking for something unique.',
-        'Each burner comes with :-',
-        '2x beeswax scented melts',
-        '1x beeswax scented t-light',
-      ],
+  meltsnburners: {
+    isSecondary: false,
+    title: 'Ceramic Burners',
+    img: {
+      src: burnerGreen,
+      alt: 'burner_Green',
     },
-    {
-      isSecondary: false,
-      img: {
-        src: burnerBlue,
-        alt: 'burner_Blue',
-      },
-      title: 'Melts & Burners - Blue',
-      descriptions: [
-        'Our beautiful ceramic burners are hand-dipped to create a colourful marbled effect. No two are the same. This makes for the ideal gift when your looking for something unique.',
-        'Each burner comes with :-',
-        '2x beeswax scented melts',
-        '1x beeswax scented t-light',
-      ],
-    },
-    {
-      isSecondary: false,
-      img: {
-        src: burnerWhite,
-        alt: 'burner_White',
-      },
-      title: 'Melts & Burners - White',
-      descriptions: [
-        'Our beautiful ceramic burners are hand-dipped to create a colourful marbled effect. No two are the same. This makes for the ideal gift when your looking for something unique.',
-        'Each burner comes with :-',
-        '2x beeswax scented melts',
-        '1x beeswax scented t-light',
-      ],
-    },
-    {
-      isSecondary: false,
-      img: {
-        src: burnerPink,
-        alt: 'burner_Pink',
-      },
-      title: 'Melts & Burners - Pink',
-      descriptions: [
-        'Our beautiful ceramic burners are hand-dipped to create a colourful marbled effect. No two are the same. This makes for the ideal gift when your looking for something unique.',
-        'Each burner comes with :-',
-        '2x beeswax scented melts',
-        '1x beeswax scented t-light',
-      ],
-    },
-    {
-      isSecondary: false,
-      img: {
-        src: burnerLBlue,
-        alt: 'burner_LBlue',
-      },
-      title: 'Melts & Burners - Light Blue',
-      descriptions: [
-        'Our beautiful ceramic burners are hand-dipped to create a colourful marbled effect. No two are the same. This makes for the ideal gift when your looking for something unique.',
-        'Each burner comes with :-',
-        '2x beeswax scented melts',
-        '1x beeswax scented t-light',
-      ],
-    },
-  ],
+    descriptions: [
+      'Our beautiful ceramic burners are hand-dipped to create a colourful marbled effect. No two are the same. This makes for the ideal gift when your looking for something unique.',
+      'Each burner comes with :-',
+      '2x beeswax scented melts',
+      '1x beeswax scented t-light',
+    ],
+  },
   waxnproducts: [
     {
       isSecondary: false,
@@ -261,7 +193,7 @@ export const content = {
       ],
       img: {
         alt: 'skincare_handbalm',
-        src: handbalm,
+        src: skincare,
       },
     },
     {
@@ -270,7 +202,7 @@ export const content = {
       information: [''],
       img: {
         alt: 'skincare_lipbalm',
-        src: lipbalm,
+        src: skincare2,
       },
     },
   ],

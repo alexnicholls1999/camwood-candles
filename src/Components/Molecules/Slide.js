@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Col, Container, Row } from '../../Layouts/Grid/Grid';
+import { ControlsContext } from '../../react-context/ControlsProvider';
+import ArrowBtn from '../Atoms/ArrowBtn';
 import Hyperlink from '../Atoms/Hyperlink';
 
 function Slide({ slide, active }) {
+  const { handleOpenModal } = useContext(ControlsContext);
+
   return (
     <Row
       className={`slide fade ${
@@ -11,14 +15,14 @@ function Slide({ slide, active }) {
       style={{ display: `${active ? 'flex' : 'none'}` }}
     >
       <Col
-        className={`slide-image ${slide.isSecondary ? 'burners' : ''}`}
+        className={`slide-image ${slide.isSecondary ? '' : 'burners'}`}
         md={6}
       >
         <img src={slide.img.src} alt={slide.img.alt} />
       </Col>
       <Col
         md={6}
-        className={`slide-info ${slide.isSecondary ? 'burners' : ''}`}
+        className={`slide-info ${slide.isSecondary ? '' : 'burners'}`}
       >
         <Container>
           <h2
@@ -32,12 +36,12 @@ function Slide({ slide, active }) {
             {slide.descriptions.map((desc) => {
               return <li>{desc}</li>;
             })}
-            <li>
-              Please{' '}
-              <Hyperlink hyperlink={{ isSecondary: slide.isSecondary }} /> to
-              see dimensions sheet for sizes and prices.
-            </li>
           </ul>
+          <ArrowBtn
+            onClick={handleOpenModal}
+            type={slide.isSecondary ? 'secondary' : 'primary'}
+            text='View Cost'
+          />
         </Container>
       </Col>
     </Row>

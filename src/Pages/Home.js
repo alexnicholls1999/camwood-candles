@@ -1,21 +1,21 @@
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import Point from '../Components/Organisms/Point';
 import Section from '../Components/Organisms/Section';
 import Slider from '../Components/Organisms/Slider';
 import { Col, Container, Row } from '../Layouts/Grid/Grid';
 import MainLayout from '../Layouts/MainLayout';
 
-import Button from '../Components/Atoms/Form/Button';
 import Map from '../Components/Organisms/Map';
 import { ContentContext } from '../content/ContextProvider';
 import SocialMedia from '../Components/Molecules/SocialMedia';
 import Form from '../Components/Organisms/Form';
 import { ControlsContext } from '../react-context/ControlsProvider';
-import ScrollBtn from '../Components/Atoms/ScrollBtn';
+import Slide from '../Components/Molecules/Slide';
+import ArrowBtn from '../Components/Atoms/ArrowBtn';
 
 function Home() {
   const content = useContext(ContentContext);
-  const { contactRef } = useContext(ControlsContext);
+  const { contactRef, votivesRef, handleVotives } = useContext(ControlsContext);
 
   return (
     <MainLayout>
@@ -29,7 +29,11 @@ function Home() {
                 Beeswax is natures gift to us. <br /> This is our gift to you!
               </p>
             </div>
-            <button className='store-link-btn'>{content.hero.store}</button>
+            <ArrowBtn
+              onClick={handleVotives}
+              className='store-link-btn'
+              text={content.hero.store}
+            />
             <SocialMedia socialmedias={content.hero.socialmedias} />
           </Container>
         </Col>
@@ -79,27 +83,46 @@ function Home() {
         </div>
       </div>
 
-      <Container fluid className='votives primary page-section' id='votives'>
-        {content.votives.map(({ isSecondary, title, information, img }) => {
-          return (
-            <Section
-              section={{
-                isSecondary: isSecondary,
-                title: title,
-                information: information,
-                img: {
-                  src: img.src,
-                  alt: img.alt,
-                },
-              }}
-            />
-          );
-        })}
-      </Container>
+      <div ref={votivesRef}>
+        <Container fluid className='votives primary page-section' id='votives'>
+          {content.votives.map(({ isSecondary, title, information, img }) => {
+            return (
+              <Section
+                section={{
+                  isSecondary: isSecondary,
+                  title: title,
+                  information: information,
+                  img: {
+                    src: img.src,
+                    alt: img.alt,
+                  },
+                }}
+              />
+            );
+          })}
+        </Container>
+      </div>
 
-      <Slider dotNumber={3} slides={content.pillars} />
+      <Slider dotNumber={2} slides={content.pillars} />
 
-      <Slider secondary dotNumber={5} slides={content.meltsnburners} />
+      {/* Change to Section */}
+      <div className='slider'>
+        <div className='slideshow-container'>
+          <Slide
+            slide={{
+              isSecondary: content.meltsnburners.isSecondary,
+              title: content.meltsnburners.title,
+              img: {
+                src: content.meltsnburners.img.src,
+                alt: content.meltsnburners.img.alt,
+              },
+              descriptions: content.meltsnburners.descriptions,
+            }}
+            active
+          />
+        </div>
+      </div>
+      {/* <Slider secondary dotNumber={5} slides={content.meltsnburners} /> */}
 
       <Container fluid className='waxnproducts page-section' id='waxnproducts'>
         {content.waxnproducts.map(
@@ -115,6 +138,7 @@ function Home() {
                     alt: img.alt,
                   },
                 }}
+                active
               />
             );
           }

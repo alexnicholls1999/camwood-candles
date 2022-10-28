@@ -52,7 +52,7 @@
     @include margin(0.75rem, 0, 1.5rem);
     @include padding(1.25rem);
     @include bgImage(
-      $src: $arrow-btn,
+      $src: $arrow-btn-dark,
       $bg-size: 1.5rem,
       $bg-position: 95%,
       $bg-repeat: no-repeat
@@ -63,7 +63,7 @@
     );
     @include shadow('dark');
     @include fontFamily();
-
+    @include fontWeight($fontWeight: var(--font-weight-400));
     border: none;
     border-left: var(--colors-primary-600) 0.25rem solid;
     cursor: pointer;

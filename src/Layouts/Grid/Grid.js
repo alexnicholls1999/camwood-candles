@@ -1,8 +1,9 @@
 import grid from './grid.module.scss';
 
-export function Container({ children, fluid, className }) {
+export function Container({ children, fluid, className, ref }) {
   return (
     <div
+      ref={ref}
       className={`${fluid ? grid.containerFluid : grid.container} ${className}`}
     >
       {children}

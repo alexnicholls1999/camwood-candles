@@ -6,7 +6,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
 
-  thead tr {
+  thead {
     color: var(--colors-neutral-100);
     text-align: left;
     background-color: var(--colors-primary-700);
@@ -24,13 +24,17 @@
     }
   }
 
+  tr:nth-child(even) {
+    background-color: var(--colors-primary-200);
+  }
+
   tbody tr {
     td {
       padding: 1rem;
     }
   }
 
-  .secondary-row {
-    background-color: var(--colors-primary-200);
-  }
+  // .secondary-row {
+  //   background-color: var(--colors-primary-200);
+  // }
 }

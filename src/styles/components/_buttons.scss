@@ -10,6 +10,54 @@
   @include fontWeight($fontWeight: var(--font-weight-700));
 }
 
+.arrow-btn {
+  @include margin(0.75rem, 0, 1.5rem);
+  @include padding(1rem);
+  @include fontFamily();
+  box-shadow: 0 1rem 3.5rem 0.1rem rgba(0, 0, 0, 0.329);
+  width: min(15rem, 80%);
+  font-size: 0.8rem;
+  text-align: left;
+  border: none;
+  @include fontWeight($fontWeight: var(--font-weight-700));
+}
+
+.arrow-primary {
+  @include bgImage(
+    $src: $arrow-btn-dark,
+    $bg-size: 1.5rem,
+    $bg-position: 95%,
+    $bg-repeat: no-repeat
+  );
+
+  &:hover {
+    @include bgImage(
+      $src: $arrow-btn-light,
+      $bg-size: 1.5rem,
+      $bg-position: 95%,
+      $bg-repeat: no-repeat
+    );
+  }
+}
+
+.arrow-secondary {
+  @include bgImage(
+    $src: $arrow-btn-light,
+    $bg-size: 1.5rem,
+    $bg-position: 95%,
+    $bg-repeat: no-repeat
+  );
+
+  &:hover {
+    @include bgImage(
+      $src: $arrow-btn-dark,
+      $bg-size: 1.5rem,
+      $bg-position: 95%,
+      $bg-repeat: no-repeat
+    );
+  }
+}
+
 .btn-primary {
   @include colors(
     $bg-color: var(--colors-primary-600),

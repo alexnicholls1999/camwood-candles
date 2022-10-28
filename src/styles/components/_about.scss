@@ -11,7 +11,8 @@
   }
 
   .about-slogan {
-    font-size: min(1.75rem, 5vh);
+    font-size: clamp(1.75rem, 5vh, 4rem);
+    width: min(100%, 30vw);
   }
 
   .about-info {
@@ -83,10 +84,6 @@
 @include mediaQuery(md) {
   .about {
     @include padding(5%, 1rem, 25%);
-
-    .about-slogan {
-      font-size: 2rem;
-    }
   }
   .points-grid {
     grid-template-columns: repeat(2, 1fr);
